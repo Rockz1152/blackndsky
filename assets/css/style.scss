@@ -1,0 +1,228 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+@media print, screen and (max-width: 480px) { 
+  #header { margin-top: -5px; }
+}
+
+#banner {
+  background-image: url('/assets/images/clouds-dark-wide.jpg');
+  width: 100%;
+  height: 115px;
+  margin-top: -15px;
+}
+
+#header {
+  height: 50px;
+}
+
+#header nav {
+  max-width: 1000px;
+  margin: 0px auto;
+}
+
+#header nav li.linkleft {
+  float: left;
+  margin-left: 6px;
+}
+
+#header nav li.linkright {
+  float: right;
+  margin-left: 6px;
+}
+
+#header nav li a {
+  color: white;
+  border: 1px solid #000;
+  background-color: #313539;
+  padding: 10px 8px;
+}
+
+#header nav li a:hover {
+  color: #ffcc00;
+  background-color: #272b30;
+  border: 1px solid #000;
+}
+
+section {
+  max-width: 1000px;
+}
+
+section #title {
+  text-shadow: 2px 2px black;
+  margin: 0px 0 0px 0;
+}
+
+section #title .credits {
+  margin-top: -20px;
+}
+
+code {
+  background: #191919;
+}
+
+p, ul, ol, table, pre, dl {
+  margin: 0 0 10px;
+}
+
+br {
+  margin: 0 0 9px;
+}
+
+hr {
+  margin: 14px 0 20px;
+}
+
+.wrapper {
+  max-width: 1000px;
+}
+
+.credits,.credits.right {
+  text-shadow: initial;
+}
+
+ul {
+  list-style-image: initial;
+}
+
+h3 {
+  color: #e8e8e8;
+}
+
+nav {
+  display: inherit;
+}
+
+.collapsible {
+  border: 1px solid #000;
+  background-color: #313539;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), 0px 3px 7px rgba(0, 0, 0, 0.7);
+}
+
+.active {
+  color: #ffcc00;
+  background-color: #272b30;
+  border: 1px solid #000;
+  box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.2), 0px 1px 0px rgba(0, 0, 0, 0);
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: inherit;
+}
+
+.simple-pressed-button {
+  cursor: pointer;
+  padding: 12px;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 17px;
+  min-width: 100px;
+  text-align: center;
+  pointer-events: none;
+  color: #ffcc00;
+  background-color: #272b30;
+  border: 1px solid #000;
+  box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.2), 0px 1px 0px rgba(0, 0, 0, 0);
+  display:inline-block;
+  margin: 5px 10px 5px 10px;
+}
+
+.simple-button {
+  border: 1px solid #000;
+  background-color: #313539;
+  color: white;
+  cursor: pointer;
+  padding: 12px;
+  min-width: 100px;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 17px;
+  text-align: center;
+  box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), 0px 3px 7px rgba(0, 0, 0, 0.7);
+  transition: all 0.2s ease-in-out;
+  display:inline-block;
+  margin: 5px 10px 5px 10px;
+}
+
+.simple-button:hover {
+  color: #ffcc00;
+}
+
+/* Custom Scroll Bar*/
+/* https://css-tricks.com/custom-scrollbars-in-webkit/ */
+
+/* Firefox */
+html {
+  scrollbar-color: #292929 rgba(0,0,0,0.3);
+}
+
+/* Chrome */
+::-webkit-scrollbar              { /* 1 */
+  background: inherit;
+}
+::-webkit-scrollbar-button       { /* 2 */
+  background: inherit;
+}
+::-webkit-scrollbar-button:vertical:end:increment { /* UP ARROW */
+  background:
+    linear-gradient(300deg, #202020 40%, rgba(0, 0, 0, 0) 41%),
+    linear-gradient(60deg, #202020 40%, rgba(0, 0, 0, 0) 41%),
+    linear-gradient(180deg, #202020 30%, rgba(0, 0, 0, 0) 31%);
+  background-color: #b6b6b6;
+}
+::-webkit-scrollbar-button:vertical:start:decrement { /* DOWN ARROW */
+  background:
+    linear-gradient(120deg, #202020 40%, rgba(0, 0, 0, 0) 41%),
+    linear-gradient(240deg, #202020 40%, rgba(0, 0, 0, 0) 41%),
+    linear-gradient(0deg, #202020 30%, rgba(0, 0, 0, 0) 31%);
+  background-color: #b6b6b6;
+}
+::-webkit-scrollbar-button:horizontal:start:decrement { /* LEFT ARROW */
+  background:
+    linear-gradient(30deg, #202020 40%, rgba(0, 0, 0, 0) 41%),
+    linear-gradient(150deg, #202020 40%, rgba(0, 0, 0, 0) 41%),
+    linear-gradient(270deg, #202020 30%, rgba(0, 0, 0, 0) 31%);
+  background-color: #b6b6b6;
+}
+::-webkit-scrollbar-button:horizontal:end:increment { /* RIGHT ARROW */
+  background:
+    linear-gradient(210deg, #202020 40%, rgba(0, 0, 0, 0) 41%),
+    linear-gradient(330deg, #202020 40%, rgba(0, 0, 0, 0) 41%),
+    linear-gradient(90deg, #202020 30%, rgba(0, 0, 0, 0) 31%);
+  background-color: #b6b6b6;
+}
+::-webkit-scrollbar-track  { /* 3 */
+  background: rgba(0,0,0,0.3);
+  -webkit-box-shadow: inset 0 0 3px rgba(0,0,0,0.3);
+}
+::-webkit-scrollbar-track-piece  { /* 4 */
+  background: rgba(0,0,0,0.3);
+}
+::-webkit-scrollbar-thumb        { /* 5 */
+  background: #292929;
+  -webkit-box-shadow: inset 0 0 3px rgba(0,0,0,0.5);
+}
+::-webkit-scrollbar-thumb:hover { /* 5 HOVER */
+  background-color: #333333;
+}
+::-webkit-scrollbar-corner       { /* 6 */
+  background: inherit;
+}
+::-webkit-resizer                { /* 7 */
+  background: inherit;
+}

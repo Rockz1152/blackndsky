@@ -1,0 +1,110 @@
+#!/bin/bash
+# Debian Provisioning script
+# 10-16-19
+
+# OS Check
+if [[ `cat /etc/debian_version 2>/dev/null | grep -E '10.|9.' | wc -l` == 1 ]]; then
+    echo ''
+    echo 'Provisioning Debian'
+    echo ''
+else
+    echo 'This script is designed to only run on Debian 9 and 10'
+    exit 1
+fi
+
+# Check for root, otherwise re-run
+[ `whoami` = root ] || { sudo "$0" "$@"; exit $?; }
+
+# Apt update and upgrade
+echo 'Running apt-update'
+apt-get -q update > /dev/null
+echo 'Running apt-upgrade'
+apt-get -q -y dist-upgrade > /dev/null
+
+# Install software
+echo 'Installing software'
+declare -a packages=('curl' 'nano' 'vim' 'htop' 'ncdu' 'wget' 'zip' 'unzip' 'p7zip-full' 'unrar-free' 'screen' 'less' 'man-db' 'open-vm-tools' 'ntp')
+for i in "${packages[@]}"
+do
+    if [[ `dpkg-query -W --showformat='${Status}\n' $i 2>/dev/null | grep "install ok installed" | wc -l` == 1 ]]; then
+        echo '-'$i
+    else
+        echo '-'$i
+        apt-get -q -y install $i > /dev/null 2>/dev/null
+        if [[ `dpkg-query -W --showformat='${Status}\n' $i 2>/dev/null | grep "install ok installed" | wc -l` == 0 ]]; then
+            echo '!!!' $i 'failed to install'
+        fi
+    fi
+done
+
+# Services
+echo 'Checking services'
+declare -a services=('ntp' 'open-vm-tools' 'vgauth')
+for s in "${services[@]}"
+do
+    if [[ `systemctl is-enabled $s 2>/dev/null | grep enabled | wc -l` == 0 ]]; then
+        echo '-Enabling' $s
+        systemctl enable $s >/dev/null 2>/dev/null
+        if [[ `systemctl is-enabled $s 2>/dev/null | grep enabled | wc -l` == 0 ]]; then
+            echo '!!!' $s 'could not be enabled'
+        fi
+    fi
+    if [[ `systemctl status $s 2>/dev/null | grep dead | wc -l` == 1 ]]; then
+        echo '-Starting' $s
+        systemctl start $s >/dev/null 2>/dev/null
+        if [[ `systemctl status $s 2>/dev/null | grep dead | wc -l` == 1 ]]; then
+            echo '-!!!' $s 'failed to start'
+        fi
+    fi
+done
+
+# Disable motd on ssh login
+echo 'Turning off SSH motd'
+sudo sed -i 's@.*session    optional     pam_motd.so  motd=/run/motd.dynamic@#session    optional     pam_motd.so  motd=/run/motd.dynamic@' /etc/pam.d/sshd
+sudo sed -i 's@.*session    optional     pam_motd.so noupdate@#session    optional     pam_motd.so noupdate@' /etc/pam.d/sshd
+
+# Configure vim
+echo 'Configuring Vim'
+
+# vim80 or vim81
+if [[ `cat /etc/debian_version 2>/dev/null | grep 10. | wc -l` == 1 ]]; then
+    echo "source /usr/share/vim/vim81/defaults.vim" > /root/.vimrc
+elif [[ `cat /etc/debian_version 2>/dev/null | grep 9. | wc -l` == 1 ]]; then
+    echo "source /usr/share/vim/vim80/defaults.vim" > /root/.vimrc
+fi
+
+cat >> /root/.vimrc << EOF
+colorscheme desert
+
+let skip_defaults_vim = 1
+
+if has('mouse')
+ set mouse=r
+endif
+EOF
+
+# Configure bash
+echo 'Configuring Bash'
+## get a fresh .bashrc file
+\cp /etc/skel/.bashrc /root/.bashrc
+cat >> /root/.bashrc << EOF
+
+alias ll='ls -l'
+alias la='ls -lA'
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+alias grep='grep --color=auto'
+EOF
+
+# Copy configs into profiles
+for d in `find /home/* -maxdepth 0 -type d`
+do
+    \cp /root/.bashrc $d
+    \cp /root/.vimrc $d
+done
+
+# Reload bash for sudo user
+echo 'Reloading Bash'
+echo ''
+# sudo -u $SUDO_USER sh -c "exec bash"
