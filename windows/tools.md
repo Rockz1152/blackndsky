@@ -14,8 +14,8 @@ Direct downloads available from [Dropbox](https://www.dropbox.com/sh/4lgb3t1pr7n
 | Program                             | Description
 | ==================================================
 | [CPU-Z](https://www.cpuid.com/softwares/cpu-z.html){:target="_blank"} | Displays detailed information about the computer's CPU, chipset, and memory
-| [Hardware Monitor](https://www.cpuid.com/softwares/hwmonitor.html){:target="_blank"} | View all sensor data possible on the current system, includes CPU, GPU, motherboard and hard disks
 | [GPU-Z](https://www.techpowerup.com/download/techpowerup-gpu-z/){:target="_blank"} | Display detailed information on the current graphics card, it's driver and sensor data
+| [Hardware Monitor](https://www.cpuid.com/softwares/hwmonitor.html){:target="_blank"} | View all sensor data possible on the current system, includes CPU, GPU, motherboard and hard disks
 | [OCCT](https://www.ocbase.com/){:target="_blank"} | Portable CPU and GPU stress testing tool. Useful running with HardwareMonitor
 | [Speccy Portable](https://www.dropbox.com/s/hfezziurmf8y2kk/SpeccyPortable.zip?dl=1){:target="_blank"} | Display detailed information on the current system hardware, including manufacturer, hardware model SKUs
 
