@@ -38,7 +38,7 @@ permalink: /windows
 - Run Windows Update
 - Update Windows Store Apps
 - Update software with [Ninite](https://ninite.com/){:target="_blank"}
-- Check Windows system files *[More information](https://support.microsoft.com/en-us/help/4026529/windows-10-using-system-file-checker){:target="_blank"}*
+- Check Windows system files *[More information](https://support.microsoft.com/en-us/help/4026529/windows-10-using-system-file-checker){:target="_blank"}*. Run in an elevated command prompt:
 ```
 dism /online /cleanup-image /StartComponentCleanup
 dism /online /cleanup-image /RestoreHealth
@@ -50,7 +50,7 @@ sfc /scannow
 ## Optional Tweaks
 
 ### Remove "Share" on right click context menu
-- Open an elevated command prompt.
+- Open an elevated command prompt
 - Type the following command:
 ```
 reg delete HKEY_CLASSES_ROOT\*\shellex\ContextMenuHandlers\ModernSharing /f
@@ -59,8 +59,8 @@ reg delete HKEY_CLASSES_ROOT\*\shellex\ContextMenuHandlers\ModernSharing /f
 ### Disable password when resuming from sleep
 Add or Remove "Require a password on wakeup" in Power Options using Command Prompt
 
-- Open an elevated command prompt.
-- Type the command below you want to use into the elevated command prompt, and press Enter.  
+- Open an elevated command prompt
+- Type the command below you want to use into the elevated command prompt, and press Enter
 (Add)
 ```
 powercfg -attributes SUB_NONE 0E796BDB-100D-47D6-A2D5-F7D2DAA51F51 -ATTRIB_HIDE
@@ -77,8 +77,8 @@ reg add "HKEY_CLASSES_ROOT\CLSID\{018D5C66-4533-4307-9B53-224DE2ED1FE6}" /v Syst
 ```
 
 ### Disable Windows Update
-You can't actually disable Windows Update, but you can trick it into not downloading it's updates  
-Goto:  
+You can't actually disable Windows Update, but you can trick it into not downloading it's updates
+Goto:
 - `Settings`
 - `Network & Internet`
 - `Wi-Fi` or `Ethernet`
