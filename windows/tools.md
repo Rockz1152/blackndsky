@@ -33,6 +33,8 @@ Direct downloads available from [Dropbox](https://www.dropbox.com/sh/4lgb3t1pr7n
 | [DesktopOK](https://www.softwareok.com/?Download=desktopok){:target="_blank"} | Utility to remember the location of desktop icons and restore their location if they get moved
 | [Driver Store Explorer](https://github.com/lostindark/DriverStoreExplorer/releases){:target="_blank"} | View the Windows driver store and remove old and unneeded drivers
 | [Icon Cache Reset](https://www.dropbox.com/s/nnrpppf3qjrv933/IconCacheReset.zip?dl=1){:target="_blank"} | Small scripts to use if icons look invalid or don't display properly - Tested on Windows 7
+| [HirensBootCD ISO](https://www.hirensbootcd.org/download/){:target="_blank"} | The legendary PE boot tool updated with UEFI for modern systems, see page for full list of software
+| [HirensBootCD USB Tool](https://www.hirensbootcd.org/usb-booting/){:target="_blank"} | The recommended tool for creating a bootable USB stick for HirensBootCD
 | [O&O Shutup 10](https://www.oo-software.com/en/shutup10){:target="_blank"} | Helps turn off telemetry and other privacy settings in Windows 10
 | [Portable WinCD Emu](https://github.com/sysprogs/WinCDEmu/releases/){:target="_blank"} | Easily mount .iso and other file types without using the built-in Windows utility
 | [Prime 95](https://www.techpowerup.com/download/prime95/){:target="_blank"} | Stress test the CPU
