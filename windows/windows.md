@@ -18,17 +18,18 @@ permalink: /windows
 - Install drivers and reboot
 - Disable System Protection
 - Disable Remote Assistance
-- Set power profile to High Perf. **--** Desktop only
+- Set power profile to High Perf. **--** Optional, Desktop only
 - Set hard disk sleep to never **--** Desktop only
 - Disable offline files **--** Pro only
 - Disable Windows Media Player Network Sharing Service
 - Disable Superfetch/SysMain service if gaming PC
 - Disable Windows Search service if not using Outlook
-- Disable Windows Error Reporting with PowerShell **--** `Disable-WindowsErrorReporting`
+- Disable Windows Error Reporting with PowerShell **--**`Disable-WindowsErrorReporting`
 - If running SSD and second HD, move pagefile to second HD
 - If running SSD disable Fast Startup
-- Disable hibernation file **--** `powercfg -h off`
+- Disable hibernation file **--**`powercfg -h off`
 - Turn off Start Menu suggestions
+- Disable Game Bar
 - Hide Action Center icon **--** Optional
 - Add Computer and User icons to desktop
 - Run Disk Cleanup and reboot
