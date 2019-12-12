@@ -28,7 +28,7 @@ permalink: /windows
 - If running SSD and second HD, move pagefile to second HD
 - If running SSD disable Fast Startup
 - Disable hibernation file **--**`powercfg -h off`
-- Turn off Start Menu suggestions
+- Turn off Start Menu suggestions and recently added apps
 - Disable Game Bar
 - Hide Action Center icon **--** Optional
 - Add Computer and User icons to desktop
@@ -78,8 +78,7 @@ reg add "HKEY_CLASSES_ROOT\CLSID\{018D5C66-4533-4307-9B53-224DE2ED1FE6}" /v Syst
 ```
 
 ### Disable Windows Update
-You can't actually disable Windows Update, but you can trick it into not downloading it's updates
-Goto:
+You can't actually disable Windows Update, but you can trick it into not downloading it's updates. Goto:
 - `Settings`
 - `Network & Internet`
 - `Wi-Fi` or `Ethernet`
