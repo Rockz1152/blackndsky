@@ -91,8 +91,8 @@ Or build from source
 ### Create or Import DVD Rip Preset
 **Import the preset**
 
-- Download preset <a href="{{site.url}}/misc/Handbrake-DVD-Rip.json" download>Handbrake-DVD-Rip.json</a>
-- Open Handbrake and select DVD drive or other Media in source selection
+- Download the preset file <a href="{{site.url}}/misc/Handbrake-DVD-Rip.json" download>Handbrake-DVD-Rip.json</a>
+- Open Handbrake and select `Cancel` in the bottom left corner
 - On the top toolbar select `Presets` **>** `Import from file`
 - Navigate to the downloaded preset file and click `Open`
 - Select the preset by going to `Presets` **>** `Custom Presets` **>** `DVD Rip`

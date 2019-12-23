@@ -32,6 +32,7 @@ permalink: /windows
 - Disable Game Bar
 - Hide Action Center icon **--** Optional
 - Add Computer and User icons to desktop
+- Set the correct Time Zone
 - Run Disk Cleanup and reboot
 - Optimize drives
 
