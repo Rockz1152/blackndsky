@@ -63,8 +63,21 @@ code {
   background: #191919;
 }
 
-p, ul, ol, table, pre, dl {
+ol, table, dl {
   margin: 0 0 10px;
+}
+
+pre {
+  margin: 5px 0 5px;
+}
+
+p {
+  margin: 0 0 5px;
+}
+
+ul {
+  margin: 0 0 0px;
+  list-style-image: initial;
 }
 
 br {
@@ -83,12 +96,13 @@ hr {
   text-shadow: initial;
 }
 
-ul {
-  list-style-image: initial;
+h2 {
+  margin: 10px 0 10px;
 }
 
 h3 {
   color: #e8e8e8;
+  margin: 0 0 0px;
 }
 
 nav {

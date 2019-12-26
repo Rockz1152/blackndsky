@@ -24,16 +24,21 @@ permalink: /windows
 - Disable Windows Media Player Network Sharing Service
 - Disable Superfetch/SysMain service if gaming PC
 - Disable Windows Search service if not using Outlook
-- Disable Windows Error Reporting with PowerShell **--**`Disable-WindowsErrorReporting`
+- Disable Windows Error Reporting with PowerShell **--** `Disable-WindowsErrorReporting`
 - If running SSD and second HD, move pagefile to second HD
 - If running SSD disable Fast Startup
-- Disable hibernation file **--**`powercfg -h off`
+- Disable hibernation file **--** `powercfg -h off`
 - Turn off Start Menu suggestions and recently added apps
 - Disable Game Bar
 - Hide Action Center icon **--** Optional
 - Add Computer and User icons to desktop
+- In Folder Options, 
+  - Change "Open File Explorer" to "This PC"
+  - Uncheck "Show recently used files" under Privacy
+  - Uncheck "Show frequently used folders" under Privacy
 - Set the correct Time Zone
-- Run Disk Cleanup and reboot
+- Run Disk Cleanup
+- Cleanup Windows Update **--** `dism /online /cleanup-image /StartComponentCleanup`
 - Optimize drives
 
 ## Maintenance
@@ -53,7 +58,7 @@ sfc /scannow
 
 ### Remove "Share" on right click context menu
 - Open an elevated command prompt
-- Type the following command:
+- Run the following command:
 ```
 reg delete HKEY_CLASSES_ROOT\*\shellex\ContextMenuHandlers\ModernSharing /f
 ```
@@ -61,16 +66,12 @@ reg delete HKEY_CLASSES_ROOT\*\shellex\ContextMenuHandlers\ModernSharing /f
 ### Disable password when resuming from sleep
 Add or Remove "Require a password on wakeup" in Power Options using Command Prompt
 
-- Open an elevated command prompt
-- Type the command below you want to use into the elevated command prompt, and press Enter
-(Add)
+- Open an elevated command prompt.
+- Run the following command:
 ```
 powercfg -attributes SUB_NONE 0E796BDB-100D-47D6-A2D5-F7D2DAA51F51 -ATTRIB_HIDE
 ```
-or (Remove - default)
-```
-powercfg -attributes SUB_NONE 0E796BDB-100D-47D6-A2D5-F7D2DAA51F51 +ATTRIB_HIDE
-```
+- If you want to remove the menu item from Power Options, change `-ATTRIB_HIDE` to `+ATTRIB_HIDE` and run the command again (This is the default setting)
 
 ### Remove OneDrive Folder in Explorer
 Removes the "OneDrive" folder icon on the left side of Windows Explorer that can sometimes linger after OneDrive is uninstalled
