@@ -24,10 +24,10 @@ permalink: /windows
 - Disable Windows Media Player Network Sharing Service
 - Disable Superfetch/SysMain service if gaming PC
 - Disable Windows Search service if not using Outlook
-- Disable Windows Error Reporting with PowerShell **--** `Disable-WindowsErrorReporting`
+- Disable Windows Error Reporting with PowerShell **--**`Disable-WindowsErrorReporting`
 - If running SSD and second HD, move pagefile to second HD
 - If running SSD disable Fast Startup
-- Disable hibernation file **--** `powercfg -h off`
+- Disable hibernation file **--**`powercfg -h off`
 - Turn off Start Menu suggestions and recently added apps
 - Disable Game Bar
 - Hide Action Center icon **--** Optional
@@ -38,7 +38,7 @@ permalink: /windows
   - Uncheck "Show frequently used folders" under Privacy
 - Set the correct Time Zone
 - Run Disk Cleanup
-- Cleanup Windows Update **--** `dism /online /cleanup-image /StartComponentCleanup`
+- Cleanup Windows Update **--**`dism /online /cleanup-image /StartComponentCleanup`
 - Optimize drives
 
 ## Maintenance
