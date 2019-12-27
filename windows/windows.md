@@ -37,15 +37,14 @@ permalink: /windows
   - Uncheck "Show recently used files" under Privacy
   - Uncheck "Show frequently used folders" under Privacy
 - Set the correct Time Zone
-- Run Disk Cleanup
-- Cleanup Windows Update **--**`dism /online /cleanup-image /StartComponentCleanup`
+- Run Disk Cleanup with "Clean up system files"
 - Optimize drives
 
 ## Maintenance
 - Run Windows Update
 - Update Windows Store Apps
 - Update software with [Ninite](https://ninite.com/){:target="_blank"}
-- Check Windows system files *[More information](https://support.microsoft.com/en-us/help/4026529/windows-10-using-system-file-checker){:target="_blank"}*. Run in an elevated command prompt:
+- Check Windows system files, *[More information](https://support.microsoft.com/en-us/help/4026529/windows-10-using-system-file-checker){:target="_blank"}*
 ```
 dism /online /cleanup-image /StartComponentCleanup
 dism /online /cleanup-image /RestoreHealth
