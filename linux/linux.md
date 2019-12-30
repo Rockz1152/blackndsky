@@ -60,21 +60,18 @@ dns-nameservers 8.8.8.8 8.8.4.4
 
 Reboot and connect with SSH
 
-<br>
 ## Debian with MATE ##
 At package selection, choose
-
 - `Debian Desktop Environment`
 - `MATE`
 - `OpenSSH Server`
 
 After Install
-System - Preferences - Look and Feel - Appearance
-Choose Black MATE or Blue-Submarine
-Install MATE Tweak
+- System **>** Preferences **>** Look and Feel **>** Appearance
+- Choose **"Black MATE"** or **"Blue-Submarine"**
 
+Install MATE Tweak
  - `sudo apt install mate-tweak`
 
 Disable desktop composition
-
-- Control Center - Look and Feel - MATE Tweak - Windows - Window Manager - Choose ***Marco(No compositor)***
+- Control Center **>** Look and Feel **>** MATE Tweak **>** Windows **>** Window Manager **>** Choose `Marco(No compositor)`
