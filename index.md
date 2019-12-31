@@ -5,9 +5,6 @@ layout: page
 
 # Resources
 
-<!-- Old layout -->
-<!-- [Windows Install]({{site.url}}/windows){:style="font-size:17px"} | [Windows Tools]({{site.url}}/windows-tools){:style="font-size:17px"} | [Linux Install]({{site.url}}/linux){:style="font-size:17px"} | [Handbrake]({{site.url}}/handbrake){:style="font-size:17px"} -->
-
 <div align="center" markdown="1">
 [Windows Install]({{site.url}}/windows){: .simple-button}
 [Windows Tools]({{site.url}}/windows-tools){: .simple-button}
@@ -17,7 +14,7 @@ layout: page
 
 ----
 
-<button class="collapsible" id="links">Links for PC Hardware</button>
+<center><button class="collapsible" id="links">Links for PC Hardware</button>
 <div class="content" id="links-data" markdown="1">
 
 | **Tools**
@@ -32,7 +29,7 @@ layout: page
 | Passmark | [https://www.videocardbenchmark.net/singleCompare.php](https://www.videocardbenchmark.net/singleCompare.php){:target="_blank"}
 | UserBenchmark | [https://gpu.userbenchmark.com/](https://gpu.userbenchmark.com/){:target="_blank"}
 
-</div>
+</div></center>
 <br>
 
 <h1>Latest Post</h1>
