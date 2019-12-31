@@ -180,6 +180,12 @@ nav {
   margin: 5px 10px 5px 10px;
 }
 
+/* Hides blue click highlight on mobile */
+html {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: transparent;
+}
+
 /* Custom Scroll Bar*/
 /* https://css-tricks.com/custom-scrollbars-in-webkit/ */
 
