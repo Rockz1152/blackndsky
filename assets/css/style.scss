@@ -118,11 +118,14 @@ nav {
   cursor: pointer;
   padding: 18px;
   width: 100%;
-  border: none;
-  text-align: left;
   outline: none;
-  font-size: 15px;
+  font-size: 17px;
+  text-align: center;
   box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), 0px 3px 7px rgba(0, 0, 0, 0.7);
+}
+
+.collapsible:hover {
+  color: #ffcc00;
 }
 
 .active {
@@ -139,10 +142,31 @@ nav {
   background-color: inherit;
 }
 
+.simple-button {
+  border: 0px solid #000;
+  background-color: #313539;
+  color: white;
+  cursor: pointer;
+  padding: 12px;
+  min-width: 100px;
+  text-align: left;
+  outline: none;
+  font-size: 17px;
+  text-align: center;
+  box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), 0px 3px 7px rgba(0, 0, 0, 0.7);
+  transition: all 0.2s ease-in-out;
+  display: inline-block;
+  margin: 5px 10px 5px 10px;
+}
+
+.simple-button:hover {
+  color: #ffcc00;
+}
+
 .simple-pressed-button {
   cursor: pointer;
   padding: 12px;
-  border: none;
+  border: 1px solid #000;
   text-align: left;
   outline: none;
   font-size: 17px;
@@ -151,32 +175,9 @@ nav {
   pointer-events: none;
   color: #ffcc00;
   background-color: #272b30;
-  border: 1px solid #000;
   box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.2), 0px 1px 0px rgba(0, 0, 0, 0);
-  display:inline-block;
+  display: inline-block;
   margin: 5px 10px 5px 10px;
-}
-
-.simple-button {
-  border: 1px solid #000;
-  background-color: #313539;
-  color: white;
-  cursor: pointer;
-  padding: 12px;
-  min-width: 100px;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 17px;
-  text-align: center;
-  box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), 0px 3px 7px rgba(0, 0, 0, 0.7);
-  transition: all 0.2s ease-in-out;
-  display:inline-block;
-  margin: 5px 10px 5px 10px;
-}
-
-.simple-button:hover {
-  color: #ffcc00;
 }
 
 /* Custom Scroll Bar*/
