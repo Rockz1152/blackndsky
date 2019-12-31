@@ -112,7 +112,7 @@ nav {
 /* Buttons */
 
 .collapsible {
-  border: 1px solid #000;
+  border: 0px solid #000;
   background-color: #313539;
   color: white;
   cursor: pointer;
@@ -164,9 +164,9 @@ nav {
 }
 
 .simple-pressed-button {
+  border: 1px solid #000;
   cursor: pointer;
   padding: 12px;
-  border: 1px solid #000;
   text-align: left;
   outline: none;
   font-size: 17px;
