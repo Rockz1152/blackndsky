@@ -66,7 +66,7 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Power" /v Hiberbo
 ```
 powercfg -h off
 ```
-- Turn off Start Menu suggestions and recently added apps
+- Turn off recently added apps in Start Menu, and Start Menu suggestions
 - Disable Game Bar
 - Hide Action Center icon **--** Optional
 - Add Computer and User icons to desktop
