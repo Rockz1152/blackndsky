@@ -1,6 +1,6 @@
 ---
 title: Home
-layout: page
+layout: home
 ---
 
 # Resources
@@ -14,7 +14,7 @@ layout: page
 
 ----
 
-<center><button class="collapsible" id="links">Links for PC Hardware</button>
+<button class="collapsible" id="links">Links for PC Hardware</button>
 <div class="content" id="links-data" markdown="1">
 
 | **Tools**
@@ -29,7 +29,7 @@ layout: page
 | Passmark | [https://www.videocardbenchmark.net/singleCompare.php](https://www.videocardbenchmark.net/singleCompare.php){:target="_blank"}
 | UserBenchmark | [https://gpu.userbenchmark.com/](https://gpu.userbenchmark.com/){:target="_blank"}
 
-</div></center>
+</div>
 <br>
 
 <h1>Latest Post</h1>

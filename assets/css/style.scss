@@ -48,6 +48,11 @@
   border: 1px solid #000;
 }
 
+.softview {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
 section {
   max-width: 1200px;
 }
@@ -125,6 +130,12 @@ nav {
   font-size: 17px;
   text-align: center;
   box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), 0px 3px 7px rgba(0, 0, 0, 0.7);
+  display: block;
+  margin: auto;
+}
+
+.collpase-container {
+  margin: auto 0px;
 }
 
 .collapsible:hover {
