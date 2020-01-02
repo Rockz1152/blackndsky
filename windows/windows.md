@@ -17,29 +17,55 @@ permalink: /windows
 - Install Windows Updates
 - Install drivers and reboot
 - Disable System Protection
-  - `Disable-ComputerRestore "C:"`
+```
+Disable-ComputerRestore "C:"
+```
 - Disable Remote Assistance
-  - `reg add "HKLM\SYSTEM\CurrentControlSet\Control\Remote Assistance" /v fAllowToGetHelp /t REG_DWORD /d 0 /f`
+```
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Remote Assistance" /v fAllowToGetHelp /t REG_DWORD /d 0 /f
+```
 - Set power profile to High Perf. **--** Optional, Desktop only
-  - `powercfg -SETACTIVE 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c`
+```
+powercfg -SETACTIVE 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c
+```
 - Set hard disk sleep to never **--** Desktop only
-  - `powercfg -change -disk-timeout-ac 0`
-  - `powercfg -change -disk-timeout-dc 0`
+```
+powercfg -change -disk-timeout-ac 0
+powercfg -change -disk-timeout-dc 0
+```
 - Disable offline files **--** Pro only
-  - `Set-Service -Name "CscService" -StartupType Disabled`
+```
+Set-Service -Name "CscService" -StartupType Disabled; Stop-Service -Name "CscService"
+```
 - Disable Windows Media Player Network Sharing Service
-  - `Set-Service -Name "WMPNetworkSvc" -StartupType Disabled`
+```
+Set-Service -Name "WMPNetworkSvc" -StartupType Disabled; Stop-Service -Name "WMPNetworkSvc"
+```
 - Disable Superfetch/SysMain service if gaming PC
-  - `Set-Service -Name "SysMain" -StartupType Disabled`
+```
+Set-Service -Name "SysMain" -StartupType Disabled; Stop-Service -Name "SysMain"
+```
 - Disable Windows Search service if not using Outlook
-  - `Set-Service -Name "WSearch" -StartupType Disabled`
+```
+Set-Service -Name "WSearch" -StartupType Disabled; Stop-Service -Name "WSearch"
+```
+- Disable the Diagnostics Tracking Service
+```
+Set-Service -Name "DiagTrack" -StartupType Disabled; Stop-Service -Name "DiagTrack"
+```
 - Disable Windows Error Reporting with PowerShell 
-  - `Disable-WindowsErrorReporting`
+```
+Disable-WindowsErrorReporting
+```
 - If running SSD and second HD, move pagefile to second HD
 - If running SSD disable Fast Startup
-  - `reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Power" /v HiberbootEnabled /t REG_DWORD /d 0 /f`
+```
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Power" /v HiberbootEnabled /t REG_DWORD /d 0 /f
+```
 - Disable hibernation file
-  - `powercfg -h off`
+```
+powercfg -h off
+```
 - Turn off Start Menu suggestions and recently added apps
 - Disable Game Bar
 - Hide Action Center icon **--** Optional
@@ -49,10 +75,16 @@ permalink: /windows
   - Uncheck "Show recently used files" under Privacy
   - Uncheck "Show frequently used folders" under Privacy
 - Set the correct Time Zone **--** Or you can choose from "Adjust date/time"
-  - `Set-TimeZone -Id "Eastern Standard Time"`
-  - `Set-TimeZone -Id "Central Standard Time"`
-  - `Set-TimeZone -Id "Mountain Standard Time"`
-  - `Set-TimeZone -Id "Pacific Standard Time"`
+```
+Set-TimeZone -Id "Eastern Standard Time"`
+Set-TimeZone -Id "Central Standard Time"
+Set-TimeZone -Id "Mountain Standard Time"
+Set-TimeZone -Id "Pacific Standard Time"
+```
+- Disable unneeded tasks
+```
+Get-Scheduledtask 'Microsoft Compatibility Appraiser','Consolidator','UsbCeip','Microsoft-Windows-DiskDiagnosticDataCollector','QueueReporting','XblGameSaveTask' -erroraction silentlycontinue | Disable-scheduledtask
+```
 - Run Disk Cleanup with "Clean up system files"
 - Optimize drives
 
