@@ -68,6 +68,7 @@ section #title .credits {
 
 code {
   background: #191919;
+  padding: 4px 10px;
 }
 
 ol, table, dl {
@@ -134,8 +135,20 @@ nav {
   margin: auto;
 }
 
-.collapsible:hover {
+.collapsible:hover, .collapsible-small:hover {
   color: #ffcc00;
+}
+
+.collapsible-small {
+  border: 0px solid #000;
+  background-color: #313539;
+  color: white;
+  cursor: pointer;
+  padding: 3px 8px 3px 8px;
+  outline: none;
+  text-align: center;
+  box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), 0px 3px 7px rgba(0, 0, 0, 0.7);
+  margin-left: 8px;
 }
 
 .active {

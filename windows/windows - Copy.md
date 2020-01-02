@@ -17,29 +17,17 @@ permalink: /windows
 - Install Windows Updates
 - Install drivers and reboot
 - Disable System Protection
-  - `Disable-ComputerRestore "C:"`
 - Disable Remote Assistance
-  - `reg add "HKLM\SYSTEM\CurrentControlSet\Control\Remote Assistance" /v fAllowToGetHelp /t REG_DWORD /d 0 /f`
 - Set power profile to High Perf. **--** Optional, Desktop only
-  - `powercfg -SETACTIVE 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c`
 - Set hard disk sleep to never **--** Desktop only
-  - `powercfg -change -disk-timeout-ac 0`
-  - `powercfg -change -disk-timeout-dc 0`
 - Disable offline files **--** Pro only
-  - `Set-Service -Name "CscService" -StartupType Disabled`
 - Disable Windows Media Player Network Sharing Service
-  - `Set-Service -Name "WMPNetworkSvc" -StartupType Disabled`
 - Disable Superfetch/SysMain service if gaming PC
-  - `Set-Service -Name "SysMain" -StartupType Disabled`
 - Disable Windows Search service if not using Outlook
-  - `Set-Service -Name "WSearch" -StartupType Disabled`
-- Disable Windows Error Reporting with PowerShell 
-  - `Disable-WindowsErrorReporting`
+- Disable Windows Error Reporting with PowerShell **--**`Disable-WindowsErrorReporting`
 - If running SSD and second HD, move pagefile to second HD
 - If running SSD disable Fast Startup
-  - `reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Power" /v HiberbootEnabled /t REG_DWORD /d 0 /f`
-- Disable hibernation file
-  - `powercfg -h off`
+- Disable hibernation file **--**`powercfg -h off`
 - Turn off Start Menu suggestions and recently added apps
 - Disable Game Bar
 - Hide Action Center icon **--** Optional
@@ -48,11 +36,7 @@ permalink: /windows
   - Change "Open File Explorer" to "This PC"
   - Uncheck "Show recently used files" under Privacy
   - Uncheck "Show frequently used folders" under Privacy
-- Set the correct Time Zone **--** Or you can choose from "Adjust date/time"
-  - `Set-TimeZone -Id "Eastern Standard Time"`
-  - `Set-TimeZone -Id "Central Standard Time"`
-  - `Set-TimeZone -Id "Mountain Standard Time"`
-  - `Set-TimeZone -Id "Pacific Standard Time"`
+- Set the correct Time Zone
 - Run Disk Cleanup with "Clean up system files"
 - Optimize drives
 
