@@ -119,7 +119,11 @@ Get-Scheduledtask 'Microsoft Compatibility Appraiser','Consolidator','UsbCeip','
 - Check Windows system files, *[More information](https://support.microsoft.com/en-us/help/4026529/windows-10-using-system-file-checker){:target="_blank"}*
 ```
 dism /online /cleanup-image /StartComponentCleanup
+```
+```
 dism /online /cleanup-image /RestoreHealth
+```
+```
 sfc /scannow
 ```
 - Run disk cleanup on system files
