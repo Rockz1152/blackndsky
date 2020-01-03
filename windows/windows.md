@@ -128,6 +128,7 @@ sfc /scannow
 ```
 - Run disk cleanup on system files
 - Optimize Drives
+- Reboot system to finish maintenance
 
 ## Optional Tweaks
 
