@@ -124,6 +124,9 @@ dism /online /cleanup-image /StartComponentCleanup
 dism /online /cleanup-image /RestoreHealth
 ```
 ```
+dism /online /cleanup-image /ScanHealth
+```
+```
 sfc /scannow
 ```
 - Run disk cleanup on system files
