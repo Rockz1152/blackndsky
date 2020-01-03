@@ -45,7 +45,7 @@ Set-Service -Name "WMPNetworkSvc" -StartupType Disabled; Stop-Service -Name "WMP
 ```
 Set-Service -Name "SysMain" -StartupType Disabled; Stop-Service -Name "SysMain"
 ```
-- Disable Windows Search service if not using Outlook
+- Disable Windows Search service **if not using Outlook**
 ```
 Set-Service -Name "WSearch" -StartupType Disabled; Stop-Service -Name "WSearch"
 ```
