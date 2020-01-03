@@ -26,6 +26,7 @@ Direct downloads available from [Dropbox](https://www.dropbox.com/sh/4lgb3t1pr7n
 | [7-Zip](https://www.7-zip.org/download.html){:target="_blank"} | The 7-Zip download page
 | [7-Zip Portable](https://portableapps.com/apps/utilities/7-zip_portable){:target="_blank"} | Unpacks 7-Zip, can be used to extract all tools if built-in uncompress not available
 | [Autoruns](https://docs.microsoft.com/en-us/sysinternals/downloads/autoruns#download){:target="_blank"} | Easily see all programs on startup and many other locations
+| [Balena Etcher](https://www.balena.io/etcher/){:target="_blank"} | Tool for writing .iso and other image files to USB drives
 | [BlueScreenView](https://www.nirsoft.net/utils/blue_screen_view.html#DownloadLinks){:target="_blank"} | Analyze minidump files from bluescreens to help diagnose issues
 | [CCleaner Portable](https://www.ccleaner.com/ccleaner/builds){:target="_blank"} | Remove junk files, reg cleaner, uninstall assist, great tool
 | [CrystalDiskMark Portable](https://portableapps.com/apps/utilities/crystaldiskmark_portable){:target="_blank"} | Benchmark disk read and write speeds
@@ -49,5 +50,6 @@ Direct downloads available from [Dropbox](https://www.dropbox.com/sh/4lgb3t1pr7n
 | [Sysinternals Suite](https://docs.microsoft.com/en-us/sysinternals/downloads/sysinternals-suite){:target="_blank"} | A collection of various programs many administrators utilize
 | [TreeSizeFree Portable](https://portableapps.com/apps/utilities/treesize-free-portable){:target="_blank"} | Analyzes disk usage by directory and displays as a chart
 | [USBdeview](https://www.nirsoft.net/utils/usb_devices_view.html#DownloadLinks){:target="_blank"} | View all installed USB devices in the registry, includes devices no longer plugged in!
+| [WebBrowserPassView](https://www.nirsoft.net/utils/web_browser_password.html){:target="_blank"} | Password recovery tool that reveals passwords stored in web browser located on the system
 | [WinDirStat Portable](https://portableapps.com/apps/utilities/windirstat_portable){:target="_blank"} | A very popular disk usage analysis program, displays all files as a large relational graphic
 | [WizTree](https://antibody-software.com/web/software/software/wiztree-finds-the-files-and-folders-using-the-most-disk-space-on-your-hard-drive/){:target="_blank"} | A small but very fast disk analyzer, useful for systems with millions of files
