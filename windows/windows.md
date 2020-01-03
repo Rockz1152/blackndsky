@@ -53,7 +53,7 @@ Set-Service -Name "WSearch" -StartupType Disabled; Stop-Service -Name "WSearch"
 ```
 Set-Service -Name "DiagTrack" -StartupType Disabled; Stop-Service -Name "DiagTrack"
 ```
-- Disable Windows Error Reporting with PowerShell 
+- Disable Windows Error Reporting across the system
 ```
 Disable-WindowsErrorReporting
 ```
@@ -70,6 +70,11 @@ powercfg -h off
 - Disable Game Bar
 - Hide Action Center icon **--** Optional
 - Add Computer and User icons to desktop
+```
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\NewStartPanel" /v "{20D04FE0-3AEA-1069-A2D8-08002B30309D}" /t REG_DWORD /d 0 /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\NewStartPanel" /v "{59031a47-3f72-44a7-89c5-5595fe6b30ee}" /t REG_DWORD /d 0 /f
+Stop-Process -ProcessName explorer
+```
 - In Folder Options, 
   - Change "Open File Explorer" to "This PC"
   - Uncheck "Show recently used files" under Privacy
