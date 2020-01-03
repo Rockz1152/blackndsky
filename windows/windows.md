@@ -95,8 +95,14 @@ reg add "HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer" /
 - Set the correct Time Zone **--** Or you can choose from "Adjust date/time"
 ```
 Set-TimeZone -Id "Eastern Standard Time"
+```
+```
 Set-TimeZone -Id "Central Standard Time"
+```
+```
 Set-TimeZone -Id "Mountain Standard Time"
+```
+```
 Set-TimeZone -Id "Pacific Standard Time"
 ```
 - Disable unneeded tasks
