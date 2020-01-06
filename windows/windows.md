@@ -115,6 +115,7 @@ If "**Windows Update Cleanup**" was not available in Disk Cleanup, run:
 dism /online /cleanup-image /StartComponentCleanup
 ```
 - Optimize drives
+- Reboot system
 
 ## Maintenance
 - Run Windows Update
@@ -135,7 +136,7 @@ sfc /scannow
 ```
 - Run disk cleanup on system files
 - Optimize Drives
-- Reboot system to finish maintenance
+- Reboot system
 
 ## Optional Tweaks
 
