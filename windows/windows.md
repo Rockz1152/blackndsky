@@ -110,7 +110,7 @@ Set-TimeZone -Id "Pacific Standard Time"
 Get-Scheduledtask 'Microsoft Compatibility Appraiser','Consolidator','UsbCeip','Microsoft-Windows-DiskDiagnosticDataCollector','QueueReporting','XblGameSaveTask' -erroraction silentlycontinue | Disable-scheduledtask
 ```
 - Run Disk Cleanup with "**Clean up system files**"  
-If "**Windows Update Cleanup**" was not available in Disk Cleanup, run:
+If "**Windows Update Cleanup**" was not available in Disk Cleanup, run it manually with:
 ```
 dism /online /cleanup-image /StartComponentCleanup
 ```
