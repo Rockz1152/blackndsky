@@ -13,7 +13,7 @@ permalink: /windows
 
 ## Standard Checklist
 - Update Windows Store and Apps
-- Remove unwanted Windows Store apps with CleanAppsHome script
+- Remove unwanted Windows Store apps with **CleanAppsHome** script
 - Install Windows Updates
 - Install drivers and reboot
 - Disable System Protection
@@ -24,16 +24,16 @@ Disable-ComputerRestore "C:"
 ```
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Remote Assistance" /v "fAllowToGetHelp" /t REG_DWORD /d 0 /f
 ```
-- Set power profile to High Perf. **--** Optional, Desktop only
+- Set power profile to High Perf. **--** **Optional**, **Desktop** only
 ```
 powercfg -SETACTIVE 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c
 ```
-- Set hard disk sleep to never **--** Desktop only
+- Set hard disk sleep to never **--** **Desktop** only
 ```
 powercfg -change -disk-timeout-ac 0
 powercfg -change -disk-timeout-dc 0
 ```
-- Disable offline files **--** Pro only
+- Disable offline files **--** **Pro** only
 ```
 Set-Service -Name "CscService" -StartupType Disabled; Stop-Service -Name "CscService"
 ```
@@ -41,7 +41,7 @@ Set-Service -Name "CscService" -StartupType Disabled; Stop-Service -Name "CscSer
 ```
 Set-Service -Name "WMPNetworkSvc" -StartupType Disabled; Stop-Service -Name "WMPNetworkSvc"
 ```
-- Disable Superfetch/SysMain service if gaming PC
+- Disable Superfetch/SysMain service if **Gaming PC**
 ```
 Set-Service -Name "SysMain" -StartupType Disabled; Stop-Service -Name "SysMain"
 ```
@@ -79,20 +79,20 @@ reg add "HKEY_CURRENT_USER\System\GameConfigStore" /v "GameDVR_FSEBehavior" /t R
 reg add "HKEY_CURRENT_USER\System\GameConfigStore" /v "GameDVR_Enabled" /t REG_DWORD /d 0 /f
 reg add "HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\GameDVR" /v "AppCaptureEnabled" /t REG_DWORD /d 0 /f
 ```
-- Hide Action Center icon **--** Optional
+- Hide Action Center icon **--** **Optional**
 - Add Computer and User icons to desktop
 ```
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\NewStartPanel" /v "{20D04FE0-3AEA-1069-A2D8-08002B30309D}" /t REG_DWORD /d 0 /f
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\NewStartPanel" /v "{59031a47-3f72-44a7-89c5-5595fe6b30ee}" /t REG_DWORD /d 0 /f
 Stop-Process -ProcessName explorer
 ```
-- Set File Explorer to "This PC", uncheck "Show recently used files" and "Show frequently used folders"
+- Set File Explorer to "**This PC**", uncheck "**Show recently used files**" and "**Show frequently used folders**"
 ```
 reg add "HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "LaunchTo" /t REG_DWORD /d 1 /f
 reg add "HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer" /v "ShowFrequent" /t REG_DWORD /d 0 /f
 reg add "HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer" /v "ShowRecent" /t REG_DWORD /d 0 /f
 ```
-- Set the correct Time Zone **--** Or you can choose from "Adjust date/time"
+- Set the correct Time Zone **--** Or you can choose from "**Adjust date/time**"
 ```
 Set-TimeZone -Id "Eastern Standard Time"
 ```
@@ -109,8 +109,8 @@ Set-TimeZone -Id "Pacific Standard Time"
 ```
 Get-Scheduledtask 'Microsoft Compatibility Appraiser','Consolidator','UsbCeip','Microsoft-Windows-DiskDiagnosticDataCollector','QueueReporting','XblGameSaveTask' -erroraction silentlycontinue | Disable-scheduledtask
 ```
-- Run Disk Cleanup with "Clean up system files"  
-If "Windows Update Cleanup" was not available in Disk Cleanup, run:
+- Run Disk Cleanup with "**Clean up system files**"  
+If "**Windows Update Cleanup**" was not available in Disk Cleanup, run:
 ```
 dism /online /cleanup-image /StartComponentCleanup
 ```
@@ -139,7 +139,7 @@ sfc /scannow
 
 ## Optional Tweaks
 
-### Remove "Share" on right click context menu
+### Remove "**Share**" on right click context menu
 - Open an elevated command prompt
 - Run the following command:
 ```
