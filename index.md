@@ -20,7 +20,6 @@ layout: home
 | **Tools**
 | PCPartPicker | [https://pcpartpicker.com](https://pcpartpicker.com/){:target="_blank"}
 | Bottleneck Calculator | [https://pc-builds.com/calculator](https://pc-builds.com/calculator/){:target="_blank"}
-| HWBench | [http://hwbench.com](http://hwbench.com/){:target="_blank"}
 | **CPU**
 | AnandTech | [https://www.anandtech.com/bench](https://www.anandtech.com/bench/){:target="_blank"}
 | Passmark | [https://www.cpubenchmark.net/singleCompare.php](https://www.cpubenchmark.net/singleCompare.php){:target="_blank"}
