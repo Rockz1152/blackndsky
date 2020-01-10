@@ -123,16 +123,20 @@ dism /online /cleanup-image /StartComponentCleanup
 - Update software with [Ninite](https://ninite.com/){:target="_blank"}
 - Check Windows system files, *[More information](https://support.microsoft.com/en-us/help/4026529/windows-10-using-system-file-checker){:target="_blank"}*
 ```
-dism /online /cleanup-image /StartComponentCleanup
+Dism /Online /Cleanup-Image /StartComponentCleanup
 ```
 ```
-dism /online /cleanup-image /RestoreHealth
+Dism /Online /Cleanup-Image /RestoreHealth
 ```
 ```
-dism /online /cleanup-image /ScanHealth
+Dism /Online /Cleanup-Image /ScanHealth
 ```
 ```
 sfc /scannow
+```
+One line command:
+```nowrap
+Dism /Online /Cleanup-Image /StartComponentCleanup;Dism /Online /Cleanup-Image /RestoreHealth;Dism /Online /Cleanup-Image /ScanHealth;sfc /scannow
 ```
 - Run disk cleanup on system files
 - Optimize Drives
