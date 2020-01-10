@@ -112,7 +112,7 @@ Get-Scheduledtask 'Microsoft Compatibility Appraiser','Consolidator','UsbCeip','
 - Run Disk Cleanup with "**Clean up system files**"  
 If "**Windows Update Cleanup**" was not available in Disk Cleanup, run it manually with:
 ```
-dism /online /cleanup-image /StartComponentCleanup
+Dism /Online /Cleanup-Image /StartComponentCleanup
 ```
 - Optimize drives
 - Reboot system
@@ -134,7 +134,7 @@ Dism /Online /Cleanup-Image /ScanHealth
 ```
 sfc /scannow
 ```
-One line command:
+Or optionally, run as one command:
 ```nowrap
 Dism /Online /Cleanup-Image /StartComponentCleanup;Dism /Online /Cleanup-Image /RestoreHealth;Dism /Online /Cleanup-Image /ScanHealth;sfc /scannow
 ```
