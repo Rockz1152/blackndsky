@@ -134,6 +134,10 @@ Dism /Online /Cleanup-Image /ScanHealth
 ```
 sfc /scannow
 ```
+Or optionally, run as one command:
+```nowrap
+Dism /Online /Cleanup-Image /StartComponentCleanup;Dism /Online /Cleanup-Image /RestoreHealth;Dism /Online /Cleanup-Image /ScanHealth;sfc /scannow
+```
 - Run disk cleanup on system files
 - Optimize Drives
 - Reboot system
