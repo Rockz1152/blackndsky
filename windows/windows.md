@@ -24,16 +24,16 @@ Disable-ComputerRestore "C:"
 ```
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Remote Assistance" /v "fAllowToGetHelp" /t REG_DWORD /d 0 /f
 ```
-- Set power profile to High Perf. **--** **Optional**, **Desktop** only
+- Set power profile to High Perf. **--** **Optional**, **Desktop only**
 ```
 powercfg -SETACTIVE 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c
 ```
-- Set hard disk sleep to never **--** **Desktop** only
+- Set hard disk sleep to never **--** **Desktop only**
 ```
 powercfg -change -disk-timeout-ac 0
 powercfg -change -disk-timeout-dc 0
 ```
-- Disable offline files **--** **Pro** only
+- Disable offline files **--** **Pro only**
 ```
 Set-Service -Name "CscService" -StartupType Disabled; Stop-Service -Name "CscService"
 ```
