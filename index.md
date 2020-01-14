@@ -28,8 +28,9 @@ layout: home
 | GPU-Check | [https://www.gpucheck.com/gpu-benchmark-comparison](https://www.gpucheck.com/gpu-benchmark-comparison){:target="_blank"}
 | Passmark | [https://www.videocardbenchmark.net/singleCompare.php](https://www.videocardbenchmark.net/singleCompare.php){:target="_blank"}
 | UserBenchmark | [https://gpu.userbenchmark.com/](https://gpu.userbenchmark.com/){:target="_blank"}
-| **Other**
+| **Display**
 | TestUFO | [https://testufo.com](https://testufo.com/){:target="_blank"}
+| DisplaySpecifications | [https://www.displayspecifications.com/](https://www.displayspecifications.com/){:target="_blank"}
 
 </div>
 <br>
