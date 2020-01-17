@@ -14,6 +14,7 @@ permalink: /windows
 ## Standard Checklist
 - Update Windows Store and Apps
 - Remove unwanted Windows Store apps with **CleanAppsHome** script
+- Remove OneDrive **-- Optional**
 - Install Windows Updates
 - Install drivers and reboot
 - Disable System Protection
@@ -33,7 +34,7 @@ powercfg -SETACTIVE 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c
 powercfg -change -disk-timeout-ac 0
 powercfg -change -disk-timeout-dc 0
 ```
-- Disable offline files **-- Pro only**
+- Disable Offline Files **-- Pro only**
 ```
 Set-Service -Name "CscService" -StartupType Disabled; Stop-Service -Name "CscService"
 ```
@@ -62,7 +63,7 @@ Disable-WindowsErrorReporting
 ```
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Power" /v "HiberbootEnabled" /t REG_DWORD /d 0 /f
 ```
-- Disable hibernation file
+- Disable hibernation file **-- Desktop only**
 ```
 powercfg -h off
 ```
@@ -159,7 +160,10 @@ Add or Remove "Require a password on wakeup" in Power Options using Command Prom
 ```
 powercfg -attributes SUB_NONE 0E796BDB-100D-47D6-A2D5-F7D2DAA51F51 -ATTRIB_HIDE
 ```
-- If you want to remove the menu item from Power Options, change `-ATTRIB_HIDE` to `+ATTRIB_HIDE` and run the command again (This is the default setting)
+  - If you want to remove the menu item from Power Options, change `-ATTRIB_HIDE` to `+ATTRIB_HIDE` and run the command again
+- Then navigate to advanced power options to make the change
+  - `Control Panel` **>** `System and Security` **>**`Power Options`
+  - `Change plan settings` (on the active plan) **>** `Change advanced power settings`
 
 ### Remove OneDrive folder from File Explorer
 Removes the "OneDrive" folder icon on the left side of Windows Explorer that can sometimes linger after OneDrive is uninstalled
