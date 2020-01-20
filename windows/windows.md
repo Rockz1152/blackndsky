@@ -136,12 +136,9 @@ Dism /Online /Cleanup-Image /RestoreHealth
 ```
 Dism /Online /Cleanup-Image /ScanHealth
 ```
-```
-sfc /scannow
-```
 Or optionally, run as one command:
 ```nowrap
-sfc /scannow;Dism /Online /Cleanup-Image /StartComponentCleanup;Dism /Online /Cleanup-Image /RestoreHealth;Dism /Online /Cleanup-Image /ScanHealth;sfc /scannow
+sfc /scannow;Dism /Online /Cleanup-Image /StartComponentCleanup;Dism /Online /Cleanup-Image /RestoreHealth;Dism /Online /Cleanup-Image /ScanHealth
 ```
 - Run disk cleanup on system files
 - Optimize Drives
