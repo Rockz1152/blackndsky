@@ -20,6 +20,7 @@ permalink: /windows
 - Disable System Protection
 ```
 Disable-ComputerRestore "C:"
+vssadmin delete shadows /all /quiet
 ```
 - Disable Remote Assistance
 ```
@@ -63,7 +64,7 @@ Disable-WindowsErrorReporting
 ```
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Power" /v "HiberbootEnabled" /t REG_DWORD /d 0 /f
 ```
-- Disable hibernation file **-- Desktop only**
+- Disable hibernation file **-- Recommended**
 ```
 powercfg -h off
 ```
