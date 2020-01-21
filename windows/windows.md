@@ -19,7 +19,7 @@ permalink: /windows
 - Install drivers and reboot
 - Disable System Protection
 ```
-Disable-ComputerRestore "C:";vssadmin delete shadows /all /quiet
+Disable-ComputerRestore "C:"; vssadmin delete shadows /all /quiet
 ```
 - Disable Remote Assistance
 ```
@@ -31,7 +31,7 @@ powercfg -SETACTIVE 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c
 ```
 - Set hard disk sleep to never **-- Desktop only**
 ```
-powercfg -change -disk-timeout-ac 0;powercfg -change -disk-timeout-dc 0
+powercfg -change -disk-timeout-ac 0; powercfg -change -disk-timeout-dc 0
 ```
 - Disable Offline Files **-- Pro only**
 ```
@@ -136,7 +136,7 @@ Dism /Online /Cleanup-Image /ScanHealth
 ```
 Or optionally, run as one command:
 ```nowrap
-sfc /scannow;Dism /Online /Cleanup-Image /StartComponentCleanup;Dism /Online /Cleanup-Image /RestoreHealth;Dism /Online /Cleanup-Image /ScanHealth
+sfc /scannow; Dism /Online /Cleanup-Image /StartComponentCleanup; Dism /Online /Cleanup-Image /RestoreHealth; Dism /Online /Cleanup-Image /ScanHealth
 ```
 - Run disk cleanup on system files
 - Optimize Drives
