@@ -20,8 +20,9 @@ layout: home
 | **Tools**
 | PCPartPicker | [https://pcpartpicker.com](https://pcpartpicker.com/){:target="_blank"}
 | Bottleneck Calculator | [https://pc-builds.com/calculator](https://pc-builds.com/calculator/){:target="_blank"}
+| Build Compare | [https://www.gpucheck.com/build-multi](https://www.gpucheck.com/build-multi){:target="_blank"}
 | **CPU**
-| AnandTech | [https://www.anandtech.com/bench](https://www.anandtech.com/bench/){:target="_blank"}
+| GPU-Check | [https://www.gpucheck.com/cpu-benchmark-comparison](https://www.gpucheck.com/cpu-benchmark-comparison){:target="_blank"}
 | Passmark | [https://www.cpubenchmark.net/singleCompare.php](https://www.cpubenchmark.net/singleCompare.php){:target="_blank"}
 | UserBenchmark | [https://cpu.userbenchmark.com/](https://cpu.userbenchmark.com/){:target="_blank"}
 | **GPU**
