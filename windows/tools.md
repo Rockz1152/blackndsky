@@ -42,6 +42,7 @@ Direct downloads available from [Dropbox](https://www.dropbox.com/sh/4lgb3t1pr7n
 | [Portable WinCD Emu](https://github.com/sysprogs/WinCDEmu/releases/){:target="_blank"} | Easily mount .iso and other file types without using the built-in Windows utility
 | [Prime 95](https://www.techpowerup.com/download/prime95/){:target="_blank"} | Stress test the CPU
 | [Process Explorer](https://docs.microsoft.com/en-us/sysinternals/downloads/process-explorer){:target="_blank"} | Displays detailed information about current running processes
+| [ProduKey](http://nirsoft.net/utils/product_cd_key_viewer.html#DownloadLinks){:target="_blank"} | A small utility that displays the ProductID and the CD-Key of many Microsoft products. **May give an AV warning*
 | [Recuva Portable](https://www.dropbox.com/s/cee3c10mp6ew6dn/RecuvaPortable.zip?dl=1){:target="_blank"} | Recover deleted files
 | [Revo Uninstaller Portable](https://portableapps.com/apps/utilities/revo_uninstaller_portable){:target="_blank"} | Helps uninstall programs and cleanup remaining files, also helps remove programs with broken uninstallers
 | [Rufus Portable](https://rufus.ie/){:target="_blank"} | Tool for writing .iso and .img files to USB drives
