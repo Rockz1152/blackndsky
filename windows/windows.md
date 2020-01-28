@@ -118,6 +118,7 @@ If "**Windows Update Cleanup**" was not available in Disk Cleanup, run it manual
 Dism /Online /Cleanup-Image /StartComponentCleanup
 ```
 - Optimize drives
+- Turn off telemetry with [O&O Shutup 10](https://www.oo-software.com/en/shutup10){:target="_blank"}
 - Reboot system
 
 ## Maintenance
