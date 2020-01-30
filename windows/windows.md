@@ -165,8 +165,11 @@ powercfg -attributes SUB_NONE 0E796BDB-100D-47D6-A2D5-F7D2DAA51F51 -ATTRIB_HIDE
 ```
   - If you want to remove the menu item from Power Options, change `-ATTRIB_HIDE` to `+ATTRIB_HIDE` and run the command again
 - Then navigate to advanced power options to make the change
-  - `Control Panel` **>** `System and Security` **>**`Power Options`
+  - `Start Button` **>** `Windows System` **>** `Control Panel`
+  - `System and Security` **>**`Power Options`
   - `Change plan settings` (on the active plan) **>** `Change advanced power settings`
+  - Click `Change settings that are currently unavailable`
+  - Change the setting for `Require a password on wakeup`
 
 ### Remove OneDrive folder from File Explorer
 Removes the "OneDrive" folder icon on the left side of Windows Explorer that can sometimes linger after OneDrive is uninstalled
