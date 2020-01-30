@@ -60,6 +60,8 @@ Open Handbrake and cancel source selection
 - Alternative download from Dropbox [libdvdcss-2-64Bit.zip](https://www.dropbox.com/s/9qfq7zzh9nscjqm/libdvdcss-2-64Bit.zip?dl=1)
 - Install to: `C:\Program Files\HandBrake`
 
+_*Please note this .dll will need to be reinstalled after Handbrake updates on Windows systems_
+
 **Debian Linux**
 
 Install from videolan
