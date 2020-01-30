@@ -11,8 +11,8 @@ Direct downloads available from [Dropbox](https://www.dropbox.com/sh/4lgb3t1pr7n
 
 ### Hardware
 
-| Program                             | Description
-| ==================================================
+| Program | Description
+| ============== | ====
 | [CPU-Z](https://www.cpuid.com/softwares/cpu-z.html){:target="_blank"} | Displays detailed information about the computer's CPU, chipset, and memory
 | [GPU-Z](https://www.techpowerup.com/download/techpowerup-gpu-z/){:target="_blank"} | Display detailed information on the current graphics card, it's driver and sensor data
 | [Hardware Monitor](https://www.cpuid.com/softwares/hwmonitor.html){:target="_blank"} | View all sensor data possible on the current system, includes CPU, GPU, motherboard and hard disks
@@ -22,8 +22,8 @@ Direct downloads available from [Dropbox](https://www.dropbox.com/sh/4lgb3t1pr7n
 
 ### Software
 
-| Program                             | Description
-| ==================================================
+| Program | Description
+| ============== | ====
 | [7-Zip](https://www.7-zip.org/download.html){:target="_blank"} | The 7-Zip download page
 | [7-Zip Portable](https://portableapps.com/apps/utilities/7-zip_portable){:target="_blank"} | Unpacks 7-Zip, can be used to extract all tools if built-in uncompress not available
 | [Autoruns](https://docs.microsoft.com/en-us/sysinternals/downloads/autoruns#download){:target="_blank"} | Easily see all programs on startup and many other locations
@@ -42,7 +42,7 @@ Direct downloads available from [Dropbox](https://www.dropbox.com/sh/4lgb3t1pr7n
 | [Portable WinCD Emu](https://github.com/sysprogs/WinCDEmu/releases/){:target="_blank"} | Easily mount .iso and other file types without using the built-in Windows utility
 | [Prime 95](https://www.techpowerup.com/download/prime95/){:target="_blank"} | Stress test the CPU
 | [Process Explorer](https://docs.microsoft.com/en-us/sysinternals/downloads/process-explorer){:target="_blank"} | Displays detailed information about current running processes
-| [ProduKey](http://nirsoft.net/utils/product_cd_key_viewer.html#DownloadLinks){:target="_blank"} | A small utility that displays the ProductID and the CD-Key of many Microsoft products. **May give an AV warning*
+| [ProduKey](http://nirsoft.net/utils/product_cd_key_viewer.html#DownloadLinks){:target="_blank"} | A small utility that displays the ProductID and the CD-Key of many Microsoft products. _*May give an AV warning_
 | [Recuva Portable](https://www.dropbox.com/s/cee3c10mp6ew6dn/RecuvaPortable.zip?dl=1){:target="_blank"} | Recover deleted files
 | [Revo Uninstaller Portable](https://portableapps.com/apps/utilities/revo_uninstaller_portable){:target="_blank"} | Helps uninstall programs and cleanup remaining files, also helps remove programs with broken uninstallers
 | [Rufus Portable](https://rufus.ie/){:target="_blank"} | Tool for writing .iso and .img files to USB drives
