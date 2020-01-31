@@ -18,7 +18,7 @@ Direct downloads available from [Dropbox](https://www.dropbox.com/sh/4lgb3t1pr7n
 | [Hardware Monitor](https://www.cpuid.com/softwares/hwmonitor.html){:target="_blank"} | View all sensor data possible on the current system, includes CPU, GPU, motherboard and hard disks
 | [OCCT](https://www.ocbase.com/){:target="_blank"} | Portable CPU and GPU stress testing tool. Useful running with HardwareMonitor
 | [MemTest86+](https://www.memtest.org/#downiso){:target="_blank"} | Free memory testing utility, choose "Auto-installer for USB Key (Win 9x/2k/xp/7)" on the download page
-| [Speccy Portable](https://www.dropbox.com/s/hfezziurmf8y2kk/SpeccyPortable.zip?dl=1){:target="_blank"} | Display detailed information on the current system hardware, including manufacturer, hardware model SKUs
+| [Speccy Portable](https://www.dropbox.com/s/hfezziurmf8y2kk/SpeccyPortable-1.32.zip?dl=1){:target="_blank"} | Display detailed information on the current system hardware, including manufacturer, hardware model SKUs
 
 ### Software
 
@@ -31,7 +31,7 @@ Direct downloads available from [Dropbox](https://www.dropbox.com/sh/4lgb3t1pr7n
 | [BlueScreenView](https://www.nirsoft.net/utils/blue_screen_view.html#DownloadLinks){:target="_blank"} | Analyze minidump files from bluescreens to help diagnose issues
 | [CCleaner Portable](https://www.ccleaner.com/ccleaner/builds){:target="_blank"} | Remove junk files, reg cleaner, uninstall assist, great tool
 | [CrystalDiskMark Portable](https://portableapps.com/apps/utilities/crystaldiskmark_portable){:target="_blank"} | Benchmark disk read and write speeds
-| [Defraggler Portable](https://www.dropbox.com/s/l50b4c8eu1ko5b8/DefragglerPortable.zip?dl=1){:target="_blank"} | Defragment very full hard disks, use on non SSDs only
+| [Defraggler Portable](https://www.dropbox.com/s/l50b4c8eu1ko5b8/DefragglerPortable-2.2.2.zip?dl=1){:target="_blank"} | Defragment very full hard disks, use on non SSDs only
 | [DesktopOK](https://www.softwareok.com/?Download=desktopok){:target="_blank"} | Utility to remember the location of desktop icons and restore their location if they get moved
 | [Driver Store Explorer](https://github.com/lostindark/DriverStoreExplorer/releases){:target="_blank"} | View the Windows driver store and remove old and unneeded drivers
 | [Icon Cache Reset](https://www.dropbox.com/s/nnrpppf3qjrv933/IconCacheReset.zip?dl=1){:target="_blank"} | Small scripts to use if icons look invalid or don't display properly - Tested on Windows 7
@@ -43,7 +43,7 @@ Direct downloads available from [Dropbox](https://www.dropbox.com/sh/4lgb3t1pr7n
 | [Prime 95](https://www.techpowerup.com/download/prime95/){:target="_blank"} | Stress test the CPU
 | [Process Explorer](https://docs.microsoft.com/en-us/sysinternals/downloads/process-explorer){:target="_blank"} | Displays detailed information about current running processes
 | [ProduKey](http://nirsoft.net/utils/product_cd_key_viewer.html#DownloadLinks){:target="_blank"} | A small utility that displays the ProductID and the CD-Key of many Microsoft products. _*May give an AV warning_
-| [Recuva Portable](https://www.dropbox.com/s/cee3c10mp6ew6dn/RecuvaPortable.zip?dl=1){:target="_blank"} | Recover deleted files
+| [Recuva Portable](https://www.dropbox.com/s/cee3c10mp6ew6dn/RecuvaPortable-1.53.zip?dl=1){:target="_blank"} | Recover deleted files
 | [Revo Uninstaller Portable](https://portableapps.com/apps/utilities/revo_uninstaller_portable){:target="_blank"} | Helps uninstall programs and cleanup remaining files, also helps remove programs with broken uninstallers
 | [Rufus Portable](https://rufus.ie/){:target="_blank"} | Tool for writing .iso and .img files to USB drives
 | [Snappy Driver Installer Origin](https://www.snappy-driver-installer.org/download/){:target="_blank"} | Snappy Driver Installer Origin - Helps find missing drivers
