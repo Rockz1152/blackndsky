@@ -12,7 +12,7 @@ permalink: /windows
 [CleanAppsHome](https://github.com/Rockz1152/blackndsky/blob/master/_files/CleanAppsHome.zip){:target="_blank"} | [O&O Shutup 10](https://www.oo-software.com/en/shutup10){:target="_blank"} | [Ninite](https://ninite.com/){:target="_blank"} | [Snappy Driver Installer Origin](https://www.snappy-driver-installer.org/download/){:target="_blank"} | [Windows Media Creation Tool](https://www.microsoft.com/en-us/software-download/windows10){:target="_blank"}
 
 ## Standard Checklist
-_\**Open a "Windows Powershell (Admin)" prompt to run commands. Right click the start button, select "Windows Powershell (Admin)"_
+_*Open a "Windows Powershell (Admin)" prompt to run commands. Right click the start button, select "Windows Powershell (Admin)"_
 
 - Update Windows Store and Apps
 - Remove unwanted Windows Store apps with **CleanAppsHome** script
