@@ -15,7 +15,7 @@ permalink: /windows
 _*Open a "Windows Powershell (Admin)" prompt to run commands. Right click the start button, select "Windows Powershell (Admin)"_
 
 - Update Windows Store and Apps
-- Remove unwanted Windows Store apps with **CleanAppsHome** script
+- Remove unwanted Windows Store apps with [CleanAppsHome](https://github.com/Rockz1152/blackndsky/blob/master/_files/CleanAppsHome.zip){:target="_blank"} script
 - Remove OneDrive **-- Optional**
 - Install Windows Updates
 - Install drivers and reboot
