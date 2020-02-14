@@ -118,6 +118,7 @@ Dism /Online /Cleanup-Image /StartComponentCleanup
 ```
 - Optimize drives
 - Turn off telemetry with [O&O Shutup 10](https://www.oo-software.com/en/shutup10){:target="_blank"}
+- Install software with [Ninite](https://ninite.com/){:target="_blank"}
 - Reboot system
 
 ## Maintenance
