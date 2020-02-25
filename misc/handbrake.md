@@ -15,9 +15,9 @@ permalink: /handbrake
 **Linux:** `sudo apt install -y handbrake`
 
 ## Configuration
-Open Handbrake and cancel source selection
+Open Handbrake and cancel the source selection dialogue
 
-`Tools` **>** `Preferences`
+Click `Tools` **>** `Preferences`
 
 **General**
 
