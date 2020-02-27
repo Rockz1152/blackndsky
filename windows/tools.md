@@ -32,6 +32,7 @@ Direct downloads available from [Dropbox](https://www.dropbox.com/sh/4lgb3t1pr7n
 | [BlueScreenView](https://www.nirsoft.net/utils/blue_screen_view.html#DownloadLinks){:target="_blank"} | Analyze minidump files from bluescreens to help diagnose issues
 | [CCleaner Portable](https://www.ccleaner.com/ccleaner/builds){:target="_blank"} | Remove junk files, reg cleaner, uninstall assist, great tool
 | [CrystalDiskMark Portable](https://portableapps.com/apps/utilities/crystaldiskmark_portable){:target="_blank"} | Benchmark disk read and write speeds
+| [Display Driver Uninstaller](https://www.guru3d.com/files-details/display-driver-uninstaller-download.html){:target="_blank"} | DDU - Tool for fully removing display drivers from Nvidia, AMD, and Intel. Best ran from safe mode
 | [Defraggler Portable](https://www.dropbox.com/s/l50b4c8eu1ko5b8/DefragglerPortable-2.2.2.zip?dl=1){:target="_blank"} | Defragment very full hard disks, use on non SSDs only
 | [DesktopOK](https://www.softwareok.com/?Download=desktopok){:target="_blank"} | Utility to remember the location of desktop icons and restore their location if they get moved
 | [Driver Store Explorer](https://github.com/lostindark/DriverStoreExplorer/releases){:target="_blank"} | View the Windows driver store and remove old and unneeded drivers
