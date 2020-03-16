@@ -94,19 +94,16 @@ reg add "HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Ad
 reg add "HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer" /v "ShowFrequent" /t REG_DWORD /d 0 /f
 reg add "HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer" /v "ShowRecent" /t REG_DWORD /d 0 /f
 ```
-- Remove "**Share**" from right click context menu
+- Remove "**Share**" and "**Cast to Device**" from right click context menu
 ```
 reg delete HKEY_CLASSES_ROOT\*\shellex\ContextMenuHandlers\ModernSharing /f
-```
-- Remove "**Cast to Device**" from right click context menu
-```
 reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Shell Extensions\Blocked" /v "{7AD84985-87B4-4a16-BE58-8B72A5B390F7}" /t REG_SZ /f
 Stop-Process -ProcessName explorer
 ```
 - Hide Action Center icon in [Taskbar Settings](ms-settings:taskbar) **-- Optional**
 - Set the correct Time Zone **--** Or you can choose from "**Adjust date/time**"
 ```
-Set-TimeZone -Id "Eastern Standard Time";
+Set-TimeZone -Id "Eastern Standard Time"
 ```
 ```
 Set-TimeZone -Id "Central Standard Time"
