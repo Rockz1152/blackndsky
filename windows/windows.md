@@ -19,6 +19,7 @@ _*Open a "Windows Powershell (Admin)" prompt to run commands. Right click the st
 - Remove OneDrive **-- Optional**
 - Install Windows Updates
 - Install drivers and reboot
+- Install software with [Ninite](https://ninite.com/){:target="_blank"}
 - Disable System Protection
 ```
 Disable-ComputerRestore "C:"; vssadmin delete shadows /all /quiet
@@ -93,10 +94,19 @@ reg add "HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Ad
 reg add "HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer" /v "ShowFrequent" /t REG_DWORD /d 0 /f
 reg add "HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer" /v "ShowRecent" /t REG_DWORD /d 0 /f
 ```
-- Hide Action Center icon **-- Optional**
+- Remove "**Share**" from right click context menu
+```
+reg delete HKEY_CLASSES_ROOT\*\shellex\ContextMenuHandlers\ModernSharing /f
+```
+- Remove "**Cast to Device**" from right click context menu
+```
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Shell Extensions\Blocked" /v "{7AD84985-87B4-4a16-BE58-8B72A5B390F7}" /t REG_SZ /f
+Stop-Process -ProcessName explorer
+```
+- Hide Action Center icon in [Taskbar Settings](ms-settings:taskbar) **-- Optional**
 - Set the correct Time Zone **--** Or you can choose from "**Adjust date/time**"
 ```
-Set-TimeZone -Id "Eastern Standard Time"
+Set-TimeZone -Id "Eastern Standard Time";
 ```
 ```
 Set-TimeZone -Id "Central Standard Time"
@@ -107,53 +117,40 @@ Set-TimeZone -Id "Mountain Standard Time"
 ```
 Set-TimeZone -Id "Pacific Standard Time"
 ```
+- Sync internet time
+```
+W32tm /resync /force
+```
 - Disable unneeded tasks
 ```
 Get-Scheduledtask 'Microsoft Compatibility Appraiser','Consolidator','UsbCeip','Microsoft-Windows-DiskDiagnosticDataCollector','QueueReporting','XblGameSaveTask' -erroraction silentlycontinue | Disable-scheduledtask
 ```
-- Run Disk Cleanup with "**Clean up system files**"  
-If "**Windows Update Cleanup**" was not available in Disk Cleanup, run it manually with:
+- Cleanup Windows components
 ```
 Dism /Online /Cleanup-Image /StartComponentCleanup
 ```
+- Run Disk Cleanup with "**Clean up system files**"
 - Optimize drives
 - Turn off telemetry with [O&O Shutup 10](https://www.oo-software.com/en/shutup10){:target="_blank"}
-- Install software with [Ninite](https://ninite.com/){:target="_blank"}
-- Reboot system
-
-## Maintenance
-- Run Windows Update
-- Update Windows Store Apps
-- Update software with [Ninite](https://ninite.com/){:target="_blank"}
-- Check Windows system files, *[More information](https://support.microsoft.com/en-us/help/4026529/windows-10-using-system-file-checker){:target="_blank"}*
-```
-sfc /scannow
-```
-```
-Dism /Online /Cleanup-Image /StartComponentCleanup
-```
-```
-Dism /Online /Cleanup-Image /RestoreHealth
-```
-```
-Dism /Online /Cleanup-Image /ScanHealth
-```
-Or optionally, run as one command:
-```nowrap
-sfc /scannow; Dism /Online /Cleanup-Image /StartComponentCleanup; Dism /Online /Cleanup-Image /RestoreHealth; Dism /Online /Cleanup-Image /ScanHealth
-```
-- Run disk cleanup on system files
-- Optimize Drives
 - Reboot system
 
 ## Optional Tweaks
 
-### Remove "**Share**" on right click context menu
-- Open an elevated command prompt
-- Run the following command:
-```
-reg delete HKEY_CLASSES_ROOT\*\shellex\ContextMenuHandlers\ModernSharing /f
-```
+### Disable Sticky Keys shortcuts
+Disable the shortcut keys that can interrupt gaming
+
+- Goto [Keyboard settings](ms-settings:easeofaccess-keyboard) in the Ease of Access page of Settings
+- Uncheck "Allow the shortcut key to start..." for:
+  - Sticky Keys
+  - Toggle Keys
+  - Filter Keys
+
+### Disable Focus Assist notifications
+Disable pointless popups from Focus Assist
+
+- Goto [Focus Assist](ms-settings:quiethours) in System Settings
+- Toggle off all "Automatic rules"
+- Uncheck "Show me a summary..." at the bottom
 
 ### Disable password when resuming from sleep
 Add or Remove "Require a password on wakeup" in Power Options using Command Prompt
@@ -185,3 +182,28 @@ You can't actually disable Windows Update, but you can trick it into not downloa
   - If Wi-Fi `Manage known networks`
   - Select Wi-Fi network and then click `Properties`
 - Turn on `Set as metered connection`
+
+## Maintenance
+- Run Windows Update
+- Update Windows Store Apps
+- Update software with [Ninite](https://ninite.com/){:target="_blank"}
+- Check Windows system files, *[More information](https://support.microsoft.com/en-us/help/4026529/windows-10-using-system-file-checker){:target="_blank"}*
+```
+sfc /scannow
+```
+```
+Dism /Online /Cleanup-Image /StartComponentCleanup
+```
+```
+Dism /Online /Cleanup-Image /RestoreHealth
+```
+```
+Dism /Online /Cleanup-Image /ScanHealth
+```
+Or optionally, run as one command:
+```nowrap
+sfc /scannow; Dism /Online /Cleanup-Image /StartComponentCleanup; Dism /Online /Cleanup-Image /RestoreHealth; Dism /Online /Cleanup-Image /ScanHealth
+```
+- Run disk cleanup on system files
+- Optimize Drives
+- Reboot system
