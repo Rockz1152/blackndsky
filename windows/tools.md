@@ -53,7 +53,7 @@ Direct downloads available from [Dropbox](https://www.dropbox.com/sh/4lgb3t1pr7n
 | [ShellMenu View](https://www.nirsoft.net/utils/shell_menu_view.html){:target="_blank"} | Display and edit right click context menu for explorer
 | [Sysinternals Suite](https://docs.microsoft.com/en-us/sysinternals/downloads/sysinternals-suite){:target="_blank"} | A collection of various programs many administrators utilize
 | [TreeSizeFree Portable](https://portableapps.com/apps/utilities/treesize-free-portable){:target="_blank"} | Analyzes disk usage by directory and displays as a chart
-| [USBdeview](https://www.nirsoft.net/utils/usb_devices_view.html#DownloadLinks){:target="_blank"} | View all installed USB devices in the registry, includes devices no longer plugged in!
+| [USBDeview](https://www.nirsoft.net/utils/usb_devices_view.html#DownloadLinks){:target="_blank"} | View all installed USB devices in the registry, includes devices no longer plugged in!
 | [WebBrowserPassView](https://www.nirsoft.net/utils/web_browser_password.html){:target="_blank"} | Password recovery tool that reveals passwords stored in web browser located on the system
 | [WinDirStat Portable](https://portableapps.com/apps/utilities/windirstat_portable){:target="_blank"} | A very popular disk usage analysis program, displays all files as a large relational graphic
 | [WizTree](https://antibody-software.com/web/software/software/wiztree-finds-the-files-and-folders-using-the-most-disk-space-on-your-hard-drive/){:target="_blank"} | A small but very fast disk analyzer, useful for systems with millions of files
