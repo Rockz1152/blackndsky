@@ -14,10 +14,10 @@ permalink: /windows
 ## Standard Checklist
 _*Open a "Windows Powershell (Admin)" prompt to run commands. Right click the start button, select "Windows Powershell (Admin)"_
 
-- Update Windows Store and Apps
 - Remove unwanted Windows Store apps with [CleanAppsHome](https://github.com/Rockz1152/blackndsky/blob/master/_files/CleanAppsHome.zip){:target="_blank"} script
+- Update Apps in [Microsoft Store](ms-windows-store://downloadsandupdates)
 - Remove OneDrive **-- Optional**
-- Install Windows Updates
+- Install [Windows Updates](ms-settings:windowsupdate)
 - Install drivers and reboot
 - Install software with [Ninite](https://ninite.com/){:target="_blank"}
 - Disable System Protection
@@ -114,7 +114,7 @@ Set-TimeZone -Id "Mountain Standard Time"
 ```
 Set-TimeZone -Id "Pacific Standard Time"
 ```
-- Sync internet time
+- Sync from internet time
 ```
 W32tm /resync /force
 ```
@@ -181,8 +181,8 @@ You can't actually disable Windows Update, but you can trick it into not downloa
 - Turn on `Set as metered connection`
 
 ## Maintenance
-- Run Windows Update
-- Update Windows Store Apps
+- Install [Windows Updates](ms-settings:windowsupdate)
+- Update Apps in [Microsoft Store](ms-windows-store://downloadsandupdates)
 - Update software with [Ninite](https://ninite.com/){:target="_blank"}
 - Check Windows system files, *[More information](https://support.microsoft.com/en-us/help/4026529/windows-10-using-system-file-checker){:target="_blank"}*
 ```
@@ -201,6 +201,6 @@ Or optionally, run as one command:
 ```nowrap
 sfc /scannow; Dism /Online /Cleanup-Image /StartComponentCleanup; Dism /Online /Cleanup-Image /RestoreHealth; Dism /Online /Cleanup-Image /ScanHealth
 ```
-- Run disk cleanup on system files
+- Run Disk Cleanup with "**Clean up system files**"
 - Optimize Drives
 - Reboot system
