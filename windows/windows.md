@@ -21,6 +21,7 @@ _*Open a "Windows Powershell (Admin)" prompt to run commands. Right click the st
 - Install drivers and reboot
 - Install software with [Ninite](https://ninite.com/){:target="_blank"}
 - Set a default Web browser in [Default apps](ms-settings:defaultapps)
+- Hide Action Center icon in [Taskbar Settings](ms-settings:taskbar) **-- Optional**
 - Disable System Protection
 ```
 Disable-ComputerRestore "C:"; vssadmin delete shadows /all /quiet
@@ -101,7 +102,6 @@ reg delete HKEY_CLASSES_ROOT\*\shellex\ContextMenuHandlers\ModernSharing /f
 reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Shell Extensions\Blocked" /v "{7AD84985-87B4-4a16-BE58-8B72A5B390F7}" /t REG_SZ /f
 Stop-Process -ProcessName explorer
 ```
-- Hide Action Center icon in [Taskbar Settings](ms-settings:taskbar) **-- Optional**
 - Set the correct Time Zone **--** Or you can choose from "**Adjust date/time**"
 ```
 Set-TimeZone -Id "Eastern Standard Time"
@@ -134,15 +134,6 @@ Dism /Online /Cleanup-Image /StartComponentCleanup
 
 ## Optional Tweaks
 
-### Disable Sticky Keys shortcuts
-Disable the shortcut keys that can interrupt gaming
-
-- Goto [Keyboard settings](ms-settings:easeofaccess-keyboard) in the Ease of Access page of Settings
-- Uncheck "Allow the shortcut key to start..." for:
-  - Sticky Keys
-  - Toggle Keys
-  - Filter Keys
-
 ### Disable Focus Assist notifications
 Disable pointless popups from Focus Assist
 
@@ -165,6 +156,15 @@ powercfg -attributes SUB_NONE 0E796BDB-100D-47D6-A2D5-F7D2DAA51F51 -ATTRIB_HIDE
   - `Change plan settings` (on the active plan) **>** `Change advanced power settings`
   - Click `Change settings that are currently unavailable`
   - Change the setting for `Require a password on wakeup`
+
+### Disable Sticky Keys shortcuts
+Disable the shortcut keys that can interrupt gaming
+
+- Goto [Keyboard settings](ms-settings:easeofaccess-keyboard) in the Ease of Access page of Settings
+- Uncheck "Allow the shortcut key to start..." for:
+  - Sticky Keys
+  - Toggle Keys
+  - Filter Keys
 
 ### Remove OneDrive folder from File Explorer
 Removes the "OneDrive" folder icon on the left side of Windows Explorer that can sometimes linger after OneDrive is uninstalled
