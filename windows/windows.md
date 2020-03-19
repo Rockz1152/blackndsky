@@ -20,6 +20,7 @@ _*Open a "Windows Powershell (Admin)" prompt to run commands. Right click the st
 - Install [Windows Updates](ms-settings:windowsupdate)
 - Install drivers and reboot
 - Install software with [Ninite](https://ninite.com/){:target="_blank"}
+- Set a default Web browser in [Default apps](ms-settings:defaultapps)
 - Disable System Protection
 ```
 Disable-ComputerRestore "C:"; vssadmin delete shadows /all /quiet
@@ -116,7 +117,7 @@ Set-TimeZone -Id "Pacific Standard Time"
 ```
 - Sync from internet time
 ```
-W32tm /resync /force
+Start-Service -Name "W32Time"; W32tm /resync /force | Out-Null
 ```
 - Disable unneeded tasks
 ```
