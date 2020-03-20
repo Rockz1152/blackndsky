@@ -21,7 +21,7 @@ _*Open a "Windows Powershell (Admin)" prompt to run commands. Right click the st
 - Install drivers and reboot
 - Install software with [Ninite](https://ninite.com/){:target="_blank"}
 - Set a default Web browser in [Default apps](ms-settings:defaultapps)
-- Hide Action Center icon in [Taskbar Settings](ms-settings:taskbar) **-- Optional**
+- Turn off telemetry with [O&O Shutup 10](https://www.oo-software.com/en/shutup10){:target="_blank"}
 - Disable System Protection
 ```
 Disable-ComputerRestore "C:"; vssadmin delete shadows /all /quiet
@@ -129,7 +129,7 @@ Dism /Online /Cleanup-Image /StartComponentCleanup
 ```
 - Run Disk Cleanup with "**Clean up system files**"
 - Optimize drives
-- Turn off telemetry with [O&O Shutup 10](https://www.oo-software.com/en/shutup10){:target="_blank"}
+- Hide Action Center icon in [Taskbar Settings](ms-settings:taskbar) **-- Optional**
 - Reboot system
 
 ## Optional Tweaks
