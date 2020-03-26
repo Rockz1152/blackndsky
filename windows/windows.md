@@ -130,16 +130,12 @@ Dism /Online /Cleanup-Image /StartComponentCleanup
 - Run Disk Cleanup with "**Clean up system files**"
 - Optimize drives
 - Hide Action Center icon in [Taskbar Settings](ms-settings:taskbar) **-- Optional**
+- Disable [Focus Assist](ms-settings:quiethours) notifications
+  - Toggle off all "Automatic rules"
+  - Uncheck "Show me a summary..." at the bottom
 - Reboot system
 
 ## Optional Tweaks
-
-### Disable Focus Assist notifications
-Disable pointless popups from Focus Assist
-
-- Goto [Focus Assist](ms-settings:quiethours) in System Settings
-- Toggle off all "Automatic rules"
-- Uncheck "Show me a summary..." at the bottom
 
 ### Disable password when resuming from sleep
 Add or Remove "Require a password on wakeup" in Power Options using Command Prompt
