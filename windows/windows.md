@@ -24,7 +24,7 @@ _*Open a "Windows Powershell (Admin)" prompt to run commands. Right click the st
 - Turn off telemetry with [O&O Shutup 10](https://www.oo-software.com/en/shutup10){:target="_blank"}
 - Disable System Protection
 ```
-Disable-ComputerRestore "C:"; vssadmin delete shadows /all /quiet
+Disable-ComputerRestore "C:"; vssadmin delete shadows /all /quiet | Out-Null
 ```
 - Disable Remote Assistance
 ```
