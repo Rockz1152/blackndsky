@@ -10,7 +10,7 @@ This is my personal site. I use it for quick access to my notes and resources
 [Github Repo](https://github.com/Rockz1152/blackndsky){:target="_blank"}
 
 <br>
-## My Current Rig
+## Current System
 
 ### System
 [https://pcpartpicker.com/list/vbgyq3](https://pcpartpicker.com/list/vbgyq3){:target="_blank"}
