@@ -24,5 +24,5 @@ This is my personal site. I use it for quick access to my notes and resources
 ### Mouse - Razer DeathAdder Essential Mouse
 [https://www.amazon.com/dp/B07F7T8J9P](https://www.amazon.com/dp/B07F7T8J9P){:target="_blank"}
 
-### UPS - CyberPower 1500VA/1000W PFC Sine Wave
+### UPS - CyberPower 1500VA/1000W PFC Sinewave
 [https://www.amazon.com/dp/B00429N19W](https://www.amazon.com/dp/B00429N19W){:target="_blank"}
