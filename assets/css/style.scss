@@ -216,6 +216,27 @@ nav {
   margin: 5px 10px 5px 10px;
 }
 
+.simple-button-small {
+  border: 0px solid #000;
+  background-color: #313539;
+  color: white;
+  cursor: pointer;
+  padding: 5px;
+  min-width: 50px;
+  text-align: left;
+  outline: none;
+  font-size: 14px;
+  text-align: center;
+  box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), 0px 3px 7px rgba(0, 0, 0, 0.7);
+  transition: all 0.2s ease-in-out;
+  display: inline-block;
+  margin: 5px 10px 5px 10px;
+}
+
+.simple-button-small:hover {
+  color: #ffcc00;
+}
+
 /* Hides blue click highlight on mobile */
 html {
   -webkit-tap-highlight-color: rgba(0,0,0,0);

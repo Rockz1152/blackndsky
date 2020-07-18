@@ -11,7 +11,9 @@ permalink: /windows
 :------------: | :------------: | :------------: | :------------: | :------------:
 [CleanAppsHome](https://github.com/Rockz1152/blackndsky/blob/master/_files/CleanAppsHome.zip){:target="_blank"} | [O&O Shutup 10](https://www.oo-software.com/en/shutup10){:target="_blank"} | [Ninite](https://ninite.com/){:target="_blank"} | [Snappy Driver Installer Origin](https://www.snappy-driver-installer.org/download/){:target="_blank"} | [Windows Media Creation Tool](https://www.microsoft.com/en-us/software-download/windows10){:target="_blank"}
 
-## Standard Checklist
+Quicklinks: <a href="#optional" Class="simple-button-small">Optional Tweaks</a><a href="#maint" Class="simple-button-small">Maintenance</a>
+
+## Basic Configuration
 _*Open a "Windows Powershell (Admin)" prompt to run commands. Right click the start button, select "Windows Powershell (Admin)"_
 
 - Remove unwanted Windows Store apps with [CleanAppsHome](https://github.com/Rockz1152/blackndsky/blob/master/_files/CleanAppsHome.zip){:target="_blank"} script
@@ -135,6 +137,7 @@ Dism /Online /Cleanup-Image /StartComponentCleanup
   - Uncheck "Show me a summary..." at the bottom
 - Reboot system
 
+<a name="optional"></a>
 ## Optional Tweaks
 
 ### Disable password when resuming from sleep
@@ -177,6 +180,7 @@ You can't actually disable Windows Update, but you can trick it into not downloa
   - Select Wi-Fi network and then click `Properties`
 - Turn on `Set as metered connection`
 
+<a name="maint"></a>
 ## Maintenance
 - Install [Windows Updates](ms-settings:windowsupdate)
 - Update Apps in [Microsoft Store](ms-windows-store://downloadsandupdates)
