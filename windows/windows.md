@@ -187,9 +187,6 @@ You can't actually disable Windows Update, but you can trick it into not downloa
 - Update software with [Ninite](https://ninite.com/){:target="_blank"}
 - Check Windows system files, *[More information](https://support.microsoft.com/en-us/help/4026529/windows-10-using-system-file-checker){:target="_blank"}*
 ```
-sfc /scannow
-```
-```
 Dism /Online /Cleanup-Image /StartComponentCleanup
 ```
 ```
@@ -198,9 +195,12 @@ Dism /Online /Cleanup-Image /RestoreHealth
 ```
 Dism /Online /Cleanup-Image /ScanHealth
 ```
+```
+sfc /scannow
+```
 Or optionally, run as one command:
 ```nowrap
-sfc /scannow; Dism /Online /Cleanup-Image /StartComponentCleanup; Dism /Online /Cleanup-Image /RestoreHealth; Dism /Online /Cleanup-Image /ScanHealth
+Dism /Online /Cleanup-Image /StartComponentCleanup; Dism /Online /Cleanup-Image /RestoreHealth; Dism /Online /Cleanup-Image /ScanHealth; sfc /scannow
 ```
 - Run Disk Cleanup with "**Clean up system files**"
 - Optimize Drives
