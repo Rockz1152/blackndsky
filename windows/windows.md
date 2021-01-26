@@ -137,6 +137,8 @@ Dism /Online /Cleanup-Image /StartComponentCleanup
   - Uncheck "Show me a summary..." at the bottom
 - Reboot system
 
+----
+
 <a name="optional"></a>
 ## Optional Tweaks
 
@@ -179,6 +181,8 @@ You can't actually disable Windows Update, but you can trick it into not downloa
   - If Wi-Fi `Manage known networks`
   - Select Wi-Fi network and then click `Properties`
 - Turn on `Set as metered connection`
+
+----
 
 <a name="maint"></a>
 ## Maintenance
