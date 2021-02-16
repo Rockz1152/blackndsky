@@ -56,6 +56,6 @@ Direct downloads available from [Dropbox](https://www.dropbox.com/sh/4lgb3t1pr7n
 | [USBDeview](https://www.nirsoft.net/utils/usb_devices_view.html#DownloadLinks){:target="_blank"} | View all installed USB devices in the registry, includes devices no longer plugged in!
 | [WebBrowserPassView](https://www.nirsoft.net/utils/web_browser_password.html){:target="_blank"} | Password recovery tool that reveals passwords stored in web browser located on the system
 | [WinDirStat Portable](https://portableapps.com/apps/utilities/windirstat_portable){:target="_blank"} | A very popular disk usage analysis program, displays all files as a large relational graphic
-| [WizTree](https://antibody-software.com/web/software/software/wiztree-finds-the-files-and-folders-using-the-most-disk-space-on-your-hard-drive/){:target="_blank"} | A small but very fast disk analyzer, useful for systems with millions of files
+| [WizTree](https://wiztreefree.com/download){:target="_blank"} | A small but very fast disk analyzer, useful for systems with millions of files
 
 </div>
