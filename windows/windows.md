@@ -141,6 +141,9 @@ Dism /Online /Cleanup-Image /StartComponentCleanup
 - Disable [Focus Assist](ms-settings:quiethours) notifications
   - Toggle off all "Automatic rules"
   - Uncheck "Show me a summary..." at the bottom
+- Open [Windows Security Center](windowsdefender:) **>** Settings **>** Manage Notifications
+  - Turn off `Get informational notifications`
+  - Turn off `Get account protection notifications`
 - Reboot system
 
 ----
