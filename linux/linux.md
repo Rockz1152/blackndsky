@@ -7,9 +7,12 @@ permalink: /linux
 # <center>Debian Quickstart</center>
 
 ## Download Installer ISO:
-* Debian 9: [https://cdimage.debian.org/cdimage/archive/9.12.0/amd64/iso-cd/debian-9.12.0-amd64-netinst.iso](https://cdimage.debian.org/cdimage/archive/9.12.0/amd64/iso-cd/debian-9.12.0-amd64-netinst.iso)
-* Debian 10: [https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/](https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/){:target="_blank"}
-  - Get the current `debian-10.X.0-amd64-netinst.iso`
+- Debian 10: [https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/](https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/){:target="_blank"}
+- Get the current `debian-10.X.0-amd64-netinst.iso`
+
+  Older releases
+  - Debian 9: https://cdimage.debian.org/cdimage/archive/9.13.0/amd64/iso-cd/debian-9.13.0-amd64-netinst.iso
+  - Debian 8: https://cdimage.debian.org/cdimage/archive/8.11.1/amd64/iso-cd/debian-8.11.1-amd64-netinst.iso
 
 ## Packages
 - Choose only `OpenSSH Server`
