@@ -23,7 +23,7 @@ apt-get -q -y dist-upgrade > /dev/null
 
 # Install software
 echo 'Installing software'
-declare -a packages=('curl' 'nano' 'vim' 'htop' 'ncdu' 'wget' 'zip' 'unzip' 'p7zip-full' 'unrar-free' 'screen' 'less' 'man-db' 'open-vm-tools' 'ntp' 'neofetch')
+declare -a packages=('curl' 'nano' 'vim' 'htop' 'ncdu' 'wget' 'zip' 'unzip' 'p7zip-full' 'unrar-free' 'screen' 'less' 'man-db' 'neofetch' 'open-vm-tools' 'ntp')
 for i in "${packages[@]}"
 do
     if [[ `dpkg-query -W --showformat='${Status}\n' $i 2>/dev/null | grep "install ok installed" | wc -l` == 1 ]]; then
