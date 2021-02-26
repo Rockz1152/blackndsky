@@ -1,6 +1,6 @@
 #!/bin/bash
 # Debian Provisioning script
-# 10-16-19
+# 2-25-21
 
 # OS Check
 if [[ `cat /etc/debian_version 2>/dev/null | grep -E '10.|9.' | wc -l` == 1 ]]; then
@@ -23,7 +23,7 @@ apt-get -q -y dist-upgrade > /dev/null
 
 # Install software
 echo 'Installing software'
-declare -a packages=('curl' 'nano' 'vim' 'htop' 'ncdu' 'wget' 'zip' 'unzip' 'p7zip-full' 'unrar-free' 'screen' 'less' 'man-db' 'open-vm-tools' 'ntp')
+declare -a packages=('curl' 'nano' 'vim' 'htop' 'ncdu' 'wget' 'zip' 'unzip' 'p7zip-full' 'unrar-free' 'screen' 'less' 'man-db' 'open-vm-tools' 'ntp' 'neofetch')
 for i in "${packages[@]}"
 do
     if [[ `dpkg-query -W --showformat='${Status}\n' $i 2>/dev/null | grep "install ok installed" | wc -l` == 1 ]]; then
