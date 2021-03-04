@@ -48,7 +48,7 @@ curl -sL {{site.url}}{{page.url}}/Debian.txt | sudo bash && exec bash
 ```
 - Remove open-vm-tools if the install is bare metal
 ```
-sudo apt autoremove open-vm-tools -y
+sudo apt autoremove --purge -y open-vm-tools
 ```
 - A reboot is recommended after provisioning but not required `sudo reboot now`
 
