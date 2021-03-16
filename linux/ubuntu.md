@@ -56,7 +56,7 @@ sudo chmod -x /etc/update-motd.d/*
 ```
 - Remove unneeded server packages
 ```
-sudo apt purge -y cloud-init multipath-tools snapd landscape-common
+sudo apt autoremove --purge -y cloud-init multipath-tools snapd landscape-common
 sudo rm -rf /etc/cloud
 ```
 - Install additional software packages
