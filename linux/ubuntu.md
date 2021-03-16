@@ -44,7 +44,7 @@ chmod u+x $HOME/upgrade-system.sh
 ## Software Packages
 - All tasks in one command, this will take a few minutes to run
 ```
-sudo sh -c "sed -i 's/^ENABLED=.*/ENABLED=0/' /etc/default/motd-news; chmod -x /etc/update-motd.d/*; apt purge -y cloud-init multipath-tools snapd landscape-common; rm -rf /etc/cloud; apt autoremove --purge -y; apt update; apt install -y ncdu zip unzip p7zip-full unrar-free neofetch; apt full-upgrade -y; reboot"
+sudo sh -c "sed -i 's/^ENABLED=.*/ENABLED=0/' /etc/default/motd-news; chmod -x /etc/update-motd.d/*; apt autoremove --purge -y cloud-init multipath-tools snapd landscape-common; rm -rf /etc/cloud; apt update; apt install -y ncdu zip unzip p7zip-full unrar-free neofetch; apt full-upgrade -y; reboot"
 ```
 - See the Command Breakdown below for more information, otherwise move on to setting timezone data
 
@@ -58,10 +58,6 @@ sudo chmod -x /etc/update-motd.d/*
 ```
 sudo apt purge -y cloud-init multipath-tools snapd landscape-common
 sudo rm -rf /etc/cloud
-```
-- Remove leftover packages
-```
-sudo apt autoremove --purge -y
 ```
 - Install additional software packages
 ```
