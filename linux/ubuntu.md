@@ -35,8 +35,8 @@ sudo apt autoremove --purge -y open-vm-tools
 ### Updates
 - Make a script that can be launched as `~/upgrade-system.sh` to install system updates
 ```
-echo 'sudo sh -c "apt update;apt upgrade -y;apt autoremove --purge -y;"' > $HOME/upgrade-system.sh
-chmod u+x $HOME/upgrade-system.sh
+echo 'sudo sh -c "apt update;apt upgrade -y;apt autoremove --purge -y;"' > ~/upgrade-system.sh
+chmod u+x ~/upgrade-system.sh
 ```
 
 ----
