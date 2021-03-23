@@ -18,6 +18,9 @@ Direct downloads available from [Dropbox](https://www.dropbox.com/sh/4lgb3t1pr7n
 | [GPU-Z](https://www.techpowerup.com/download/techpowerup-gpu-z/){:target="_blank"} | Display detailed information on the current graphics card, it's driver and sensor data
 | [Hardware Monitor](https://www.cpuid.com/softwares/hwmonitor.html){:target="_blank"} | View all sensor data possible on the current system, includes CPU, GPU, motherboard and hard disks
 | [OCCT](https://www.ocbase.com/){:target="_blank"} | Portable CPU and GPU stress testing tool. Useful running with HardwareMonitor
+| [Prime 95](https://www.techpowerup.com/download/prime95/){:target="_blank"} | Stress test the CPU
+| [FurMark](https://www.geeks3d.com/furmark/downloads/){:target="_blank"} | Lightweight but very intensive graphics card / GPU stress test program
+| [CrystalDiskMark Portable](https://portableapps.com/apps/utilities/crystaldiskmark_portable){:target="_blank"} | Benchmark disk read and write speeds
 | [MemTest86+](https://www.memtest.org/#downiso){:target="_blank"} | Free memory testing utility, choose "Auto-installer for USB Key (Win 9x/2k/xp/7)" on the download page
 | [Speccy Portable](https://www.dropbox.com/s/hfezziurmf8y2kk/SpeccyPortable-1.32.zip?dl=1){:target="_blank"} | Display detailed information on the current system hardware, including manufacturer, hardware model SKUs
 
@@ -31,7 +34,6 @@ Direct downloads available from [Dropbox](https://www.dropbox.com/sh/4lgb3t1pr7n
 | [Balena Etcher](https://www.balena.io/etcher/){:target="_blank"} | Tool for writing .iso and other image files to USB drives
 | [BlueScreenView](https://www.nirsoft.net/utils/blue_screen_view.html#DownloadLinks){:target="_blank"} | Analyze minidump files from bluescreens to help diagnose issues
 | [CCleaner Portable](https://www.ccleaner.com/ccleaner/builds){:target="_blank"} | Remove junk files, reg cleaner, uninstall assist, great tool
-| [CrystalDiskMark Portable](https://portableapps.com/apps/utilities/crystaldiskmark_portable){:target="_blank"} | Benchmark disk read and write speeds
 | [Display Driver Uninstaller](https://www.guru3d.com/files-details/display-driver-uninstaller-download.html){:target="_blank"} | DDU - Tool for fully removing display drivers from Nvidia, AMD, and Intel. Best ran from safe mode
 | [Defraggler Portable](https://www.dropbox.com/s/l50b4c8eu1ko5b8/DefragglerPortable-2.2.2.zip?dl=1){:target="_blank"} | Defragment very full hard disks, use on non SSDs only
 | [DesktopOK](https://www.softwareok.com/?Download=desktopok){:target="_blank"} | Utility to remember the location of desktop icons and restore their location if they get moved
@@ -42,7 +44,6 @@ Direct downloads available from [Dropbox](https://www.dropbox.com/sh/4lgb3t1pr7n
 | [HirensBootCD 15.2 ISO](https://www.hirensbootcd.org/old-versions/){:target="_blank"} | The original Hirens tool, see page for full list of software. Use Rufus Portable to write to USB drive
 | [O&O Shutup 10](https://www.oo-software.com/en/shutup10){:target="_blank"} | Helps turn off telemetry and other privacy settings in Windows 10
 | [Portable WinCD Emu](https://github.com/sysprogs/WinCDEmu/releases/){:target="_blank"} | Easily mount .iso and other file types without using the built-in Windows utility
-| [Prime 95](https://www.techpowerup.com/download/prime95/){:target="_blank"} | Stress test the CPU
 | [Process Explorer](https://docs.microsoft.com/en-us/sysinternals/downloads/process-explorer){:target="_blank"} | Displays detailed information about current running processes
 | [ProduKey](http://nirsoft.net/utils/product_cd_key_viewer.html#DownloadLinks){:target="_blank"} | A small utility that displays the ProductID and the CD-Key of many Microsoft products. _*May give an AV warning_
 | [Recuva Portable](https://www.dropbox.com/s/cee3c10mp6ew6dn/RecuvaPortable-1.53.zip?dl=1){:target="_blank"} | Recover deleted files
