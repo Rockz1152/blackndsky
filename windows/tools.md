@@ -23,16 +23,16 @@ Direct downloads available from [Dropbox](https://www.dropbox.com/sh/4lgb3t1pr7n
 | [MemTest86+](https://www.memtest.org/#downiso){:target="_blank"} | Free memory testing utility, choose "Auto-installer for USB Key (Win 9x/2k/xp/7)" on the download page
 | [Speccy Portable](https://www.dropbox.com/s/hfezziurmf8y2kk/SpeccyPortable-1.32.zip?dl=1){:target="_blank"} | Display detailed information on the current system hardware, including manufacturer, hardware model SKUs
 
-### .ISO Handling Programs
+### .ISO Programs
 
 | Program | Description
 | ============== | ====
-| [Balena Etcher](https://www.balena.io/etcher/){:target="_blank"} | Tool for writing .iso and other image files to USB drives
+| [Balena Etcher](https://www.balena.io/etcher/){:target="_blank"} | Tool for writing .ISO and other image files to USB drives
 | [HirensBootCD ISO](https://www.hirensbootcd.org/download/){:target="_blank"} | The legendary PE boot tool updated with UEFI for modern systems, see page for full list of software
 | [HirensBootCD USB Tool](https://www.hirensbootcd.org/usb-booting/){:target="_blank"} | The recommended tool for creating a bootable USB stick for HirensBootCD
 | [HirensBootCD 15.2 ISO](https://www.hirensbootcd.org/old-versions/){:target="_blank"} | The original Hirens tool, see page for full list of software. Use Rufus Portable to write to USB drive
-| [Portable WinCD Emu](https://github.com/sysprogs/WinCDEmu/releases/){:target="_blank"} | Easily mount .iso and other file types without using the built-in Windows utility
-| [Rufus Portable](https://rufus.ie/){:target="_blank"} | Tool for writing .iso and .img files to USB drives
+| [Portable WinCD Emu](https://github.com/sysprogs/WinCDEmu/releases/){:target="_blank"} | Easily mount .ISO and other file types without using the built-in Windows utility
+| [Rufus Portable](https://rufus.ie/){:target="_blank"} | Tool for writing .ISO and .IMG files to USB drives
 | [Ventoy](https://github.com/ventoy/Ventoy/releases){:target="_blank"} | Tool that creates a USB drive that can boot multiple .ISO files directly without the need to extract their contents.
 
 ### Software
