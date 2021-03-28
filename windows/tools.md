@@ -10,7 +10,6 @@ permalink: /windows-tools
 Direct downloads available from [Dropbox](https://www.dropbox.com/sh/4lgb3t1pr7n8xya/AAAXy7FZl6OyrQCeTVV-s2--a?dl=0&lst=){:target="_blank"} or download from sources below. Dropbox downloads may be outdated.
 
 ### Hardware
-<div class="long-list" markdown="1">
 
 | Program | Description
 | ============== | ====
@@ -24,6 +23,18 @@ Direct downloads available from [Dropbox](https://www.dropbox.com/sh/4lgb3t1pr7n
 | [MemTest86+](https://www.memtest.org/#downiso){:target="_blank"} | Free memory testing utility, choose "Auto-installer for USB Key (Win 9x/2k/xp/7)" on the download page
 | [Speccy Portable](https://www.dropbox.com/s/hfezziurmf8y2kk/SpeccyPortable-1.32.zip?dl=1){:target="_blank"} | Display detailed information on the current system hardware, including manufacturer, hardware model SKUs
 
+### .ISO Handling Programs
+
+| Program | Description
+| ============== | ====
+| [Balena Etcher](https://www.balena.io/etcher/){:target="_blank"} | Tool for writing .iso and other image files to USB drives
+| [HirensBootCD ISO](https://www.hirensbootcd.org/download/){:target="_blank"} | The legendary PE boot tool updated with UEFI for modern systems, see page for full list of software
+| [HirensBootCD USB Tool](https://www.hirensbootcd.org/usb-booting/){:target="_blank"} | The recommended tool for creating a bootable USB stick for HirensBootCD
+| [HirensBootCD 15.2 ISO](https://www.hirensbootcd.org/old-versions/){:target="_blank"} | The original Hirens tool, see page for full list of software. Use Rufus Portable to write to USB drive
+| [Portable WinCD Emu](https://github.com/sysprogs/WinCDEmu/releases/){:target="_blank"} | Easily mount .iso and other file types without using the built-in Windows utility
+| [Rufus Portable](https://rufus.ie/){:target="_blank"} | Tool for writing .iso and .img files to USB drives
+| [Ventoy](https://github.com/ventoy/Ventoy/releases){:target="_blank"} | Tool that creates a USB drive that can boot multiple .ISO files directly without the need to extract their contents.
+
 ### Software
 
 | Program | Description
@@ -31,7 +42,6 @@ Direct downloads available from [Dropbox](https://www.dropbox.com/sh/4lgb3t1pr7n
 | [7-Zip](https://www.7-zip.org/download.html){:target="_blank"} | The 7-Zip download page
 | [7-Zip Portable](https://portableapps.com/apps/utilities/7-zip_portable){:target="_blank"} | Unpacks 7-Zip, can be used to extract all tools if built-in uncompress not available
 | [Autoruns](https://docs.microsoft.com/en-us/sysinternals/downloads/autoruns#download){:target="_blank"} | Easily see all programs on startup and many other locations
-| [Balena Etcher](https://www.balena.io/etcher/){:target="_blank"} | Tool for writing .iso and other image files to USB drives
 | [BlueScreenView](https://www.nirsoft.net/utils/blue_screen_view.html#DownloadLinks){:target="_blank"} | Analyze minidump files from bluescreens to help diagnose issues
 | [CCleaner Portable](https://www.ccleaner.com/ccleaner/builds){:target="_blank"} | Remove junk files, reg cleaner, uninstall assist, great tool
 | [Display Driver Uninstaller](https://www.guru3d.com/files-details/display-driver-uninstaller-download.html){:target="_blank"} | DDU - Tool for fully removing display drivers from Nvidia, AMD, and Intel. Best ran from safe mode
@@ -39,16 +49,11 @@ Direct downloads available from [Dropbox](https://www.dropbox.com/sh/4lgb3t1pr7n
 | [DesktopOK](https://www.softwareok.com/?Download=desktopok){:target="_blank"} | Utility to remember the location of desktop icons and restore their location if they get moved
 | [Driver Store Explorer](https://github.com/lostindark/DriverStoreExplorer/releases){:target="_blank"} | View the Windows driver store and remove old and unneeded drivers
 | [Icon Cache Reset](https://www.dropbox.com/s/nnrpppf3qjrv933/IconCacheReset.zip?dl=1){:target="_blank"} | Small scripts to use if icons look invalid or don't display properly - Tested on Windows 7
-| [HirensBootCD ISO](https://www.hirensbootcd.org/download/){:target="_blank"} | The legendary PE boot tool updated with UEFI for modern systems, see page for full list of software
-| [HirensBootCD USB Tool](https://www.hirensbootcd.org/usb-booting/){:target="_blank"} | The recommended tool for creating a bootable USB stick for HirensBootCD
-| [HirensBootCD 15.2 ISO](https://www.hirensbootcd.org/old-versions/){:target="_blank"} | The original Hirens tool, see page for full list of software. Use Rufus Portable to write to USB drive
 | [O&O Shutup 10](https://www.oo-software.com/en/shutup10){:target="_blank"} | Helps turn off telemetry and other privacy settings in Windows 10
-| [Portable WinCD Emu](https://github.com/sysprogs/WinCDEmu/releases/){:target="_blank"} | Easily mount .iso and other file types without using the built-in Windows utility
 | [Process Explorer](https://docs.microsoft.com/en-us/sysinternals/downloads/process-explorer){:target="_blank"} | Displays detailed information about current running processes
 | [ProduKey](http://nirsoft.net/utils/product_cd_key_viewer.html#DownloadLinks){:target="_blank"} | A small utility that displays the ProductID and the CD-Key of many Microsoft products. _*May give an AV warning_
 | [Recuva Portable](https://www.dropbox.com/s/cee3c10mp6ew6dn/RecuvaPortable-1.53.zip?dl=1){:target="_blank"} | Recover deleted files
 | [Revo Uninstaller Portable](https://portableapps.com/apps/utilities/revo_uninstaller_portable){:target="_blank"} | Helps uninstall programs and cleanup remaining files, also helps remove programs with broken uninstallers
-| [Rufus Portable](https://rufus.ie/){:target="_blank"} | Tool for writing .iso and .img files to USB drives
 | [Snappy Driver Installer Origin](https://www.snappy-driver-installer.org/download/){:target="_blank"} | Snappy Driver Installer Origin - Helps find missing drivers
 | [ShellEx View](https://www.nirsoft.net/utils/shexview.html#DownloadLinks){:target="_blank"} | Display and edit right click context menu for explorer
 | [ShellMenu View](https://www.nirsoft.net/utils/shell_menu_view.html){:target="_blank"} | Display and edit right click context menu for explorer
@@ -58,5 +63,3 @@ Direct downloads available from [Dropbox](https://www.dropbox.com/sh/4lgb3t1pr7n
 | [WebBrowserPassView](https://www.nirsoft.net/utils/web_browser_password.html){:target="_blank"} | Password recovery tool that reveals passwords stored in web browser located on the system
 | [WinDirStat Portable](https://portableapps.com/apps/utilities/windirstat_portable){:target="_blank"} | A very popular disk usage analysis program, displays all files as a large relational graphic
 | [WizTree](https://wiztreefree.com/download){:target="_blank"} | A small but very fast disk analyzer, useful for systems with millions of files
-
-</div>
