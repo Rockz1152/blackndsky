@@ -39,13 +39,15 @@ permalink: /debian
 - Turns off SSH MotD
 - Sets up vim and bash
 - Does not configure the network
-- See [Debian.txt]({{site.url}}{{page.url}}/Debian.txt){:target="_blank"} for full script
+- See [Debian.txt]({{site.url}}/linux/Debian.txt){:target="_blank"} for full script
 
 ### Running the Provision Script
 - Install curl and run the script
 ```
 sudo apt install curl -y
-curl -sL {{site.url}}{{page.url}}/Debian.txt | sudo bash && exec bash
+```
+```
+curl -sL {{site.url}}/linux/Debian.txt | sudo bash && exec bash
 ```
 - Remove open-vm-tools if the install is bare metal
 ```
