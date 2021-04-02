@@ -32,6 +32,12 @@ permalink: /linux
 sudo apt autoremove --purge -y open-vm-tools
 ```
 
+### Expand Hard Disk
+- If you have no intention of using LVM snapshots or other features, reclaim the missing hard disk space
+```
+sudo lvextend -l +100%FREE /dev/ubuntu-vg/ubuntu-lv
+```
+
 ### Updates
 - Make a script that can be launched as `~/upgrade-system.sh` to install system updates
 ```
