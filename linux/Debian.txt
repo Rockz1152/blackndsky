@@ -75,6 +75,7 @@ fi
 
 cat >> /root/.vimrc << EOF
 colorscheme desert
+set nowrap
 
 let skip_defaults_vim = 1
 
