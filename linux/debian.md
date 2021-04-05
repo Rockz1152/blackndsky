@@ -53,7 +53,7 @@ curl -sL {{site.url}}/linux/Debian.txt | sudo bash && exec bash
 ```
 sudo apt autoremove --purge -y open-vm-tools
 ```
-- A reboot is recommended after provisioning but not required `sudo reboot now`
+- A reboot is recommended after provisioning but not required `sudo reboot`
 
 ----
 
@@ -77,7 +77,7 @@ netmask 255.255.255.0
 gateway 192.168.0.1
 dns-nameservers 8.8.8.8 1.1.1.1
 ```
-- Reboot and connect with SSH `sudo reboot now`
+- Reboot and connect with SSH `sudo reboot`
 
 ----
 
