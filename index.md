@@ -22,13 +22,13 @@ layout: home
 | Bottleneck Calculator | [https://pc-builds.com/calculator](https://pc-builds.com/calculator/){:target="_blank"}
 | Build Compare | [https://www.gpucheck.com/build-multi](https://www.gpucheck.com/build-multi){:target="_blank"}
 | **CPU**
-| GPU-Check | [https://www.gpucheck.com/cpu-benchmark-comparison](https://www.gpucheck.com/cpu-benchmark-comparison){:target="_blank"}
 | Passmark | [https://www.cpubenchmark.net/singleCompare.php](https://www.cpubenchmark.net/singleCompare.php){:target="_blank"}
 | UserBenchmark | [https://cpu.userbenchmark.com/](https://cpu.userbenchmark.com/){:target="_blank"}
+| GPU-Check | [https://www.gpucheck.com/cpu-benchmark-comparison](https://www.gpucheck.com/cpu-benchmark-comparison){:target="_blank"}
 | **GPU**
-| GPU-Check | [https://www.gpucheck.com/gpu-benchmark-comparison](https://www.gpucheck.com/gpu-benchmark-comparison){:target="_blank"}
 | Passmark | [https://www.videocardbenchmark.net/singleCompare.php](https://www.videocardbenchmark.net/singleCompare.php){:target="_blank"}
 | UserBenchmark | [https://gpu.userbenchmark.com/](https://gpu.userbenchmark.com/){:target="_blank"}
+| GPU-Check | [https://www.gpucheck.com/gpu-benchmark-comparison](https://www.gpucheck.com/gpu-benchmark-comparison){:target="_blank"}
 | **Display**
 | TestUFO | [https://testufo.com](https://testufo.com/){:target="_blank"}
 | DisplaySpecifications | [https://www.displayspecifications.com/](https://www.displayspecifications.com/){:target="_blank"}
