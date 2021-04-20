@@ -86,6 +86,7 @@ At software selection, choose
 - `Debian Desktop Environment`
 - `MATE`
 - `OpenSSH Server`
+- `Standard System Utilities
 
 After Install
 - System **>** Preferences **>** Look and Feel **>** Appearance
