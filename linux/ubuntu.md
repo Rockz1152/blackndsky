@@ -47,37 +47,6 @@ chmod u+x ~/upgrade-system.sh
 
 ----
 
-## Software Packages
-- All tasks in one command, this will take a few minutes to run
-```
-sudo sh -c "sed -i 's/^ENABLED=.*/ENABLED=0/' /etc/default/motd-news; chmod -x /etc/update-motd.d/*; apt autoremove --purge -y cloud-init multipath-tools snapd landscape-common; rm -rf /etc/cloud; apt update; apt install -y ncdu zip unzip p7zip-full unrar-free neofetch; apt full-upgrade -y; reboot"
-```
-- See the Command Breakdown below for more information, otherwise move on to setting timezone data
-
-### Command Breakdown
-- Turn off Message of the Day on login
-```
-sudo sed -i 's/^ENABLED=.*/ENABLED=0/' /etc/default/motd-news
-sudo chmod -x /etc/update-motd.d/*
-```
-- Remove unneeded server packages
-```
-sudo apt autoremove --purge -y cloud-init multipath-tools snapd landscape-common
-sudo rm -rf /etc/cloud
-```
-- Install additional software packages
-```
-sudo apt update
-sudo apt install -y ncdu zip unzip p7zip-full unrar-free neofetch
-```
-- Install package updates and reboot
-```
-sudo apt full-upgrade -y
-sudo reboot
-```
-
-----
-
 ## Timezone
 - The timezone is set to Coordinated Universal Time, or UTC, by default
 - It needs to be localized after the install
@@ -108,6 +77,37 @@ sudo timedatectl set-timezone US/Pacific; cat /etc/timezone; date
 - Or you can set the timezone interactively
 ```
 sudo dpkg-reconfigure tzdata
+```
+
+----
+
+## Software Packages
+- All tasks in one command, this will take a few minutes to run
+```
+sudo sh -c "sed -i 's/^ENABLED=.*/ENABLED=0/' /etc/default/motd-news; chmod -x /etc/update-motd.d/*; apt autoremove --purge -y cloud-init multipath-tools snapd landscape-common; rm -rf /etc/cloud; apt update; apt install -y ncdu zip unzip p7zip-full unrar-free neofetch; apt full-upgrade -y; reboot"
+```
+- See the Command Breakdown below for more information, otherwise move on to setting timezone data
+
+### Command Breakdown
+- Turn off Message of the Day on login
+```
+sudo sed -i 's/^ENABLED=.*/ENABLED=0/' /etc/default/motd-news
+sudo chmod -x /etc/update-motd.d/*
+```
+- Remove unneeded server packages
+```
+sudo apt autoremove --purge -y cloud-init multipath-tools snapd landscape-common
+sudo rm -rf /etc/cloud
+```
+- Install additional software packages
+```
+sudo apt update
+sudo apt install -y ncdu zip unzip p7zip-full unrar-free neofetch
+```
+- Install package updates and reboot
+```
+sudo apt full-upgrade -y
+sudo reboot
 ```
 
 ----
