@@ -86,7 +86,7 @@ sudo dpkg-reconfigure tzdata
 ```
 sudo sh -c "sed -i 's/^ENABLED=.*/ENABLED=0/' /etc/default/motd-news; chmod -x /etc/update-motd.d/*; apt autoremove --purge -y cloud-init multipath-tools snapd landscape-common; rm -rf /etc/cloud; apt update; apt install -y ncdu zip unzip p7zip-full unrar-free neofetch; apt full-upgrade -y; reboot"
 ```
-- See the Command Breakdown below for more information, otherwise move on to setting timezone data
+- See the Command Breakdown below for more information, otherwise continue on to Networking
 
 ### Command Breakdown
 - Turn off Message of the Day on login
