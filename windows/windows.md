@@ -191,13 +191,14 @@ reg add "HKEY_CLASSES_ROOT\CLSID\{018D5C66-4533-4307-9B53-224DE2ED1FE6}" /v Syst
 ```
 
 ### Disable Windows Update
-You can't actually disable Windows Update, but you can trick it into not downloading it's updates. Goto:
-- `Settings`
-- `Network & Internet`
-- `Wi-Fi` or `Ethernet`
-  - If Wi-Fi `Manage known networks`
-  - Select Wi-Fi network and then click `Properties`
-- Turn on `Set as metered connection`
+To disable Windows Update, simply add the following registry entry:
+```
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU" /v "NoAutoUpdate" /t REG_DWORD /d 1 /f
+```
+To re-enable Windows Update, delete the above registry entry:
+```
+reg delete "HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU" /v "NoAutoUpdate" /f
+```
 
 ----
 
