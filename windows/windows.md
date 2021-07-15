@@ -190,12 +190,12 @@ Removes the "OneDrive" folder icon on the left side of Windows Explorer that can
 reg add "HKEY_CLASSES_ROOT\CLSID\{018D5C66-4533-4307-9B53-224DE2ED1FE6}" /v System.IsPinnedToNameSpaceTree /t REG_DWORD /d 0 /f
 ```
 
-### Disable Windows Update
-To disable Windows Update, simply add the following registry entry:
+### Disable automatic Windows Updates
+To disable automatic Windows Updates, simply add the following registry entry:
 ```
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU" /v "NoAutoUpdate" /t REG_DWORD /d 1 /f
 ```
-To re-enable Windows Update, delete the above registry entry:
+To re-enable, delete the above registry entry:
 ```
 reg delete "HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU" /v "NoAutoUpdate" /f
 ```
