@@ -102,12 +102,12 @@ tbody tr td:first-child {
 pre {
   margin: 5px 0 5px;
   /* make code blocks auto select contents */
-  -webkit-touch-callout: all; /* iOS Safari */
-  -webkit-user-select: all; /* Safari */
-  -khtml-user-select: all; /* Konqueror HTML */
-  -moz-user-select: all; /* Firefox */
-  -ms-user-select: all; /* Internet Explorer/Edge */
-  user-select: all; /* Chrome and Opera */
+  /*-webkit-touch-callout: all; /* iOS Safari */
+  /*-webkit-user-select: all; /* Safari */
+  /*-khtml-user-select: all; /* Konqueror HTML */
+  /*-moz-user-select: all; /* Firefox */
+  /*-ms-user-select: all; /* Internet Explorer/Edge */
+  /*user-select: all; /* Chrome and Opera */
 }
 
 p {
@@ -325,4 +325,30 @@ html {
 }
 ::-webkit-resizer                { /* 7 */
   background: inherit;
+}
+
+/* Copy code button */
+/* Needed for button position */
+pre {
+  position:relative;
+}
+/* Button style */
+.code-copy {
+  cursor: pointer;
+  opacity: 0;
+  /* opacity: 1; */
+  position: absolute;
+  top: 2px;
+  right: 5px;
+  transition: opacity .5s ease;
+  padding: 3px 9px;
+  pointer-events: auto
+}
+/* Show copy button on block mouse over */
+pre:hover .code-copy {
+  opacity: 1;
+}
+/* Helps with copy button clicks */
+pre code {
+  display: flex;
 }
