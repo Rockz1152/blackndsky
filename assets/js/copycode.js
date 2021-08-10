@@ -1,8 +1,9 @@
 // copycode.js
 // 8-9-21 by Rockz
 
-const codeBlocks = document.querySelectorAll("pre > code");
-// console.log(codeBlocks.length); // uncomment for debugging
+// const codeBlocks = document.querySelectorAll("pre > code");
+const codeBlocks = document.querySelectorAll("div.highlight > pre");
+console.log(codeBlocks.length); // uncomment for debugging
 codeBlocks.forEach(function(block) {
     var btn = document.createElement("button");
     btn.classList.add("simple-button-small", "code-copy"),
@@ -21,5 +22,7 @@ codeBlocks.forEach(function(block) {
         });
     });
     var sourceBlock = block.parentNode;
-    sourceBlock.parentNode.classList.contains("pre") ? sourceBlock.parentNode.appendChild(btn) : sourceBlock.appendChild(btn);
+    // sourceBlock.parentNode.classList.contains("pre") ? sourceBlock.parentNode.appendChild(btn) : sourceBlock.appendChild(btn);
+    sourceBlock.parentNode.classList.contains("pre.highlight") ? sourceBlock.parentNode.appendChild(btn) : sourceBlock.appendChild(btn);
+    // sourceBlock.parentNode.classList.contains("highlighter-rouge") ? sourceBlock.parentNode.appendChild(btn) : sourceBlock.appendChild(btn);
 }); // End main

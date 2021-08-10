@@ -112,7 +112,6 @@ p {
 ul {
   margin: 0 0 0px;
   list-style-image: initial;
-  list-style-type: none;
 }
 
 br {
@@ -264,7 +263,7 @@ html {
 
 /* Firefox */
 html {
-  scrollbar-color: #292929 rgba(0,0,0,0.3);
+  scrollbar-color: #292929 #333333;
 }
 
 /* Chrome */
@@ -307,7 +306,6 @@ html {
   -webkit-box-shadow: inset 0 0 3px rgba(0,0,0,0.3);
 }
 ::-webkit-scrollbar-track-piece  { /* 4 */
-  /* background: rgba(0,0,0,0.3); */
   background: #333333
 }
 ::-webkit-scrollbar-thumb        { /* 5 */
@@ -315,7 +313,7 @@ html {
   -webkit-box-shadow: inset 0 0 3px rgba(0,0,0,0.5);
 }
 ::-webkit-scrollbar-thumb:hover { /* 5 HOVER */
-  background-color: #333333;
+  /* background-color: #333333; */
 }
 ::-webkit-scrollbar-corner       { /* 6 */
   background: inherit;
@@ -329,6 +327,10 @@ html {
 pre {
   position:relative;
 }
+.highlight{
+  position:relative;
+}
+
 /* Button style */
 .code-copy {
   cursor: pointer;
@@ -341,7 +343,7 @@ pre {
   pointer-events: auto
 }
 /* Show copy button on block mouse over */
-pre:hover .code-copy {
+.highlight:hover .code-copy {
   opacity: 1;
 }
 /* Helps with copy button clicks */
