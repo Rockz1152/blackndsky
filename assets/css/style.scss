@@ -25,24 +25,24 @@
   margin: 0px auto;
 }
 
-#header nav li.linkleft {
+#header nav ul li.linkleft {
   float: left;
   margin-left: 6px;
 }
 
-#header nav li.linkright {
+#header nav ul li.linkright {
   float: right;
   margin-left: 6px;
 }
 
-#header nav li a {
+#header nav ul li a {
   color: white;
   border: 1px solid #000;
   background-color: #313539;
   padding: 10px 8px;
 }
 
-#header nav li a:hover {
+#header nav ul li a:hover {
   color: #ffcc00;
   background-color: #272b30;
   border: 1px solid #000;
