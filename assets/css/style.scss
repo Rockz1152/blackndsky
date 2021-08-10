@@ -40,13 +40,14 @@
   border: 1px solid #000;
   background-color: #313539;
   padding: 10px 8px;
-  background: none;
+  background: #313539;
 }
 
 #header nav ul li a:hover {
   color: #ffcc00;
   background-color: #272b30;
   border: 1px solid #000;
+  background: #272b30;
 }
 
 .softview {
@@ -306,7 +307,8 @@ html {
   -webkit-box-shadow: inset 0 0 3px rgba(0,0,0,0.3);
 }
 ::-webkit-scrollbar-track-piece  { /* 4 */
-  background: rgba(0,0,0,0.3);
+  /* background: rgba(0,0,0,0.3); */
+  background: #333333
 }
 ::-webkit-scrollbar-thumb        { /* 5 */
   background: #292929;
