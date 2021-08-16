@@ -9,16 +9,16 @@ permalink: /debian
 
 ## Download Installer
 - Debian 10: [https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/](https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/){:target="_blank"}
-- Get the current `debian-10.X.0-amd64-netinst.iso`
+- Get the current `debian-XX.X.X-amd64-netinst.iso`
 
 ### Firmware Included
 - If you are installing on a laptop and need extra drivers for WiFi, get the appropriate installer from:
   - [https://cdimage.debian.org/cdimage/unofficial/non-free/cd-including-firmware/current/](https://cdimage.debian.org/cdimage/unofficial/non-free/cd-including-firmware/current/){:target="_blank"}
-- Select your cpu architecture and then the **iso-cd/** subfolder
-- Look for `firmware-10.X.0-XXXX-netinst.iso`
+- Select your cpu `architecture` and then the `iso-cd` subfolder
+- Look for `firmware-XX.X.X-XXXX-netinst.iso`
 
 ### Older releases
-
+- Debian 10: [https://cdimage.debian.org/cdimage/archive/10.10.0/amd64/iso-cd/debian-10.10.0-amd64-netinst.iso](https://cdimage.debian.org/cdimage/archive/10.10.0/amd64/iso-cd/debian-10.10.0-amd64-netinst.iso)
 - Debian 9: [https://cdimage.debian.org/cdimage/archive/9.13.0/amd64/iso-cd/debian-9.13.0-amd64-netinst.iso](https://cdimage.debian.org/cdimage/archive/9.13.0/amd64/iso-cd/debian-9.13.0-amd64-netinst.iso)
 - Debian 8: [https://cdimage.debian.org/cdimage/archive/8.11.1/amd64/iso-cd/debian-8.11.1-amd64-netinst.iso](https://cdimage.debian.org/cdimage/archive/8.11.1/amd64/iso-cd/debian-8.11.1-amd64-netinst.iso)
 
@@ -57,18 +57,18 @@ sudo apt autoremove --purge -y open-vm-tools
 
 ----
 
-## Configure Network
+## Configure Static Network
+- Run `ip link` to retrieve the name of your network interface and substitute as necessary
 - Open the network interface config file
 ```
 sudo vim /etc/network/interfaces
 ```
-- Change `dhcp` to `static` in the following section
+- If your interface already has an entry, change `dhcp` to `static`
 ```
 auto ens32
 iface ens32 inet dhcp
 ```
-- If `auto ens32` is missing, run `ip link` to retrieve the name of your network interface and substitute as necessary
-- Add the missing interface information
+- Add the following information substituting `ens32` for your interface
 ```
 auto ens32
 iface ens32 inet static
@@ -77,7 +77,7 @@ netmask 255.255.255.0
 gateway 192.168.0.1
 dns-nameservers 8.8.8.8 1.1.1.1
 ```
-- Reboot and connect with SSH `sudo reboot`
+- Reboot with `sudo reboot`
 
 ----
 
@@ -86,7 +86,7 @@ At software selection, choose
 - `Debian Desktop Environment`
 - `MATE`
 - `OpenSSH Server`
-- `Standard System Utilities
+- `Standard System Utilities`
 
 After Install
 - System **>** Preferences **>** Look and Feel **>** Appearance
