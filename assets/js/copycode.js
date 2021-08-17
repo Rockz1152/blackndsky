@@ -2,7 +2,7 @@
 // 8-9-21 by Rockz
 
 const codeBlocks = document.querySelectorAll("div.highlight > pre");
-console.log(codeBlocks.length); // uncomment for debugging
+//console.log(codeBlocks.length); // uncomment for debugging
 codeBlocks.forEach(function(block) {
     var btn = document.createElement("button");
     btn.classList.add("simple-button-small", "code-copy"),
