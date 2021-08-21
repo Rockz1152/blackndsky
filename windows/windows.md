@@ -191,14 +191,20 @@ reg add "HKEY_CLASSES_ROOT\CLSID\{018D5C66-4533-4307-9B53-224DE2ED1FE6}" /v Syst
 ```
 
 ### Disable automatic Windows Updates
-To disable automatic Windows Updates, simply add the following registry entry:
+- Windows 10 Pro/Enterprise
+  - Add the following registry entry:
 ```
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU" /v "NoAutoUpdate" /t REG_DWORD /d 1 /f
 ```
-To re-enable, delete the above registry entry:
+  - To re-enable, delete the registry entry:
 ```
 reg delete "HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU" /v "NoAutoUpdate" /f
 ```
+- Windows 10 Home - Over WiFi only
+  - WiFi only because Windows ignores metered status on wired connections
+  - `Settings` **>** `Network & Internet` **>** `Wi-Fi`
+  - Select Wi-Fi network and then click `Properties`
+  - Turn on `Set as metered connection`
 
 ----
 
