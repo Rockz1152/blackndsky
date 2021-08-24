@@ -1,14 +1,14 @@
 #!/bin/bash
 # Debian Provisioning script
-# 2-25-21
+# 8-14-21
 
 # OS Check
-if [[ `cat /etc/debian_version 2>/dev/null | grep -E '10.|9.' | wc -l` == 1 ]]; then
+if [[ `cat /etc/debian_version 2>/dev/null | grep -E '11.|10.|9.' | wc -l` == 1 ]]; then
     echo ''
     echo 'Provisioning Debian'
     echo ''
 else
-    echo 'This script is designed to only run on Debian 9 and 10'
+    echo 'This script is designed to only run on Debian 9, 10, or 11'
     exit 1
 fi
 
@@ -66,8 +66,9 @@ sudo sed -i 's@.*session    optional     pam_motd.so noupdate@#session    option
 # Configure vim
 echo 'Configuring Vim'
 
-# vim80 or vim81
-if [[ `cat /etc/debian_version 2>/dev/null | grep 10. | wc -l` == 1 ]]; then
+if [[ `cat /etc/debian_version 2>/dev/null | grep 11. | wc -l` == 1 ]]; then
+    echo "source /usr/share/vim/vim82/defaults.vim" > /root/.vimrc
+elif [[ `cat /etc/debian_version 2>/dev/null | grep 10. | wc -l` == 1 ]]; then
     echo "source /usr/share/vim/vim81/defaults.vim" > /root/.vimrc
 elif [[ `cat /etc/debian_version 2>/dev/null | grep 9. | wc -l` == 1 ]]; then
     echo "source /usr/share/vim/vim80/defaults.vim" > /root/.vimrc
@@ -86,7 +87,6 @@ EOF
 
 # Configure bash
 echo 'Configuring Bash'
-## get a fresh .bashrc file
 \cp /etc/skel/.bashrc /root/.bashrc
 cat >> /root/.bashrc << EOF
 
@@ -98,11 +98,14 @@ alias mv='mv -i'
 alias grep='grep --color=auto'
 EOF
 
+echo "set enable-bracketed-paste Off" > /root/.inputrc
+
 # Copy configs into profiles
 for d in `find /home/* -maxdepth 0 -type d`
 do
     \cp /root/.bashrc $d
     \cp /root/.vimrc $d
+    \cp /root/.inputrc $d
 done
 
 # Reload bash for sudo user
