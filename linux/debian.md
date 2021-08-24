@@ -97,3 +97,39 @@ Install MATE Tweak
 
 Disable desktop composition
 - Control Center **>** Look and Feel **>** MATE Tweak **>** Windows **>** Window Manager **>** Choose `Marco(No compositor)`
+
+----
+
+## Release Upgrades
+
+### Resources
+- https://wiki.debian.org/DebianUpgrade
+- Release code names can be found here: https://wiki.debian.org/DebianReleases#Production_Releases
+- Consult wiki if source links change between releases. e.g. https://wiki.debian.org/DebianBullseye#Links
+
+### Upgrade
+- Fully upgrades and cleanup any packages on the system
+```
+sudo sh -c "apt update; apt full-upgrade -y; apt autoremove --purge -y"
+```
+- Update source files to new release code name
+```
+sudo sed -i 's/<OldName>/<NewName>/g' /etc/apt/sources.list
+```
+  - Buster to Bullseye:
+```
+sudo sed -i 's!buster!bullseye!g' /etc/apt/sources.list
+sudo sed -i 's!bullseye/updates!bullseye-security!g'  /etc/apt/sources.list
+```
+- Upgrade to the new release
+```
+sudo sh -c "apt clean; apt update; apt upgrade --without-new-pkgs -y; apt full-upgrade -y; apt autoremove --purge -y"
+```
+  - When prompted "Restart services during package upgrades without asking?" select `Yes`
+  - If prompted to overwrite existing configuration files, select `N` which is the default
+- Reboot when complete `sudo reboot`
+- Rerun the Debian provision script to setup dotfiles
+```
+curl -sL https://www.dropbox.com/s/s57r4beopxs1gjn/Debian.txt | sudo bash && exec bash
+```
+- Verify the upgrade `cat /etc/os-release`
