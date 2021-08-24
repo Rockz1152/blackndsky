@@ -103,9 +103,10 @@ Disable desktop composition
 ## Release Upgrades
 
 ### Resources
-- https://wiki.debian.org/DebianUpgrade
-- Release code names can be found here: https://wiki.debian.org/DebianReleases#Production_Releases
-- Consult wiki if source links change between releases. e.g. https://wiki.debian.org/DebianBullseye#Links
+- The official wiki page for release upgrades: [https://wiki.debian.org/DebianUpgrade](https://wiki.debian.org/DebianUpgrade){:target="_blank"}
+- Release code names and wiki pages: [https://wiki.debian.org/DebianReleases#Production_Releases](https://wiki.debian.org/DebianReleases#Production_Releases){:target="_blank"}
+- Check the current release wiki page for any updates to the sources.list file.
+  - e.g. [https://wiki.debian.org/DebianBullseye#Links](https://wiki.debian.org/DebianBullseye#Links){:target="_blank"}
 
 ### Upgrade
 - Fully upgrades and cleanup any packages on the system
