@@ -26,12 +26,6 @@ permalink: /linux
 - Wait for the system to finish booting up and login
 - Get the IP of your server using `ip a` and connect using putty or another SSH client
 
-### Open-vm-tools
-- Remove open-vm-tools if the install is bare metal or not a VMware install
-```
-sudo apt autoremove --purge -y open-vm-tools
-```
-
 ### Expand Hard Disk
 - If you have no intention of using LVM snapshots or other features, reclaim the missing hard disk space
 ```
@@ -39,10 +33,10 @@ sudo lvextend -l +100%FREE /dev/ubuntu-vg/ubuntu-lv
 ```
 
 ### Updates
-- Make a script that can be launched as `~/upgrade-system.sh` to install system updates
+- Make a script that can be launched as `~/update-system.sh` to install system updates
 ```
-echo 'sudo sh -c "apt update;apt upgrade -y;apt autoremove --purge -y;"' > ~/upgrade-system.sh
-chmod u+x ~/upgrade-system.sh
+echo 'sudo sh -c "apt update;apt upgrade -y;apt autoremove --purge -y;"' > ~/update-system.sh
+chmod u+x ~/update-system.sh
 ```
 
 ----

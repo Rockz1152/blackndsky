@@ -26,8 +26,8 @@ permalink: /debian
 
 ## Installation
 - At the boot menu, select `Install` and not "Graphical Install"
+- Choose only `SSH Server` at software selection
 - If installing a desktop environment see the [Debian with MATE](#debian-with-mate) section at the bottom.
-- Choose only `OpenSSH Server` at software selection
 
 ----
 
@@ -38,22 +38,27 @@ permalink: /debian
 - Installs base software
 - Turns off SSH MotD
 - Sets up vim and bash
-- Does not configure the network
+- Installs guest tools if running a virtual machine
 - See [Debian.txt]({{site.url}}/linux/Debian.txt){:target="_blank"} for full script
 
 ### Running the Provision Script
 - Install curl and run the script
 ```
-sudo apt install curl -y
+sudo apt install -y curl
 ```
 ```
 curl -sL {{site.url}}/linux/Debian.txt | sudo bash && exec bash
 ```
-- Remove open-vm-tools if the install is bare metal
-```
-sudo apt autoremove --purge -y open-vm-tools
-```
 - A reboot is recommended after provisioning but not required `sudo reboot`
+
+----
+
+## Updates
+- Make a script that can be launched as `~/update-system.sh` to install system updates
+```nowrap
+echo 'sudo sh -c "apt update;apt upgrade -y;apt autoremove --purge -y;"' > $HOME/update-system.sh
+chmod u+x $HOME/update-system.sh
+```
 
 ----
 
@@ -131,6 +136,6 @@ sudo sh -c "apt clean; apt update; apt upgrade --without-new-pkgs -y; apt full-u
 - Reboot when complete `sudo reboot`
 - Rerun the Debian provision script to setup dotfiles
 ```
-curl -sL https://www.dropbox.com/s/s57r4beopxs1gjn/Debian.txt | sudo bash && exec bash
+curl -sL {{site.url}}/linux/Debian.txt | sudo bash && exec bash
 ```
 - Verify the upgrade `cat /etc/os-release`

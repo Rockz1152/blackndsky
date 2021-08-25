@@ -1,6 +1,6 @@
 #!/bin/bash
 # Debian Provisioning script
-# 8-14-21
+# 8-25-21
 
 # OS Check
 if [[ `cat /etc/debian_version 2>/dev/null | grep -E '11.|10.|9.' | wc -l` == 1 ]]; then
@@ -21,56 +21,48 @@ apt-get -q update > /dev/null
 echo 'Running apt-upgrade'
 apt-get -q -y dist-upgrade > /dev/null
 
-# Install software
+# Software to install
 echo 'Installing software'
-declare -a packages=('curl' 'nano' 'vim' 'htop' 'ncdu' 'wget' 'zip' 'unzip' 'p7zip-full' 'screen' 'less' 'man-db' 'neofetch' 'open-vm-tools' 'ntp')
+declare -a packages=('curl' 'nano' 'vim' 'htop' 'ncdu' 'wget' 'zip' 'unzip' 'p7zip-full' 'screen' 'less' 'man-db' 'neofetch')
+
+# Check for VMware
+if [[ `dmidecode -t system | grep Manufacturer | awk '{sub(/Manufacturer:/,"");print}' | xargs` == "VMware, Inc." ]]; then
+    packages=(${packages[@]} "open-vm-tools")
+fi
+# Check for QEMU
+if [[ `dmidecode -t system | grep Manufacturer | awk '{sub(/Manufacturer:/,"");print}' | xargs` == "QEMU" ]]; then
+    packages=(${packages[@]} "qemu-guest-agent")
+fi
+
+# Install software
 for i in "${packages[@]}"
 do
-    if [[ `dpkg-query -W --showformat='${Status}\n' $i 2>/dev/null | grep "install ok installed" | wc -l` == 1 ]]; then
+    if [[ `dpkg-query -W -f='${Status}' $i 2>/dev/null | grep -c "ok installed"` == 1 ]]; then
         echo '-'$i
     else
         echo '-'$i
         apt-get -q -y install $i > /dev/null 2>/dev/null
-        if [[ `dpkg-query -W --showformat='${Status}\n' $i 2>/dev/null | grep "install ok installed" | wc -l` == 0 ]]; then
+        if [[ `dpkg-query -W -f='${Status}' $i 2>/dev/null | grep -c "ok installed"` == 0 ]]; then
             echo '!!!' $i 'failed to install'
         fi
     fi
 done
 
-# Services
-echo 'Checking services'
-declare -a services=('ntp' 'open-vm-tools' 'vgauth')
-for s in "${services[@]}"
-do
-    if [[ `systemctl is-enabled $s 2>/dev/null | grep enabled | wc -l` == 0 ]]; then
-        echo '-Enabling' $s
-        systemctl enable $s >/dev/null 2>/dev/null
-        if [[ `systemctl is-enabled $s 2>/dev/null | grep enabled | wc -l` == 0 ]]; then
-            echo '!!!' $s 'could not be enabled'
-        fi
-    fi
-    if [[ `systemctl status $s 2>/dev/null | grep dead | wc -l` == 1 ]]; then
-        echo '-Starting' $s
-        systemctl start $s >/dev/null 2>/dev/null
-        if [[ `systemctl status $s 2>/dev/null | grep dead | wc -l` == 1 ]]; then
-            echo '-!!!' $s 'failed to start'
-        fi
-    fi
-done
-
 # Disable motd on ssh login
+if [ -f /etc/pam.d/sshd ]; then
 echo 'Turning off SSH motd'
 sudo sed -i 's@.*session    optional     pam_motd.so  motd=/run/motd.dynamic@#session    optional     pam_motd.so  motd=/run/motd.dynamic@' /etc/pam.d/sshd
 sudo sed -i 's@.*session    optional     pam_motd.so noupdate@#session    optional     pam_motd.so noupdate@' /etc/pam.d/sshd
+fi
 
 # Configure vim
 echo 'Configuring Vim'
 
-if [[ `cat /etc/debian_version 2>/dev/null | grep 11. | wc -l` == 1 ]]; then
+if [[ `cat /etc/debian_version 2>/dev/null | grep 11.` ]]; then
     echo "source /usr/share/vim/vim82/defaults.vim" > /root/.vimrc
-elif [[ `cat /etc/debian_version 2>/dev/null | grep 10. | wc -l` == 1 ]]; then
+elif [[ `cat /etc/debian_version 2>/dev/null | grep 10.` ]]; then
     echo "source /usr/share/vim/vim81/defaults.vim" > /root/.vimrc
-elif [[ `cat /etc/debian_version 2>/dev/null | grep 9. | wc -l` == 1 ]]; then
+elif [[ `cat /etc/debian_version 2>/dev/null | grep 9.` ]]; then
     echo "source /usr/share/vim/vim80/defaults.vim" > /root/.vimrc
 fi
 
@@ -98,9 +90,13 @@ alias mv='mv -i'
 alias grep='grep --color=auto'
 EOF
 
-echo "set enable-bracketed-paste Off" > /root/.inputrc
+# Configure bash input
+cat > /root/.inputrc << EOF
+\$include /etc/inputrc
+set enable-bracketed-paste Off
+EOF
 
-# Copy configs into profiles
+# Copy dotfiles into home directories
 for d in `find /home/* -maxdepth 0 -type d`
 do
     \cp /root/.bashrc $d
