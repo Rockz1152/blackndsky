@@ -81,6 +81,8 @@ echo 'Configuring Bash'
 \cp /etc/skel/.bashrc /root/.bashrc
 cat >> /root/.bashrc << EOF
 
+alias reboot='systemctl reboot'
+alias shutdown='systemctl poweroff'
 alias ll='ls -l'
 alias la='ls -lA'
 alias rm='rm -i'
