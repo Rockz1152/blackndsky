@@ -7,6 +7,25 @@
   #header { margin-top: -5px; }
 }
 
+/* Footer links on homepage */
+#centered {
+  width: 100%;
+  text-align: center;
+}
+
+#div1 {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 auto;
+}
+#div2 {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 auto;
+  text-align: left;
+}
+/* End footer links */
+
 #banner {
   background-image: url('/assets/images/clouds-dark-wide.jpg');
   width: 100%;

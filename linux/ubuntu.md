@@ -1,10 +1,10 @@
 ---
 layout: default
 title: Ubuntu Server
-permalink: /linux
+permalink: /ubuntu
 ---
 
-[Ubuntu]({{site.url}}/linux){: .simple-pressed-button}
+[Ubuntu]({{site.url}}/ubuntu){: .simple-pressed-button}
 [Debian]({{site.url}}/debian){: .simple-button}
 
 ## Download Installer

@@ -1,8 +1,7 @@
 ---
-layout: post
-title:  "Jekyll on GitHub Pages"
-date:   2019-08-13 8:52:17 -0400
-categories: jekyll
+layout: default
+title: "Jekyll on GitHub Pages"
+permalink: /Jekyll
 ---
 
 Inspired by a friend of mine, I wanted to create a site for my own personal use that met the following needs:

@@ -4,7 +4,7 @@ title: Debian
 permalink: /debian
 ---
 
-[Ubuntu]({{site.url}}/linux){: .simple-button}
+[Ubuntu]({{site.url}}/ubuntu){: .simple-button}
 [Debian]({{site.url}}/debian){: .simple-pressed-button}
 
 ## Download Installer

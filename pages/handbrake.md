@@ -3,7 +3,6 @@ layout: default
 title: Handbrake
 permalink: /handbrake
 ---
-<!-- # <center>Handbrake</center> -->
 
 ## Installation
 

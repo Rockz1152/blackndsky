@@ -3,13 +3,13 @@ title: Home
 layout: home
 ---
 
-# Resources
+# <center>Resources</center>
 
 <div align="center" markdown="1">
 [Windows Install]({{site.url}}/windows){: .simple-button}
 [Windows Tools]({{site.url}}/windows-tools){: .simple-button}
-[Linux Install]({{site.url}}/linux){: .simple-button}
-[Handbrake]({{site.url}}/handbrake){: .simple-button}
+[Ubuntu Install]({{site.url}}/ubuntu){: .simple-button}
+[Debian Install]({{site.url}}/debian){: .simple-button}
 </div>
 
 ----
@@ -36,7 +36,23 @@ layout: home
 </div>
 <br>
 
-<h1>Latest Post</h1>
+<div id="centered">
+<div id="div1" markdown="1">
+## Page Links
+<!-- curated list -->
+</div>
+<div id="div2"  markdown="1">
+- [Handbrake]({{site.url}}/handbrake)
+- [Jekyll]({{site.url}}/jekyll)
+- Plex
+</div>
+</div>
+
+
+
+<!-- old homepage code
+<div id="div1">
+<h1> Latest Post </h1>
 <ul>
 {% for post in site.posts limit:1 %}
     <li>
@@ -45,7 +61,7 @@ layout: home
 {% endfor %}
 </ul>
 
-<h2>Recent Posts</h2>
+<h2> Recent Posts </h2>
 <ul>
 {% for post in site.posts offset:1 limit:2 %}
     <li>
@@ -53,3 +69,4 @@ layout: home
     </li>
 {% endfor %}
 </ul>
+-->
