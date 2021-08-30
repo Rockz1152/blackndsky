@@ -39,7 +39,6 @@ layout: home
 <div id="centered">
 <div id="div1" markdown="1">
 ## Page Links
-<!-- curated list -->
 </div>
 <div id="div2"  markdown="1">
 - [Handbrake]({{site.url}}/handbrake)
@@ -47,26 +46,3 @@ layout: home
 - Plex
 </div>
 </div>
-
-
-
-<!-- old homepage code
-<div id="div1">
-<h1> Latest Post </h1>
-<ul>
-{% for post in site.posts limit:1 %}
-    <li>
-      <a href="{{ post.url }}">{{ post.title }}</a>
-    </li>
-{% endfor %}
-</ul>
-
-<h2> Recent Posts </h2>
-<ul>
-{% for post in site.posts offset:1 limit:2 %}
-    <li>
-      <a href="{{ post.url }}">{{ post.title }}</a>
-    </li>
-{% endfor %}
-</ul>
--->
