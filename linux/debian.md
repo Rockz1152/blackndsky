@@ -64,19 +64,27 @@ chmod u+x $HOME/update-system.sh
 
 ## Configure Static Network
 - Run `ip link` to retrieve the name of your network interface and substitute as necessary
-- Open the network interface config file
+- Open the network interface config
 ```
 sudo vim /etc/network/interfaces
 ```
 - If your interface already has an entry, change `dhcp` to `static`
 ```
-auto ens32
-iface ens32 inet dhcp
+iface net# inet dhcp
 ```
-- Add the following information substituting `ens32` for your interface
+  - Otherwise you'll need to add your own lines
+  - Debian 10 and older:
 ```
-auto ens32
-iface ens32 inet static
+auto net#
+iface net# inet static
+```
+  - Debian 11 and newer:
+```
+allow-hotplug net#
+iface net# inet static
+```
+- Add the following information after the `iface net# inet static` line
+```
 address 192.168.0.XX
 netmask 255.255.255.0
 gateway 192.168.0.1
