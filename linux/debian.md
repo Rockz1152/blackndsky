@@ -133,6 +133,8 @@ sudo sed -i 's/<OldName>/<NewName>/g' /etc/apt/sources.list
   - Buster to Bullseye:
 ```
 sudo sed -i 's!buster!bullseye!g' /etc/apt/sources.list
+```
+```
 sudo sed -i 's!bullseye/updates!bullseye-security!g'  /etc/apt/sources.list
 ```
 - Upgrade to the new release
