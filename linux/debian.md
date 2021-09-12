@@ -39,7 +39,7 @@ permalink: /debian
 - Turns off SSH MotD
 - Sets up vim and bash
 - Installs guest tools if running a virtual machine
-- See [Debian.txt]({{site.url}}/linux/Debian.txt){:target="_blank"} for full script
+- See [Github](https://github.com/Rockz1152/Debian){:target="_blank"} for full script
 
 ### Running the Provision Script
 - Install curl and run the script
@@ -47,7 +47,7 @@ permalink: /debian
 sudo apt install -y curl
 ```
 ```
-curl -sL {{site.url}}/linux/Debian.txt | sudo bash && exec bash
+curl -sL https://raw.githubusercontent.com/Rockz1152/Debian/main/setup.sh | sudo bash && exec bash --login
 ```
 - A reboot is recommended after provisioning but not required `sudo reboot`
 
