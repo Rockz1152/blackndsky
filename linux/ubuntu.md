@@ -145,7 +145,7 @@ _*Optional_
 sudo apt install cockpit -y
 ```
 - Cockpit requires NetworkManager to function properly so we'll make the changes to use it
-```nowrap
+```
 sudo sed -i 's!renderer: networkd!renderer: NetworkManager!g' /etc/netplan/00-installer-config.yaml
 ```
 

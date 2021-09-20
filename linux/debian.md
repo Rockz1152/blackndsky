@@ -54,7 +54,7 @@ curl -sL https://raw.githubusercontent.com/Rockz1152/Debian/main/setup.sh | sudo
 
 ## Updates
 - Make a script that can be launched as `~/update-system.sh` to install system updates
-```nowrap
+```
 echo 'sudo sh -c "apt update;apt upgrade -y;apt autoremove --purge -y;"' > $HOME/update-system.sh
 chmod u+x $HOME/update-system.sh
 ```
