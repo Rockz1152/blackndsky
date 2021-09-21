@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Jekyll on GitHub Pages"
-permalink: /Jekyll
+permalink: /jekyll
 ---
 
 Inspired by a friend of mine, I wanted to create a site for my own personal use that met the following needs:
