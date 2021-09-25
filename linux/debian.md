@@ -46,7 +46,7 @@ permalink: /debian
 sudo apt install -y curl
 ```
 ```
-curl -sL https://raw.githubusercontent.com/Rockz1152/Debian/main/setup.sh | sudo bash && exec bash --login
+curl -sL https://raw.githubusercontent.com/Rockz1152/Debian/main/setup.sh | sudo bash && exec bash
 ```
 - A reboot is recommended after provisioning but not required `sudo reboot`
 
@@ -65,7 +65,7 @@ chmod u+x $HOME/update-system.sh
 - Run `ip link` to retrieve the name of your network interface and substitute as necessary
 - Open the network interface config
 ```
-sudo vim /etc/network/interfaces
+sudo nano /etc/network/interfaces
 ```
 - If your interface already has an entry, change `dhcp` to `static`
 ```
