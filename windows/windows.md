@@ -178,7 +178,7 @@ powercfg -attributes SUB_NONE 0E796BDB-100D-47D6-A2D5-F7D2DAA51F51 -ATTRIB_HIDE
 ### Disable Sticky Keys shortcuts
 Disable the shortcut keys that can interrupt gaming
 
-- Goto [Keyboard settings](ms-settings:easeofaccess-keyboard) in the Ease of Access page of Settings
+- Go to [Keyboard settings](ms-settings:easeofaccess-keyboard) in the Ease of Access page of Settings
 - Uncheck "Allow the shortcut key to start..." for:
   - Sticky Keys
   - Toggle Keys
