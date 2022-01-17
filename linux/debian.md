@@ -8,7 +8,7 @@ permalink: /debian
 [Debian]({{site.url}}/debian){: .simple-pressed-button}
 
 ## Download Installer
-- Debian 10: [https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/](https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/){:target="_blank"}
+- Debian 11: [https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/](https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/){:target="_blank"}
 - Get the current `debian-XX.X.X-amd64-netinst.iso`
 
 ### Firmware Included
