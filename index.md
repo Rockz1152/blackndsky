@@ -24,8 +24,13 @@ layout: home
 | iBuyPower | [https://www.ibuypower.com/](https://www.ibuypower.com/){:target="_blank"}
 | CyberPowerPC | [https://www.cyberpowerpc.com/](https://www.cyberpowerpc.com/){:target="_blank"}
 | MainGear | [https://maingear.com/](https://maingear.com/){:target="_blank"}
+| Digital Storm | [https://www.digitalstorm.com/](https://www.digitalstorm.com/){:target="_blank"}
 | Origin PC | [https://www.originpc.com/](https://www.originpc.com/){:target="_blank"}
 | Falcon Northwest | [https://www.falcon-nw.com/](https://www.falcon-nw.com/){:target="_blank"}
+| Puget Systems | [https://www.pugetsystems.com/](https://www.pugetsystems.com/){:target="_blank"}
+| Velocity Micro | [https://www.velocitymicro.com/](https://www.velocitymicro.com/){:target="_blank"}
+| Xidax | [https://www.xidax.com/](https://www.xidax.com/){:target="_blank"}
+| AVA Direct | [https://www.avadirect.com/](https://www.avadirect.com/){:target="_blank"}
 | **Tools**
 | PCPartPicker | [https://pcpartpicker.com](https://pcpartpicker.com/){:target="_blank"}
 | Bottleneck Calculator | [https://pc-builds.com/calculator](https://pc-builds.com/calculator/){:target="_blank"}
