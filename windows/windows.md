@@ -16,7 +16,7 @@ Quicklinks: <a href="#optional" Class="simple-button-small">Optional Tweaks</a><
 ## Standard Configuration
 _*Open a "Windows Powershell (Admin)" prompt to run commands. Right click the start button, select "Windows Powershell (Admin)"_
 
-- Remove unwanted Windows Store apps with [CleanAppsHome](https://github.com/Rockz1152/blackndsky/blob/master/_files/CleanAppsHome.zip){:target="_blank"} script
+- Remove unwanted Windows Store apps with [CleanApps](https://github.com/Rockz1152/CleanApps/releases){:target="_blank"} script
 - Update Apps in [Microsoft Store](ms-windows-store://downloadsandupdates)
 - Remove OneDrive **-- Optional**
 - Install [Windows Updates](ms-settings:windowsupdate)
