@@ -190,7 +190,7 @@ sudo reboot
 ```
 - Login and verify services
 ```
-systemctl status network-manager | grep Active:
+systemctl status NetworkManager | grep Active:
 systemctl status systemd-networkd | grep Active:
 ```
 - Login to your server using the web address: `<Server IP>:9090`
