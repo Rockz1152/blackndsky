@@ -54,7 +54,7 @@ Direct downloads available from [Dropbox](https://www.dropbox.com/sh/4lgb3t1pr7n
 | [ProduKey](http://nirsoft.net/utils/product_cd_key_viewer.html#DownloadLinks){:target="_blank"} | A small utility that displays the ProductID and the CD-Key of many Microsoft products. _*May give an AV warning_
 | [Recuva Portable](https://www.dropbox.com/s/cee3c10mp6ew6dn/RecuvaPortable-1.53.zip?dl=1){:target="_blank"} | Recover deleted files
 | [Revo Uninstaller Portable](https://portableapps.com/apps/utilities/revo_uninstaller_portable){:target="_blank"} | Helps uninstall programs and cleanup remaining files, also helps remove programs with broken uninstallers
-| [Snappy Driver Installer Origin](https://www.snappy-driver-installer.org/download/){:target="_blank"} | Snappy Driver Installer Origin - Helps find missing drivers
+| [Snappy Driver Installer Origin](https://www.glenn.delahoy.com/snappy-driver-installer-origin/){:target="_blank"} | Snappy Driver Installer Origin - Helps find missing drivers
 | [ShellEx View](https://www.nirsoft.net/utils/shexview.html#DownloadLinks){:target="_blank"} | Display and edit right click context menu for explorer
 | [ShellMenu View](https://www.nirsoft.net/utils/shell_menu_view.html){:target="_blank"} | Display and edit right click context menu for explorer
 | [Sysinternals Suite](https://docs.microsoft.com/en-us/sysinternals/downloads/sysinternals-suite){:target="_blank"} | A collection of various programs many administrators utilize
