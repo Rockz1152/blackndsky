@@ -47,6 +47,7 @@ Direct downloads available from [Dropbox](https://www.dropbox.com/sh/4lgb3t1pr7n
 | [Display Driver Uninstaller](https://www.guru3d.com/files-details/display-driver-uninstaller-download.html){:target="_blank"} | DDU - Tool for fully removing display drivers from Nvidia, AMD, and Intel. Best ran from safe mode
 | [Defraggler Portable](https://www.dropbox.com/s/l50b4c8eu1ko5b8/DefragglerPortable-2.2.2.zip?dl=1){:target="_blank"} | Defragment very full hard disks, use on non SSDs only
 | [DesktopOK](https://www.softwareok.com/?Download=desktopok){:target="_blank"} | Utility to remember the location of desktop icons and restore their location if they get moved
+| [Disk2vhd](https://learn.microsoft.com/en-us/sysinternals/downloads/disk2vhd){:target="_blank"} | Utility that creates VHD (Virtual Hard Disk - Microsoft's Virtual Machine disk format) versions of physical disks
 | [Driver Store Explorer](https://github.com/lostindark/DriverStoreExplorer/releases){:target="_blank"} | View the Windows driver store and remove old and unneeded drivers
 | [Icon Cache Reset](https://www.dropbox.com/s/nnrpppf3qjrv933/IconCacheReset.zip?dl=1){:target="_blank"} | Small scripts to use if icons look invalid or don't display properly - Tested on Windows 7
 | [O&O Shutup 10](https://www.oo-software.com/en/shutup10){:target="_blank"} | Helps turn off telemetry and other privacy settings in Windows 10
