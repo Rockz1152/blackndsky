@@ -35,17 +35,6 @@ permalink: /ubuntu
 - Wait for the system to finish booting up and login
 - Get the IP of your server using `ip a` and connect using putty or another SSH client
 
-### Expand Hard Disk
-- If you have no intention of using LVM snapshots or other features, reclaim the missing hard disk space
-```
-sudo lvextend -l +100%FREE /dev/ubuntu-vg/ubuntu-lv
-```
-- Expand the filesystem
-```
-sudo resize2fs /dev/ubuntu-vg/ubuntu-lv
-```
-- Verify free space with `df -h`
-
 ### Updates
 - Make a script that can be launched as `~/update-system.sh` to install system updates
 ```
@@ -219,3 +208,16 @@ systemctl status systemd-networkd | grep Active:
 sudo do-release-upgrade
 ```
 - Follow the prompts, a restart is required at the end
+
+----
+
+## Reclaim Disk Space
+- If during the install you didn't allocate the entire disk to the root partition and have no intention of using LVM snapshots or other features, you can reclaim the missing hard disk space
+```
+sudo lvextend -l +100%FREE /dev/ubuntu-vg/ubuntu-lv
+```
+- Expand the filesystem
+```
+sudo resize2fs /dev/ubuntu-vg/ubuntu-lv
+```
+- Verify free space with `df -h`
