@@ -19,6 +19,13 @@ permalink: /ubuntu
 - Boot the installation media and wait for the installer to finish loading
 - Proceed through the setup prompts until you reach the "Choose type of install" page
   - Leave `Ubuntu Server` selected
+- Guided storage configuration
+  - You can leave this at the default settings and then fix the hard disk later if you want
+  - Otherwise you can specify that the install actually use the entire disk
+  - Select `Custom storage layout`
+  - Highlight `Free space` and press Enter
+  - Select `Add GPT Partition`
+  - Leave "Size" blank and select `Create`, this will use the entire disk properly
 - Proceed through the setup prompts until you reach the "SSH Setup" page
   - Check `Install OpenSSH server`
 - On the "Featured Server Snaps" page, leave everything unchecked and select `Done`
@@ -104,6 +111,10 @@ sudo DEBIAN_FRONTEND=noninteractive apt install -y open-vm-tools
   - Proxmox
 ```
 sudo DEBIAN_FRONTEND=noninteractive apt install -y qemu-guest-agent
+```
+- Install any pending updates
+```
+sudo sh -c "apt update; DEBIAN_FRONTEND=noninteractive apt upgrade -y; DEBIAN_FRONTEND=noninteractive apt autoremove --purge -y;"
 ```
 - Reboot server
 ```
