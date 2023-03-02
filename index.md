@@ -17,6 +17,22 @@ layout: home
 <button class="collapsible" id="links">Links for PC Hardware</button>
 <div class="content" id="links-data" markdown="1">
 
+| **Tools**
+| PCPartPicker | [https://pcpartpicker.com](https://pcpartpicker.com/){:target="_blank"}
+| SSD Google Doc | [https://docs.google.com/spreadsheets/...](https://docs.google.com/spreadsheets/d/1B27_j9NDPU3cNlj2HKcrfpJKHkOf-Oi1DbuuQva2gT4){:target="_blank"}
+| Bottleneck Calculator | [https://pc-builds.com/calculator](https://pc-builds.com/calculator/){:target="_blank"}
+| Build Compare | [https://www.gpucheck.com/build-multi](https://www.gpucheck.com/build-multi){:target="_blank"}
+| **CPU**
+| Passmark | [https://www.cpubenchmark.net/singleCompare.php](https://www.cpubenchmark.net/singleCompare.php){:target="_blank"}
+| UserBenchmark | [https://cpu.userbenchmark.com/](https://cpu.userbenchmark.com/){:target="_blank"}
+| GPU-Check | [https://www.gpucheck.com/cpu-benchmark-comparison](https://www.gpucheck.com/cpu-benchmark-comparison){:target="_blank"}
+| **GPU**
+| Passmark | [https://www.videocardbenchmark.net/singleCompare.php](https://www.videocardbenchmark.net/singleCompare.php){:target="_blank"}
+| UserBenchmark | [https://gpu.userbenchmark.com/](https://gpu.userbenchmark.com/){:target="_blank"}
+| GPU-Check | [https://www.gpucheck.com/gpu-benchmark-comparison](https://www.gpucheck.com/gpu-benchmark-comparison){:target="_blank"}
+| **Display**
+| TestUFO | [https://testufo.com](https://testufo.com/){:target="_blank"}
+| DisplaySpecifications | [https://www.displayspecifications.com/](https://www.displayspecifications.com/){:target="_blank"}
 | **System Integrators**
 | NZXT BLD | [https://letsbld.com/](https://letsbld.com/){:target="_blank"}
 | Buld Redux | [https://buildredux.com/](https://buildredux.com/){:target="_blank"}
@@ -31,21 +47,6 @@ layout: home
 | Velocity Micro | [https://www.velocitymicro.com/](https://www.velocitymicro.com/){:target="_blank"}
 | Xidax | [https://www.xidax.com/](https://www.xidax.com/){:target="_blank"}
 | AVA Direct | [https://www.avadirect.com/](https://www.avadirect.com/){:target="_blank"}
-| **Tools**
-| PCPartPicker | [https://pcpartpicker.com](https://pcpartpicker.com/){:target="_blank"}
-| Bottleneck Calculator | [https://pc-builds.com/calculator](https://pc-builds.com/calculator/){:target="_blank"}
-| Build Compare | [https://www.gpucheck.com/build-multi](https://www.gpucheck.com/build-multi){:target="_blank"}
-| **CPU**
-| Passmark | [https://www.cpubenchmark.net/singleCompare.php](https://www.cpubenchmark.net/singleCompare.php){:target="_blank"}
-| UserBenchmark | [https://cpu.userbenchmark.com/](https://cpu.userbenchmark.com/){:target="_blank"}
-| GPU-Check | [https://www.gpucheck.com/cpu-benchmark-comparison](https://www.gpucheck.com/cpu-benchmark-comparison){:target="_blank"}
-| **GPU**
-| Passmark | [https://www.videocardbenchmark.net/singleCompare.php](https://www.videocardbenchmark.net/singleCompare.php){:target="_blank"}
-| UserBenchmark | [https://gpu.userbenchmark.com/](https://gpu.userbenchmark.com/){:target="_blank"}
-| GPU-Check | [https://www.gpucheck.com/gpu-benchmark-comparison](https://www.gpucheck.com/gpu-benchmark-comparison){:target="_blank"}
-| **Display**
-| TestUFO | [https://testufo.com](https://testufo.com/){:target="_blank"}
-| DisplaySpecifications | [https://www.displayspecifications.com/](https://www.displayspecifications.com/){:target="_blank"}
 
 </div>
 <br>
