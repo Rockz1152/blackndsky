@@ -7,7 +7,7 @@ permalink: /windows-tools
 [Configuration]({{site.url}}/windows){: .simple-button}
 [Tools]({{site.url}}/windows-tools){: .simple-pressed-button}
 
-Direct downloads available from [Dropbox](https://www.dropbox.com/sh/4lgb3t1pr7n8xya/AAAXy7FZl6OyrQCeTVV-s2--a?dl=0&lst=){:target="_blank"} or download from sources below. Dropbox downloads may be outdated.
+Direct downloads available from [Dropbox](https://www.dropbox.com/sh/4lgb3t1pr7n8xya/AAAXy7FZl6OyrQCeTVV-s2--a){:target="_blank"} or download from sources below. Dropbox downloads may be outdated.
 
 ### Hardware
 
@@ -49,7 +49,7 @@ Direct downloads available from [Dropbox](https://www.dropbox.com/sh/4lgb3t1pr7n
 | [DesktopOK](https://www.softwareok.com/?Download=desktopok){:target="_blank"} | Utility to remember the location of desktop icons and restore their location if they get moved
 | [Disk2vhd](https://learn.microsoft.com/en-us/sysinternals/downloads/disk2vhd){:target="_blank"} | Utility that creates VHD (Virtual Hard Disk - Microsoft's Virtual Machine disk format) versions of physical disks
 | [Driver Store Explorer](https://github.com/lostindark/DriverStoreExplorer/releases){:target="_blank"} | View the Windows driver store and remove old and unneeded drivers
-| [Icon Cache Reset](https://www.dropbox.com/s/nnrpppf3qjrv933/IconCacheReset.zip?dl=1){:target="_blank"} | Small scripts to use if icons look invalid or don't display properly - Tested on Windows 7
+| [Icon Cache Reset](https://www.dropbox.com/s/nnrpppf3qjrv933/IconCacheReset.zip){:target="_blank"} | Small scripts to use if icons look invalid or don't display properly - Tested on Windows 7
 | [O&O Shutup 10](https://www.oo-software.com/en/shutup10){:target="_blank"} | Helps turn off telemetry and other privacy settings in Windows 10
 | [Process Explorer](https://docs.microsoft.com/en-us/sysinternals/downloads/process-explorer){:target="_blank"} | Displays detailed information about current running processes
 | [ProduKey](http://nirsoft.net/utils/product_cd_key_viewer.html#DownloadLinks){:target="_blank"} | A small utility that displays the ProductID and the CD-Key of many Microsoft products. _*May give an AV warning_
