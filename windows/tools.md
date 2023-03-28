@@ -52,7 +52,6 @@ Direct downloads available from [Dropbox](https://www.dropbox.com/sh/4lgb3t1pr7n
 | [Icon Cache Reset](https://www.dropbox.com/s/nnrpppf3qjrv933/IconCacheReset.zip){:target="_blank"} | Small scripts to use if icons look invalid or don't display properly - Tested on Windows 7
 | [O&O Shutup 10](https://www.oo-software.com/en/shutup10){:target="_blank"} | Helps turn off telemetry and other privacy settings in Windows 10
 | [Process Explorer](https://docs.microsoft.com/en-us/sysinternals/downloads/process-explorer){:target="_blank"} | Displays detailed information about current running processes
-| [ProduKey](http://nirsoft.net/utils/product_cd_key_viewer.html#DownloadLinks){:target="_blank"} | A small utility that displays the ProductID and the CD-Key of many Microsoft products. _*May give an AV warning_
 | [Recuva Portable](https://www.majorgeeks.com/files/details/recuva_portable.html){:target="_blank"} | Recover deleted files
 | [Revo Uninstaller Portable](https://portableapps.com/apps/utilities/revo_uninstaller_portable){:target="_blank"} | Helps uninstall programs and cleanup remaining files, also helps remove programs with broken uninstallers
 | [Snappy Driver Installer Origin](https://www.glenn.delahoy.com/snappy-driver-installer-origin/){:target="_blank"} | Snappy Driver Installer Origin - Helps find missing drivers
@@ -61,6 +60,5 @@ Direct downloads available from [Dropbox](https://www.dropbox.com/sh/4lgb3t1pr7n
 | [Sysinternals Suite](https://docs.microsoft.com/en-us/sysinternals/downloads/sysinternals-suite){:target="_blank"} | A collection of various programs many administrators utilize
 | [TreeSizeFree Portable](https://portableapps.com/apps/utilities/treesize-free-portable){:target="_blank"} | Analyzes disk usage by directory and displays as a chart
 | [USBDeview](https://www.nirsoft.net/utils/usb_devices_view.html#DownloadLinks){:target="_blank"} | View all installed USB devices in the registry, includes devices no longer plugged in!
-| [WebBrowserPassView](https://www.nirsoft.net/utils/web_browser_password.html){:target="_blank"} | Password recovery tool that reveals passwords stored in web browser located on the system
 | [WinDirStat Portable](https://portableapps.com/apps/utilities/windirstat_portable){:target="_blank"} | A very popular disk usage analysis program, displays all files as a large relational graphic
 | [WizTree](https://wiztreefree.com/download){:target="_blank"} | A small but very fast disk analyzer, useful for systems with millions of files
