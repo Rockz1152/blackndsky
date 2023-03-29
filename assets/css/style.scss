@@ -106,6 +106,12 @@ tbody tr td:first-child {
   word-break: break-all;
 }
 
+/* tools page table header */
+#banner > div > section > div.softview > table > tbody > tr > td:nth-child(2),
+#banner > div > section > div.softview > table > tbody > tr > td:nth-child(1) {
+  font-size: 15px;
+}
+
 @media
 only screen and (max-width: 760px),
 (min-device-width: 768px) and (max-device-width: 768px)  {
