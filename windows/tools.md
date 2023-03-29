@@ -47,7 +47,7 @@ permalink: /windows-tools
 | [DesktopOK](https://www.softwareok.com/?Download=desktopok){:target="_blank"} | Utility to remember the location of desktop icons and restore their location if they get moved
 | [Disk2vhd](https://learn.microsoft.com/en-us/sysinternals/downloads/disk2vhd){:target="_blank"} | Utility that creates VHD (Virtual Hard Disk - Microsoft's Virtual Machine disk format) versions of physical disks
 | [Driver Store Explorer](https://github.com/lostindark/DriverStoreExplorer/releases){:target="_blank"} | View the Windows driver store and remove old and unneeded drivers
-| [Ninite](https://ninite.com/){:target="_blank"} | Install and update dozens of programs at once. All automated with no toolbars. Great to run for monthly updates
+| [Ninite](https://ninite.com/){:target="_blank"} | Install and update multiple programs at once. All automated with no toolbars. Great to run for monthly updates and new system installs.
 | [O&O Shutup 10](https://www.oo-software.com/en/shutup10){:target="_blank"} | Helps turn off telemetry and other privacy settings in Windows 10
 | [Process Explorer](https://docs.microsoft.com/en-us/sysinternals/downloads/process-explorer){:target="_blank"} | Displays detailed information about current running processes
 | [Recuva Portable](https://www.majorgeeks.com/files/details/recuva_portable.html){:target="_blank"} | Recover deleted files
