@@ -80,6 +80,10 @@ sudo dpkg-reconfigure tzdata
 ```
 touch ~/.hushlogin
 ```
+- Disable "Ubuntu Pro" advertisement in apt
+```
+sudo mv /etc/apt/apt.conf.d/20apt-esm-hook.conf /etc/apt/apt.conf.d/20apt-esm-hook.conf.bak; sudo touch /etc/apt/apt.conf.d/20apt-esm-hook.conf
+```
 - Remove unneeded server packages
 ```
 sudo DEBIAN_FRONTEND=noninteractive apt autoremove --purge -y cloud-init multipath-tools snapd landscape-common; sudo rm -rf /etc/cloud
