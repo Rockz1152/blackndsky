@@ -8,18 +8,21 @@ permalink: /debian
 [Debian]({{site.url}}/debian){: .simple-pressed-button}
 
 ## Download Installer
-- Debian 11: [https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/](https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/){:target="_blank"}
+- Debian 12: [https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/](https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/){:target="_blank"}
 - Get the current `debian-XX.X.X-amd64-netinst.iso`
 
-### Firmware Included
-- If you are installing on a laptop and need extra drivers for WiFi, get the appropriate installer from:
-  - [https://cdimage.debian.org/cdimage/unofficial/non-free/cd-including-firmware/current/](https://cdimage.debian.org/cdimage/unofficial/non-free/cd-including-firmware/current/){:target="_blank"}
-- Select your cpu `architecture` and then the `iso-cd` subfolder
-- Look for `firmware-XX.X.X-XXXX-netinst.iso`
-
-### Older releases
+### Older Releases
+- Debian 11: [https://cdimage.debian.org/cdimage/archive/11.7.0/amd64/iso-cd/debian-11.7.0-amd64-netinst.iso](https://cdimage.debian.org/cdimage/archive/11.7.0/amd64/iso-cd/debian-11.7.0-amd64-netinst.iso)
 - Debian 10: [https://cdimage.debian.org/cdimage/archive/10.10.0/amd64/iso-cd/debian-10.10.0-amd64-netinst.iso](https://cdimage.debian.org/cdimage/archive/10.10.0/amd64/iso-cd/debian-10.10.0-amd64-netinst.iso)
 - Debian 9: [https://cdimage.debian.org/cdimage/archive/9.13.0/amd64/iso-cd/debian-9.13.0-amd64-netinst.iso](https://cdimage.debian.org/cdimage/archive/9.13.0/amd64/iso-cd/debian-9.13.0-amd64-netinst.iso)
+
+### Old Release Firmware
+- As of Debian 12, non-free firmware is included in the install image
+- If you need firmware for an older release, you can find it in the archive below
+  - [https://cdimage.debian.org/cdimage/unofficial/non-free/cd-including-firmware/archive/](https://cdimage.debian.org/cdimage/unofficial/non-free/cd-including-firmware/archive/)
+- Select the folder for the release you need
+- Select your cpu `architecture` and then the `iso-cd` subfolder
+- Look for `firmware-XX.X.X-XXXX-netinst.iso`
 
 ----
 
@@ -100,9 +103,15 @@ At software selection, choose
 - `OpenSSH Server`
 - `Standard System Utilities`
 
-After Install
+### After Install
+Install the Yaru theme
+```
+sudo apt install -y yaru-theme-gtk yaru-theme-icon yaru-theme-sound
+```
+- System **>** Preferences **>** Look and Feel **>** Popup Notifications
+  - For Theme select `Coco`
 - System **>** Preferences **>** Look and Feel **>** Appearance
-- Choose **"Black MATE"** or **"Blue-Submarine"**
+  - Choose a theme and color you are comfortable with
 
 Install MATE Tweak
  - `sudo apt install mate-tweak`
@@ -129,12 +138,15 @@ sudo sh -c "apt update; apt full-upgrade -y; apt autoremove --purge -y"
 ```
 sudo sed -i 's/<OldName>/<NewName>/g' /etc/apt/sources.list
 ```
+  - Bullseye to Bookworm
+```
+sudo sed -i 's!bullseye!bookworm!g' /etc/apt/sources.list
+sudo sed -i 's!main!main non-free-firmware!g' /etc/apt/sources.list
+```
   - Buster to Bullseye:
 ```
 sudo sed -i 's!buster!bullseye!g' /etc/apt/sources.list
-```
-```
-sudo sed -i 's!bullseye/updates!bullseye-security!g'  /etc/apt/sources.list
+sudo sed -i 's!bullseye/updates!bullseye-security!g' /etc/apt/sources.list
 ```
 - Upgrade to the new release
 ```
@@ -145,6 +157,6 @@ sudo sh -c "apt clean; apt update; apt upgrade --without-new-pkgs -y; apt full-u
 - Reboot when complete `sudo reboot`
 - Rerun the Debian provision script to setup dotfiles
 ```
-curl -sL {{site.url}}/linux/Debian.txt | sudo bash && exec bash
+curl -sL https://raw.githubusercontent.com/Rockz1152/Debian/main/setup.sh | sudo bash && exec bash
 ```
 - Verify the upgrade `cat /etc/os-release`
