@@ -10,7 +10,7 @@ permalink: /ubuntu
 ## Download Installer
 - New releases only support 64-bit systems
 - Download the latest LTS release from [https://releases.ubuntu.com/?C=M;O=D](https://releases.ubuntu.com/?C=M;O=D){:target="_blank"}
-  - Select the `Server install image` link on the right after choosing a release
+  - Select the `Server install image` after choosing a release
 - Current server install image: [https://releases.ubuntu.com/jammy/ubuntu-22.04.1-live-server-amd64.iso](https://releases.ubuntu.com/jammy/ubuntu-22.04.1-live-server-amd64.iso){:target="_blank"}
 
 ----
@@ -116,7 +116,7 @@ sudo reboot
 - Run `ip link` first to retrieve the name of your network interface and make note of it
 - Edit netplan's config file
 ```
-sudo nano /etc/netplan/01-netcfg.yaml
+sudo nano /etc/netplan/00-installer-config.yaml
 ```
 - Add the network configuration in YAML format as below:
 ```
@@ -125,7 +125,6 @@ network:
     renderer: networkd
     ethernets:
       ens18:
-        link-local: [ ipv4 ]
         dhcp4: no
         addresses:
           - 192.168.0.XX/24
@@ -137,8 +136,6 @@ network:
 ```
   - _*When editing Yaml files, make sure you follow the YAML code indent standards._
   - _*If the syntax is not correct, the changes will not be applied._
-  - _*The line "link-local: [ ipv4 ]" will disable IPv6 without disabling the kernel module for it"_
-
 - Be sure to update the following:
   - Under "ethernets" update `ens18` with the name of your network interface
   - Under "addresses" update `192.168.0.XX` with your preferred host IP address
@@ -148,10 +145,9 @@ network:
 sudo netplan apply; ip a
 ```
 
-<!-- ----
+----
 
 ## Disable IPv6 (Optional)
-
 - Make the change in the GRUB config
 ```
 sudo sed -i 's!GRUB_CMDLINE_LINUX_DEFAULT=""!GRUB_CMDLINE_LINUX_DEFAULT="ipv6.disable=1"!' /etc/default/grub
@@ -159,7 +155,7 @@ sudo sed -i 's!GRUB_CMDLINE_LINUX_DEFAULT=""!GRUB_CMDLINE_LINUX_DEFAULT="ipv6.di
 - Update GRUB and reboot
 ```
 sudo update-grub && sudo reboot
-``` -->
+```
 
 ----
 
