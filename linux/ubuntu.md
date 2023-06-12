@@ -105,10 +105,6 @@ sudo DEBIAN_FRONTEND=noninteractive apt install -y open-vm-tools
 ```
 sudo DEBIAN_FRONTEND=noninteractive apt install -y qemu-guest-agent
 ```
-- Install any pending updates
-```
-sudo sh -c "apt update; DEBIAN_FRONTEND=noninteractive apt upgrade -y; DEBIAN_FRONTEND=noninteractive apt autoremove --purge -y;"
-```
 - Reboot server
 ```
 sudo reboot
@@ -129,6 +125,7 @@ network:
     renderer: networkd
     ethernets:
       ens18:
+        link-local: [ ipv4 ]
         dhcp4: no
         addresses:
           - 192.168.0.XX/24
@@ -141,6 +138,7 @@ network:
 
 _*When editing Yaml files, make sure you follow the YAML code indent standards._
 _*If the syntax is not correct, the changes will not be applied._
+_*The line "link-local: [ ipv4 ]" will disable IPv6 without disaling ther kernel module for it"_
 
 - Be sure to update the following:
   - Under "ethernets" update `ens18` with the name of your network interface
@@ -151,7 +149,7 @@ _*If the syntax is not correct, the changes will not be applied._
 sudo netplan apply; ip a
 ```
 
-----
+<!-- ----
 
 ## Disable IPv6 (Optional)
 
@@ -162,7 +160,7 @@ sudo sed -i 's!GRUB_CMDLINE_LINUX_DEFAULT=""!GRUB_CMDLINE_LINUX_DEFAULT="ipv6.di
 - Update GRUB and reboot
 ```
 sudo update-grub && sudo reboot
-```
+``` -->
 
 ----
 
