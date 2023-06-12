@@ -135,10 +135,9 @@ network:
           - to: default
             via: 192.168.0.1
 ```
-
-_*When editing Yaml files, make sure you follow the YAML code indent standards._
-_*If the syntax is not correct, the changes will not be applied._
-_*The line "link-local: [ ipv4 ]" will disable IPv6 without disaling ther kernel module for it"_
+  - _*When editing Yaml files, make sure you follow the YAML code indent standards._
+  - _*If the syntax is not correct, the changes will not be applied._
+  - _*The line "link-local: [ ipv4 ]" will disable IPv6 without disabling the kernel module for it"_
 
 - Be sure to update the following:
   - Under "ethernets" update `ens18` with the name of your network interface
