@@ -38,7 +38,7 @@ permalink: /ubuntu
 ### Updates
 - Make a script that can be launched as `~/update-system.sh` to install system updates
 ```
-echo 'sudo sh -c "apt update; DEBIAN_FRONTEND=noninteractive apt upgrade -y; DEBIAN_FRONTEND=noninteractive apt autoremove --purge -y;"' > $HOME/update-system.sh; chmod u+x $HOME/update-system.sh
+echo 'sudo sh -c "export DEBIAN_FRONTEND=noninteractive; apt update; apt upgrade -y; apt autoremove --purge -y;"' > $HOME/update-system.sh; chmod u+x $HOME/update-system.sh
 ```
 
 ----
@@ -76,13 +76,21 @@ sudo dpkg-reconfigure tzdata
 ----
 
 ## Software Packages
+Run the automated script
+```
+curl -sL https://raw.githubusercontent.com/Rockz1152/Ubuntu/main/ubuntu_setup.sh | sudo /bin/bash
+```
+
+Manual steps for the script above
+
 - Turn off Message-of-the-Day on login
 ```
-touch ~/.hushlogin
+sudo sed -i 's/session    optional     pam_motd.so/# session    optional     pam_motd.so/g' /etc/pam.d/sshd
+sudo sed -i 's/PrintMotd yes/PrintMotd no/g' /etc/ssh/sshd_config
 ```
 - Disable "Ubuntu Pro" advertisement in apt
 ```
-sudo mv /etc/apt/apt.conf.d/20apt-esm-hook.conf /etc/apt/apt.conf.d/20apt-esm-hook.conf.bak; sudo touch /etc/apt/apt.conf.d/20apt-esm-hook.conf
+sudo dpkg-divert --divert /etc/apt/apt.conf.d/20apt-esm-hook.conf.bak --rename --local /etc/apt/apt.conf.d/20apt-esm-hook.conf
 ```
 - Remove unneeded server packages
 ```
