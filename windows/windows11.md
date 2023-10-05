@@ -12,7 +12,7 @@ permalink: /windows11
 :------------: | :------------: | :------------: | :------------: | :------------:
 [CleanApps](https://github.com/Rockz1152/CleanApps/releases){:target="_blank"} | [O&O Shutup 10](https://www.oo-software.com/en/shutup10){:target="_blank"} | [Ninite](https://ninite.com/){:target="_blank"} | [Snappy Driver Installer Origin](https://www.glenn.delahoy.com/snappy-driver-installer-origin/){:target="_blank"} | [Windows 11 Media Creation Tool](https://www.microsoft.com/en-us/software-download/windows11){:target="_blank"}
 
-Quicklinks: <a href="#maint" Class="simple-button-small">Maintenance</a>
+Quicklinks: <a href="#optional" Class="simple-button-small">Optional Tweaks</a><a href="#maint" Class="simple-button-small">Maintenance</a>
 
 ## Installation
 
@@ -111,14 +111,14 @@ Stop-Process -ProcessName explorer
 ----
 
 ## Standard Setup
-_*Open a "Windows Terminal (Admin)" prompt to run commands. Right click the start button, select "Windows Terminal (Admin)"_
+_*Open a "Terminal (Admin)" prompt to run commands. Right click the start button, select "Terminal (Admin)"_
 
-- Remove unwanted Windows Store apps with **CleanApps** script
+- Remove unwanted Windows Store apps with [CleanApps](https://github.com/Rockz1152/CleanApps/releases){:target="_blank"} script
 - Update Apps in [Microsoft Store](ms-windows-store://downloadsandupdates)
 - Install [Windows Updates](ms-settings:windowsupdate)
 - Install drivers and reboot
 - Install software with [Ninite](https://ninite.com/){:target="_blank"}
-- Set a default Web browser in [Default apps](ms-settings://defaultapps)
+- Set a default Web browser in [Default apps](ms-settings:defaultapps)
 - Turn off telemetry with "**O&O Shutup 10**"
 - Disable System Protection
 ```
@@ -263,11 +263,24 @@ Dism /Online /Cleanup-Image /StartComponentCleanup
 ```
 - Run Disk Cleanup with "**Clean up system files**"
 - Optimize drives
-- Disable [Do not Disturb](ms-settings:privacy-notifications)
+- Disable [Do not Disturb](ms-settings:notifications)
   - Toggle off `Do not disturb`
   - Expand "Turn on do not disturb automatically"
   - Toggle off all rules
 - Reboot system
+
+----
+
+<a name="optional"></a>
+## Optional Tweaks
+
+### Disable Sticky Keys shortcuts
+Disable shortcut keys that can interrupt gaming
+
+- Go to [Keyboard](ms-settings:easeofaccess-keyboard) under Accessibility in Settings
+- Click "Sticky Keys" and turn off all options
+- Click "Filter Keys" and turn off all options
+- Keep "Toggle Keys" off
 
 ----
 
