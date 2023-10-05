@@ -119,7 +119,7 @@ _*Open a "Terminal (Admin)" prompt to run commands. Right click the start button
 - Install drivers and reboot
 - Install software with [Ninite](https://ninite.com/){:target="_blank"}
 - Set a default Web browser in [Default apps](ms-settings:defaultapps)
-- Turn off telemetry with "**O&O Shutup 10**"
+- Turn off telemetry with [O&O Shutup 10](https://www.oo-software.com/en/shutup10){:target="_blank"}
 - Disable System Protection
 ```
 Disable-ComputerRestore "C:"; vssadmin delete shadows /all /quiet | Out-Null
@@ -253,10 +253,11 @@ reg add "HKCU\Software\Microsoft\Windows Defender Security Center\Account protec
 reg add "HKCU\Software\Microsoft\Windows Defender Security Center\Account protection" /v "DisableWindowsHelloNotifications" /t REG_DWORD /d 1 /f
 reg add "HKCU\Software\Microsoft\Windows Defender Security Center\Account protection" /v "DisableDynamiclockNotifications" /t REG_DWORD /d 1 /f
 ```
-
-<!-- Windows Security >> Device Security >> Core Isolation Details >> Memory Integrity >> Off
-Not sure if this needs to be changed, early reports say it affects gaming performance but it's not clear by how much. Be on the lookout for in-depth analysis from a reputable source (GamersNexus?) -->
-
+- Disable Core Isolation: Memory integrity **-- Optional, Improves Game Performance**
+```
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\DeviceGuard\Scenarios\HypervisorEnforcedCodeIntegrity" /v "Enabled" /t REG_DWORD /d 0 /f
+```
+- Open [Windows Security Center](windowsdefender:) and dismiss any alerts
 - Cleanup Windows components
 ```
 Dism /Online /Cleanup-Image /StartComponentCleanup
