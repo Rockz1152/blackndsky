@@ -6,7 +6,7 @@ layout: home
 # <center>Resources</center>
 
 <div align="center" markdown="1">
-[Windows 10 Setup]({{site.url}}/windows){: .simple-button}
+[Windows Setup]({{site.url}}/windows11){: .simple-button}
 [Windows Tools]({{site.url}}/windows-tools){: .simple-button}
 [Ubuntu Setup]({{site.url}}/ubuntu){: .simple-button}
 [Debian Setup]({{site.url}}/debian){: .simple-button}

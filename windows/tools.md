@@ -4,7 +4,8 @@ title: Windows Tools
 permalink: /windows-tools
 ---
 
-[Configuration]({{site.url}}/windows){: .simple-button}
+[Windows 11]({{site.url}}/windows11){: .simple-button}
+[Windows 10]({{site.url}}/windows10){: .simple-button}
 [Tools]({{site.url}}/windows-tools){: .simple-pressed-button}
 
 ### Hardware Information & Diagnostics
