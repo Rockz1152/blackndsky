@@ -45,7 +45,7 @@ Follow these steps to create a local user
 ----
 
 ## Appearance
-_*Open a "Windows Terminal (Admin)" prompt to run commands. Right click the start button, select "Windows Terminal (Admin)"_
+_*Open a "Terminal (Admin)" prompt to run commands. Right click the start button, select "Terminal (Admin)"_
 
 ### Recommended
 - Start Layout

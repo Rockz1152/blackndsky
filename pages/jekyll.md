@@ -63,7 +63,10 @@ cd <SiteName>
 ```
 
 Check for updates
+<!-- bundle add webrick -->
+
 ```
+bundle install
 bundle update
 ```
 
