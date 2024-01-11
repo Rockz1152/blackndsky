@@ -21,11 +21,11 @@ Check disk and recovery environment status
 Shrink the OS partition and remove the old WinRE partition
 - Run `diskpart`
 - Run `list disk`
-- To select the OS disk, run `sel disk<OS disk index>`. This should be the same disk index as WinRE.
+- To select the OS disk, run `sel disk <OS disk index>`. This should be the same disk index as WinRE.
 - To check the partition under the OS disk and find the OS partition, run `list part`
-- To select the OS partition, run `sel part<OS partition index>`
+- To select the OS partition, run `sel part <OS partition index>`
 - Run `shrink desired=400 minimum=400`
-- To select the WinRE partition, run `sel part<WinRE partition index>`
+- To select the WinRE partition, run `sel part <WinRE partition index>`
 - To delete the WinRE partition, run `delete partition override`
 
 Create new recovery partition
