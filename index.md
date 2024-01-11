@@ -58,6 +58,6 @@ layout: home
 <div id="div2"  markdown="1">
 - [Handbrake]({{site.url}}/handbrake)
 - [Jekyll]({{site.url}}/jekyll)
-- Plex
+- [WindowsRE]({{site.url}}/winre)
 </div>
 </div>
