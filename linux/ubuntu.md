@@ -9,9 +9,9 @@ permalink: /ubuntu
 
 ## Download Installer
 - New releases only support 64-bit systems
-- Download the latest LTS release from [https://releases.ubuntu.com/?C=M;O=D](https://releases.ubuntu.com/?C=M;O=D){:target="_blank"}
+- Download the latest LTS release from [https://releases.ubuntu.com](https://releases.ubuntu.com){:target="_blank"}
   - Select the `Server install image` after choosing a release
-- Current server install image: [https://releases.ubuntu.com/jammy/ubuntu-22.04.1-live-server-amd64.iso](https://releases.ubuntu.com/jammy/ubuntu-22.04.1-live-server-amd64.iso){:target="_blank"}
+- Current server install image: [https://releases.ubuntu.com/noble/ubuntu-24.04-live-server-amd64.iso](https://releases.ubuntu.com/noble/ubuntu-24.04-live-server-amd64.iso){:target="_blank"}
 
 ----
 
@@ -52,19 +52,23 @@ echo 'sudo sh -c "export DEBIAN_FRONTEND=noninteractive; apt update; apt upgrade
 ### Commands
 - Eastern Standard Time
 ```
-sudo timedatectl set-timezone US/Eastern; cat /etc/timezone; date
+sudo timedatectl set-timezone America/New_York; echo $(timedatectl | grep "Time zone"); date
 ```
 - Central Standard Time
 ```
-sudo timedatectl set-timezone US/Central; cat /etc/timezone; date
+sudo timedatectl set-timezone America/Chicago; echo $(timedatectl | grep "Time zone"); date
 ```
 - Mountain Standard Time
 ```
-sudo timedatectl set-timezone US/Mountain; cat /etc/timezone; date
+sudo timedatectl set-timezone America/Denver; echo $(timedatectl | grep "Time zone"); date
+```
+- Arizona Time
+```
+sudo timedatectl set-timezone America/Phoenix; echo $(timedatectl | grep "Time zone"); date
 ```
 - Pacific Standard Time
 ```
-sudo timedatectl set-timezone US/Pacific; cat /etc/timezone; date
+sudo timedatectl set-timezone America/Los_Angeles; echo $(timedatectl | grep "Time zone"); date
 ```
 
 ### Interactive
