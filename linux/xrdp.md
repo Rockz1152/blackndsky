@@ -43,7 +43,7 @@ unzip xrdp-installer-X.X.X.zip
 
 Run the install script
 - Do not run the install script over SSH, you must be logged in locally
-- Do not run the install script as root with sudo, the script will prompt elevate itself when necessary
+- Do not run the install script as root with sudo, the script will prompt to elevate itself when necessary
 
 ```
 bash xrdp-installer-X.X.X.sh -l -s
