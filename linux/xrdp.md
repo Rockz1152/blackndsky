@@ -51,10 +51,11 @@ bash xrdp-installer-X.X.X.sh -l -s
 - The `-l` customizes the login screen over Remote Desktop
 - The `-s` enables audio over Remote Desktop
 
-Hide the `thinclient_drives` from the desktop
+Hide `thinclient_drives` from the desktop
 ```
 sudo sed -i 's!FuseMountName=thinclient_drives!FuseMountName=.thinclient_drives!' /etc/xrdp/sesman.ini
 ```
+- This is part of the FuseMount system which is used for the copying-and-pasting of files and the clipboard
 
 Reboot the system
 ```
