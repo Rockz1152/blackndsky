@@ -98,6 +98,7 @@ ol, table, dl {
   margin: 0 0 10px;
 }
 
+/* Home page links table */
 thead tr th:first-child,
 tbody tr td:first-child {
   width: 195px;
@@ -106,7 +107,7 @@ tbody tr td:first-child {
   word-break: break-all;
 }
 
-/* tools page table header */
+/* Tools page table header */
 #banner > div > section > div.softview > table > tbody > tr > td:nth-child(2),
 #banner > div > section > div.softview > table > tbody > tr > td:nth-child(1) {
   font-size: 15px;

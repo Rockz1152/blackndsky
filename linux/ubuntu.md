@@ -6,6 +6,8 @@ permalink: /ubuntu
 
 [Ubuntu]({{site.url}}/ubuntu){: .simple-pressed-button}
 [Debian]({{site.url}}/debian){: .simple-button}
+[Mint]({{site.url}}/mint){: .simple-button}
+[xRDP]({{site.url}}/xrdp){: .simple-button}
 
 ## Download Installer
 - New releases only support 64-bit systems
@@ -106,7 +108,7 @@ sudo apt update; sudo DEBIAN_FRONTEND=noninteractive apt full-upgrade -y
 ```
 - Install additional software packages
 ```
-sudo DEBIAN_FRONTEND=noninteractive apt install -y ncdu zip unzip p7zip-full unrar-free neofetch
+sudo DEBIAN_FRONTEND=noninteractive apt install -y ncdu zstd zip unzip p7zip-full unrar-free neofetch
 ```
 - Install guest agents if you are running the server in a VM
   - VMWare

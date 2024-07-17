@@ -1,11 +1,13 @@
 ---
 layout: default
-title: Debian
+title: Debian Linux
 permalink: /debian
 ---
 
 [Ubuntu]({{site.url}}/ubuntu){: .simple-button}
 [Debian]({{site.url}}/debian){: .simple-pressed-button}
+[Mint]({{site.url}}/mint){: .simple-button}
+[xRDP]({{site.url}}/xrdp){: .simple-button}
 
 ## Download Installer
 - Debian 12: [https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/](https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/){:target="_blank"}
