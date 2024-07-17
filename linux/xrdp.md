@@ -67,65 +67,11 @@ xRDP should be ready to use
 ----
 
 ## Change RDP port in xRDP
-To change xRDP's port, edit the following file and adjust the value of `PORT=`
+To change xRDP's port from the default of `3389`, edit the following file and adjust the value of `PORT=`
 ```
 sudo nano /etc/xrdp/xrdp.ini
 ```
 Save the file and restart the system
 ```
 sudo reboot
-```
-
-----
-
-## Limit access with Firewall
-Debian users will need to install UFW
-```
-sudo apt install -y ufw
-```
-
-Make sure firewall is enabled
-```
-sudo ufw enable
-```
-- Enabling the firewall will not disconnect current sessions but will prevent new sessions from being established.
-- If you are using SSH, be sure to add a rule for SSH
-```
-sudo ufw allow 22/tcp
-```
-
-Check firewall status
-```
-sudo ufw status
-```
-
-Port `3389` should already be allowed. This is the default port that Remote Desktop Protocol (RDP) uses. If you need to re-add this rule, this command will allow access from any address.
-```
-sudo ufw allow 3389/tcp
-```
-
-Allow port 3389 from specific IP address
-```
-sudo ufw allow from <IP_address> to any port 3389/tcp
-```
-- Change `3389` to any custom port you want to use with RDP
-- To allow from a range of IPs, use the address formatted as a subnet or CIDR address
-- e.g. `192.168.0.0/255.255.0.0` or `192.168.0.0/16`
-
-Check firewall status to see your rules
-```
-sudo ufw status
-```
-
-### Remove a firewall rule
-Here is an example command to remove a firewall rule
-```
-sudo ufw delete allow 3389/tcp
-```
-- `sudo ufw delete` This part specifies you are trying to delete a rule
-- `allow 3389/tcp` This part specifies you are deleting the rule: `allow` traffic to port `3389/tcp`
-
-Verify the rules are deleted with
-```
-sudo ufw status
 ```
