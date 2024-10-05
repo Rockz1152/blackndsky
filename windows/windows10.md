@@ -14,6 +14,11 @@ permalink: /windows10
 
 Quicklinks: <a href="#optional" Class="simple-button-small">Optional Tweaks</a><a href="#maint" Class="simple-button-small">Maintenance</a>
 
+## Prepare Installation Media
+- Download the [Media Creation Tool](https://www.microsoft.com/en-us/software-download/windows10){:target="_blank"}
+- Select "USB Device" and wait for the installation media to be ready
+- Boot to the USB device to start the install
+
 ## Standard Setup
 _*Open a "Windows Powershell (Admin)" prompt to run commands. Right click the start button, select "Windows Powershell (Admin)"_
 
