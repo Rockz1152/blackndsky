@@ -43,15 +43,34 @@ Follow these steps to create a local user
 _*Open a "Terminal (Admin)" prompt to run commands. Right click the start button, select "Terminal (Admin)"_
 
 ### Recommended
-- Enable dark mode - Open [Personalization](ms-settings:personalization) and select a theme or enable dark mode with the commands below. May require a restart
+- Enable dark mode - Open [Personalization](ms-settings:personalization) and select a theme or enable dark mode with the commands below
 ```
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes" /v "CurrentTheme" /t REG_SZ /d "C:\WINDOWS\resources\Themes\dark.theme" /f
 reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "AppsUseLightTheme" /t REG_DWORD /d 0 /f
 reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "SystemUsesLightTheme" /t REG_DWORD /d 0 /f
-reg add "HKCU\Control Panel\Desktop" /v "Wallpaper" /t REG_SZ /d "C:\Windows\Web\Wallpaper\Windows\img19.jpg" /f
-Stop-Process -ProcessName explorer
-RUNDLL32.EXE USER32.DLL,UpdatePerUserSystemParameters 1, True
+Add-Type -TypeDefinition 'using System.Runtime.InteropServices; public class W { [DllImport("user32.dll", CharSet=CharSet.Auto)] public static extern int SystemParametersInfo(int uAction, int uParam, string lpvParam, int fuWinIni); public static void SetWallpaper(string path) { SystemParametersInfo(20, 0, path, 3); } }';
+[W]::SetWallpaper("C:\Windows\Web\Wallpaper\Windows\img19.jpg"); Stop-Process -ProcessName explorer
 ```
+<!-- Original force wallpaper refresh script - minified version is used above
+$imgPath="C:\Windows\Web\Wallpaper\Windows\img19.jpg"
+$code = @' 
+using System.Runtime.InteropServices; 
+namespace Win32{ 
+    
+     public class Wallpaper{ 
+        [DllImport("user32.dll", CharSet=CharSet.Auto)] 
+         static extern int SystemParametersInfo (int uAction , int uParam , string lpvParam , int fuWinIni) ; 
+         
+         public static void SetWallpaper(string thePath){ 
+            SystemParametersInfo(20,0,thePath,3); 
+         }
+    }
+ } 
+'@
+add-type $code 
+#Apply the Change on the system 
+[Win32.Wallpaper]::SetWallpaper($imgPath)
+-->
 - Start Layout
 ```
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "Start_Layout" /t REG_DWORD /d 1 /f
