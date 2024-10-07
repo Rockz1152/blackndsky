@@ -135,6 +135,9 @@ Set-TimeZone -Id "Central Standard Time"
 Set-TimeZone -Id "Mountain Standard Time"
 ```
 ```
+Set-TimeZone -Id "US Mountain Standard Time" #Arizona
+```
+```
 Set-TimeZone -Id "Pacific Standard Time"
 ```
 - Sync from internet time

@@ -125,7 +125,7 @@ Stop-Process -ProcessName explorer
 ```
 
 ### Microsoft Edge
-- Makes Edge usable, requires closing and reopening
+- Changes to make Microsoft Edge usable
 ```
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Edge" /v NewTabPageAllowedBackgroundTypes /t REG_DWORD /d 3 /f
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Edge" /v HubsSidebarEnabled /t REG_DWORD /d 0 /f
@@ -161,6 +161,10 @@ reg add "HKLM\SOFTWARE\Policies\Microsoft\Edge" /v NewTabPageSearchBox /t REG_SZ
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Edge" /v HideFirstRunExperience /t REG_DWORD /d 1 /f
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Edge" /v AutoImportAtFirstRun /t REG_DWORD /d 4 /f
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Edge\Recommended" /v ShowHomeButton /t REG_DWORD /d 1 /f
+```
+- Open `edge://policy/` and click `Reload Policies` - Copy and paste link below to visit
+```
+edge://policy/
 ```
 
 <a name="standard"></a>
@@ -338,6 +342,9 @@ Set-TimeZone -Id "Central Standard Time"
 ```
 ```
 Set-TimeZone -Id "Mountain Standard Time"
+```
+```
+Set-TimeZone -Id "US Mountain Standard Time" #Arizona
 ```
 ```
 Set-TimeZone -Id "Pacific Standard Time"
