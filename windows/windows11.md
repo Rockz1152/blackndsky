@@ -151,29 +151,6 @@ reg delete "HKEY_CLASSES_ROOT\*\shell\CompressToFullMenu_ForOldContextMenu" /f
 reg delete "HKEY_CLASSES_ROOT\Folder\shell\CompressToFullMenu_ForOldContextMenu" /f
 ```
 
-<!--
-Windows Registry Editor Version 5.00
-
-[HKEY_CLASSES_ROOT\*\shell\CompressToFullMenu_ForOldContextMenu]
-"CommandStateSync"=""
-"ExplorerCommandHandler"="{7AE6900F-6EB0-44A2-9CA1-DB2F7EF352AF}"
-"MUIVerb"="@Windows.UI.FileExplorer.dll,-51797"
-"Note"="Copied from original Command Store command: Windows.CompressTo"
-
-[HKEY_CLASSES_ROOT\Folder\shell\CompressToFullMenu_ForOldContextMenu]
-"CommandStateSync"=""
-"ExplorerCommandHandler"="{7AE6900F-6EB0-44A2-9CA1-DB2F7EF352AF}"
-"MUIVerb"="@Windows.UI.FileExplorer.dll,-51797"
-"Note"="Copied from original Command Store command: Windows.CompressTo"
-
-
-Windows Registry Editor Version 5.00
-
-[-HKEY_CLASSES_ROOT\*\shell\CompressToFullMenu_ForOldContextMenu]
-
-[-HKEY_CLASSES_ROOT\Folder\shell\CompressToFullMenu_ForOldContextMenu]
--->
-
 ### Microsoft Edge
 - Changes to make Microsoft Edge usable
 ```
