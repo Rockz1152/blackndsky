@@ -132,6 +132,47 @@ Stop-Process -ProcessName explorer
 reg delete "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}" /f
 Stop-Process -ProcessName explorer
 ```
+<!-- https://gist.github.com/ThioJoe/f4b0799e2f0d95466f4c2bd4e46d1e67 -->
+- Add new "Compress to..." menu to Classic Right Click
+  - Add menu
+```
+reg add "HKEY_CLASSES_ROOT\*\shell\CompressToFullMenu_ForOldContextMenu" /v "CommandStateSync" /t REG_SZ /d "" /f
+reg add "HKEY_CLASSES_ROOT\*\shell\CompressToFullMenu_ForOldContextMenu" /v "ExplorerCommandHandler" /t REG_SZ /d "{7AE6900F-6EB0-44A2-9CA1-DB2F7EF352AF}" /f
+reg add "HKEY_CLASSES_ROOT\*\shell\CompressToFullMenu_ForOldContextMenu" /v "MUIVerb" /t REG_SZ /d "@Windows.UI.FileExplorer.dll,-51797" /f
+reg add "HKEY_CLASSES_ROOT\*\shell\CompressToFullMenu_ForOldContextMenu" /v "Note" /t REG_SZ /d "Copied from original Command Store command: Windows.CompressTo" /f
+reg add "HKEY_CLASSES_ROOT\Folder\shell\CompressToFullMenu_ForOldContextMenu" /v "CommandStateSync" /t REG_SZ /d "" /f
+reg add "HKEY_CLASSES_ROOT\Folder\shell\CompressToFullMenu_ForOldContextMenu" /v "ExplorerCommandHandler" /t REG_SZ /d "{7AE6900F-6EB0-44A2-9CA1-DB2F7EF352AF}" /f
+reg add "HKEY_CLASSES_ROOT\Folder\shell\CompressToFullMenu_ForOldContextMenu" /v "MUIVerb" /t REG_SZ /d "@Windows.UI.FileExplorer.dll,-51797" /f
+reg add "HKEY_CLASSES_ROOT\Folder\shell\CompressToFullMenu_ForOldContextMenu" /v "Note" /t REG_SZ /d "Copied from original Command Store command: Windows.CompressTo" /f
+```
+  - Remove menu
+```
+reg delete "HKEY_CLASSES_ROOT\*\shell\CompressToFullMenu_ForOldContextMenu" /f
+reg delete "HKEY_CLASSES_ROOT\Folder\shell\CompressToFullMenu_ForOldContextMenu" /f
+```
+
+<!--
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\*\shell\CompressToFullMenu_ForOldContextMenu]
+"CommandStateSync"=""
+"ExplorerCommandHandler"="{7AE6900F-6EB0-44A2-9CA1-DB2F7EF352AF}"
+"MUIVerb"="@Windows.UI.FileExplorer.dll,-51797"
+"Note"="Copied from original Command Store command: Windows.CompressTo"
+
+[HKEY_CLASSES_ROOT\Folder\shell\CompressToFullMenu_ForOldContextMenu]
+"CommandStateSync"=""
+"ExplorerCommandHandler"="{7AE6900F-6EB0-44A2-9CA1-DB2F7EF352AF}"
+"MUIVerb"="@Windows.UI.FileExplorer.dll,-51797"
+"Note"="Copied from original Command Store command: Windows.CompressTo"
+
+
+Windows Registry Editor Version 5.00
+
+[-HKEY_CLASSES_ROOT\*\shell\CompressToFullMenu_ForOldContextMenu]
+
+[-HKEY_CLASSES_ROOT\Folder\shell\CompressToFullMenu_ForOldContextMenu]
+-->
 
 ### Microsoft Edge
 - Changes to make Microsoft Edge usable
