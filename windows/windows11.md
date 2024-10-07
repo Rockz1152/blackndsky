@@ -371,6 +371,10 @@ reg add "HKCU\Software\Microsoft\Windows Defender Security Center\Account protec
 ```
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\DeviceGuard\Scenarios\HypervisorEnforcedCodeIntegrity" /v "Enabled" /t REG_DWORD /d 0 /f
 ```
+- Disable reminders from "Windows Backup"
+```
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Notifications\Settings\MicrosoftWindows.Client.CBS_cw5n1h2txyewy!WindowsBackup" /v "Enabled" /t REG_DWORD /d 0 /f
+```
 - Open [Windows Security Center](windowsdefender:) and dismiss any alerts
 - Cleanup Windows components
 ```
