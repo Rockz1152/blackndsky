@@ -43,6 +43,15 @@ Click `Tools` **>** `Preferences`
   - Click the down arrow next to `Add to Queue` **>** `Add all`
   - In Handbrake or the Queue windows, click `Start`
 
+### Convert MKV with Subtitles
+
+- Select the preset you want to convert the video to
+- On the "Summary" tab, change the container to `MKV`
+  - Optionally on the "Video" tab, change the "Encoder Preset" slider to "Very Slow"
+- On the "Subtitles" tab, change "Foreign Audio Scan" to the English subtitles track
+- Uncheck `Forced Only` and `Burn In`
+- Start the transcode
+
 ## DVD Ripping
 ### Download and Install **libdvdcss-2.dll**
 **Windows**

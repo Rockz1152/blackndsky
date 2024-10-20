@@ -4,6 +4,10 @@ title: "Jellyfin Media Server"
 permalink: /jellyfin
 ---
 
+> ### **Warning**
+>
+> _This article is under construction and may be missing important information_
+
 Install type: <a href="#baremetal" Class="simple-button-small">Bare Metal</a><a href="#lxc" Class="simple-button-small">Proxmox LXC Container</a>
 
 ----
