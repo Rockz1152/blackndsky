@@ -46,6 +46,7 @@ body {
 #header nav {
   max-width: 1200px;
   margin: 0px auto;
+  background-color: #313539;
 }
 
 #header nav ul li.linkleft {
@@ -74,10 +75,19 @@ body {
 
 #header nav ul li a:hover {
   color: #ffcc00;
-  background-color: #272b30;
   border: 1px solid #000;
-  background: #272b30;
+  background-color: #313539;
+  background: #313539;
+  box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), 0px 3px 7px rgba(0, 0, 0, 0.7);
 }
+
+/* Old top nav hover */
+/* #header nav ul li a:hover { */
+  /* color: #ffcc00; */
+  /* background-color: #272b30; */
+  /* border: 1px solid #000; */
+  /* background: #272b30; */
+/* } */
 
 .softview {
   max-width: 1000px;
