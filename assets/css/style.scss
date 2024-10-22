@@ -54,6 +54,12 @@
   margin-left: 6px;
 }
 
+@media (max-width: 468px) {
+  #header nav ul li.linkright {
+    margin-left: 0;
+  }
+}
+
 #header nav ul li a {
   color: white;
   border: 1px solid #000;
