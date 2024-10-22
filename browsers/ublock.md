@@ -35,7 +35,6 @@ www.youtube.com/live_chat
 www.youtube.com###panels-full-bleed-container
 ```
 - Click `Apply changes` at the top
-- Done
 
 Block Youtube Shorts <!-- https://github.com/gijsdev/ublock-hide-yt-shorts/blob/master/list.txt -->
 

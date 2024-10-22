@@ -9,6 +9,12 @@ permalink: /firefox
 [Microsoft Edge]({{site.url}}/edge){: .simple-button}
 [uBlock Origin]({{site.url}}/ublock){: .simple-button}
 
+<sup>_Version 10/22/24_</sup>
+
+> ### **Author's Note**
+>
+> _Mozilla Firefox is recommended over Google Chrome and Microsoft Edge due to better support for Ad blocking_
+
 ## Installation
 
 Install with `winget` or use [Ninite](https://ninite.com/){:target="_blank"}
@@ -147,8 +153,8 @@ browser.tabs.hoverPreview.enabled
 
 Once you have finished configuring your settings, close and reopen Firefox
 
-  - Click the hamburger menu in the top right corner > `Exit`
-  - Reopen Firefox
+- Click the hamburger menu in the top right corner > `Exit`
+- Reopen Firefox
 
 ----
 
@@ -156,7 +162,7 @@ Once you have finished configuring your settings, close and reopen Firefox
 
 Install
 
-- Open the Firefox Add-ons page:
+- Open the Firefox Add-ons page
   - [https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/){:target="_blank"}
 - Click `Add to Firefox`
 - In the popup click `Add`
@@ -164,7 +170,7 @@ Install
 
 Pin
 
-- If uBlock does not show on the toolbar, click the Overflow Menu button
+- If uBlock doesn't show on the toolbar, click the Overflow Menu button
 - Right click the uBlock icon and select `Unpin from Overflow Menu`
 
 Configure
