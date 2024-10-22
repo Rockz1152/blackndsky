@@ -7,6 +7,11 @@
   #header { margin-top: -5px; }
 }
 
+/* iphone support */
+html {
+  padding: env(safe-area-inset);
+}
+
 /* Footer links on homepage */
 #centered {
   width: 100%;
