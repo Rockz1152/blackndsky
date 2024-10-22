@@ -9,8 +9,8 @@ layout: home
 
 <div align="center" markdown="1">
 [Windows Setup]({{site.url}}/windows11){: .simple-button}
-[Windows Tools]({{site.url}}/windows-tools){: .simple-button}
 [Linux Setup]({{site.url}}/ubuntu){: .simple-button}
+[Web Browsers]({{site.url}}/firefox){: .simple-button}
 [xRDP Setup]({{site.url}}/xrdp){: .simple-button}
 </div>
 
@@ -75,8 +75,9 @@ layout: home
 ## Page Links
 </div>
 <div id="div2"  markdown="1">
+- [Windows Tools]({{site.url}}/windows-tools)
+- [WindowsRE]({{site.url}}/winre)
 - [Handbrake]({{site.url}}/handbrake)
 - [Jekyll]({{site.url}}/jekyll)
-- [WindowsRE]({{site.url}}/winre)
 </div>
 </div>
