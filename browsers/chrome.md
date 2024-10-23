@@ -31,8 +31,10 @@ Open Chrome
 Choose a theme
 
 - Settings > Appearance > Theme
-- Or use the "Just Black" theme from google
-  - [https://chrome.google.com/webstore/detail/just-black/aghfnjkcakhmadgdomlmlhhaocbkloab](https://chrome.google.com/webstore/detail/just-black/aghfnjkcakhmadgdomlmlhhaocbkloab){:target="_blank"}
+- Or use the "Just Black" theme from google [https://chrome.google.com/webstore/detail/just-black/aghfnjkcakhmadgdomlmlhhaocbkloab](https://chrome.google.com/webstore/detail/just-black/aghfnjkcakhmadgdomlmlhhaocbkloab){:target="_blank"}
+```
+https://chrome.google.com/webstore/detail/just-black/aghfnjkcakhmadgdomlmlhhaocbkloab
+```
 
 Additional Changes
 
@@ -87,8 +89,10 @@ reg add "HKLM\Software\Policies\Google\Chrome" /v "PrivacySandboxAdMeasurementEn
 ## uBlock Origin
 Install
 
-- Open the Chrome Web Store page
-  - [https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm){:target="_blank"}
+- Open the Chrome Web Store page [https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm){:target="_blank"}
+```
+https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm
+```
 - Click `Add to Chrome`
 - In the popup click `Add extension`
 

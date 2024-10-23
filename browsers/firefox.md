@@ -153,9 +153,6 @@ browser.tabs.hoverPreview.enabled
 
 Once you have finished configuring your settings, close and reopen Firefox
 
-- Click the hamburger menu in the top right corner > `Exit`
-- Reopen Firefox
-
 ----
 
 ## uBlock Origin

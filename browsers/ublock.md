@@ -9,6 +9,8 @@ permalink: /ublock
 [Microsoft Edge]({{site.url}}/edge){: .simple-button}
 [uBlock Origin]({{site.url}}/ublock){: .simple-pressed-button}
 
+<sup>_Version 10/22/24_</sup>
+
 ## Configure
 - Click the red uBlock shield and then click the small 3 gears icon under the I/O button labeled `Open the dashboard`
 - Select the `Filter lists` tab
