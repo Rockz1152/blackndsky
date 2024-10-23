@@ -16,9 +16,9 @@ permalink: /ublock
 - Select the `Filter lists` tab
 - Expand "Built-in", make sure all boxes are checked
 - Expand "Ads", check all boxes
-- Expand "Privacy", check all boxes except "Block access to LAN"
+- Expand "Privacy", check all boxes except "Block Outsider intrusion into LAN"
 - Expand "Malware protection, security", check all boxes
-- Under "Multipurpose", leave just "Peter Lowe's Ad and tracking server list" checked
+- Expand "Multipurpose", check all boxes
 - Expand "Cookie notices", check all boxes
 - Expand "Social widgets", check all boxes
 - Expand "Annoyances", check all boxes
@@ -53,6 +53,14 @@ https://raw.githubusercontent.com/gijsdev/ublock-hide-yt-shorts/master/list.txt
 
 ## uBlock Origin Lite
 
-Coming soon...
+### Configure
+- Click the red uBlock shield and then click the small 3 gears icon under the filter mode slider labeled `Open the dashboard`
+- Under "Default filtering mode" select `Complete`
+  - Click `Allow` for the permissions popup
+- Scroll down to "Filter lists"
+  - Under "Default" make sure "Ads, trackers, miners, and more" is checked
+  - Under "Annoyances" check all boxes
+  - Expand "Miscellaneous", check all boxes except "Block Outsider intrusion into LAN"
+
 
 

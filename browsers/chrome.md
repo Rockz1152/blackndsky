@@ -86,12 +86,15 @@ reg add "HKLM\Software\Policies\Google\Chrome" /v "PrivacySandboxAdMeasurementEn
 
 ----
 
-## uBlock Origin
+## uBlock Origin Lite
+> ### Author's Note
+> _Due to a change in Chromium based browsers supporting manifest V2 extensions, Mozilla Firefox is recommended for it's better support for Ad blocking. As a result of this, Chromium based browsers only officially support uBlock Origin Lite which is a manifest V3 compliant extension._
+
 Install
 
-- Open the Chrome Web Store page [https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm){:target="_blank"}
+- Open the Chrome Web Store page [https://chromewebstore.google.com/detail/ublock-origin-lite/ddkjiahejlhfcafbddmgiahcphecmpfh](https://chromewebstore.google.com/detail/ublock-origin-lite/ddkjiahejlhfcafbddmgiahcphecmpfh){:target="_blank"}
 ```
-https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm
+https://chromewebstore.google.com/detail/ublock-origin-lite/ddkjiahejlhfcafbddmgiahcphecmpfh
 ```
 - Click `Add to Chrome`
 - In the popup click `Add extension`
@@ -103,13 +106,13 @@ Pin
 
 Incognito Mode
 
-- Click Options **>** More Tools **>** Extensions
+- Click Options > Extensions > Manage Extensions
 - Under uBlock Origin click `Details`
 - Scroll down and enable `Allow in Incognito`
 
 Configure
 
-- See the [uBlock Origin]({{site.url}}/ublock#lite) article
+- See the [uBlock Origin Lite]({{site.url}}/ublock#lite){:target="_blank"} article
 
 ----
 
