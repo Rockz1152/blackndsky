@@ -9,7 +9,7 @@ permalink: /chrome
 [Microsoft Edge]({{site.url}}/edge){: .simple-button}
 [uBlock Origin]({{site.url}}/ublock){: .simple-button}
 
-<sup>_Version 10/22/24_</sup>
+<sup>_Version 10/23/24_</sup>
 
 ## Installation
 
@@ -31,7 +31,7 @@ Open Chrome
 Choose a theme
 
 - Settings > Appearance > Theme
-- Or use the "Just Black" theme from google [https://chrome.google.com/webstore/detail/just-black/aghfnjkcakhmadgdomlmlhhaocbkloab](https://chrome.google.com/webstore/detail/just-black/aghfnjkcakhmadgdomlmlhhaocbkloab){:target="_blank"}
+- Or use the "Just Black" theme from Google [https://chrome.google.com/webstore/detail/just-black/aghfnjkcakhmadgdomlmlhhaocbkloab](https://chrome.google.com/webstore/detail/just-black/aghfnjkcakhmadgdomlmlhhaocbkloab){:target="_blank"}
 ```
 https://chrome.google.com/webstore/detail/just-black/aghfnjkcakhmadgdomlmlhhaocbkloab
 ```
@@ -88,7 +88,7 @@ reg add "HKLM\Software\Policies\Google\Chrome" /v "PrivacySandboxAdMeasurementEn
 
 ## uBlock Origin Lite
 > ### Author's Note
-> _Due to a change in Chromium based browsers supporting manifest V2 extensions, Mozilla Firefox is recommended for it's better support for Ad blocking. As a result of this, Chromium based browsers only officially support uBlock Origin Lite which is a manifest V3 compliant extension._
+> _Due to recent changes in Chromium-based browsers, which no longer support Manifest V2 extensions, Mozilla Firefox is now recommended for its enhanced ad-blocking capabilities. As a result, Chromium-based browsers only officially support uBlock Origin Lite, a Manifest V3-compliant extension._
 
 Install
 

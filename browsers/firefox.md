@@ -9,11 +9,11 @@ permalink: /firefox
 [Microsoft Edge]({{site.url}}/edge){: .simple-button}
 [uBlock Origin]({{site.url}}/ublock){: .simple-button}
 
-<sup>_Version 10/22/24_</sup>
+<sup>_Version 10/23/24_</sup>
 
 > ### **Author's Note**
 >
-> _Mozilla Firefox is recommended over Google Chrome and Microsoft Edge due to better support for Ad blocking_
+> _Mozilla Firefox is recommended over Google Chrome and Microsoft Edge for its enhanced ad-blocking capabilities._
 
 ## Installation
 
