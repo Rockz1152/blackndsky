@@ -33,9 +33,10 @@ Open Firefox
 - If you don't like the current theme you can change it
   - Options Menu > Add-ons and themes > Themes on the left
   - Enable a theme to try it out
-- If you don't like the default Dark theme, try the one below
-- Visit [https://addons.mozilla.org/en-US/firefox/addon/old-dark-theme/](https://addons.mozilla.org/en-US/firefox/addon/old-dark-theme/){:target="_blank"} and install the theme
-  - Additional changes can be found at: [https://github.com/anewuser/firefox-clean-dark-theme](https://github.com/anewuser/firefox-clean-dark-theme){:target="_blank"} but are not required
+- If you don't like the default Dark theme, try this one instead [https://addons.mozilla.org/en-US/firefox/addon/old-dark-theme/](https://addons.mozilla.org/en-US/firefox/addon/old-dark-theme/){:target="_blank"}
+```
+https://addons.mozilla.org/en-US/firefox/addon/old-dark-theme/
+```
 
 ----
 
@@ -159,8 +160,10 @@ Once you have finished configuring your settings, close and reopen Firefox
 
 Install
 
-- Open the Firefox Add-ons page
-  - [https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/){:target="_blank"}
+- Open the Firefox Add-ons page [https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/){:target="_blank"}
+```
+https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/
+```
 - Click `Add to Firefox`
 - In the popup click `Add`
 - On the second popup check `Allow this extension to run in Private Windows` and click `Okay`
