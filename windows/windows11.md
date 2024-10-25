@@ -12,7 +12,12 @@ permalink: /windows11
 :------------: | :------------: | :------------: | :------------: | :------------:
 [CleanApps](https://github.com/Rockz1152/CleanApps/releases){:target="_blank"} | [O&O Shutup 10](https://www.oo-software.com/en/shutup10){:target="_blank"} | [Ninite](https://ninite.com/){:target="_blank"} | [Snappy Driver Installer Origin](https://www.glenn.delahoy.com/snappy-driver-installer-origin/){:target="_blank"} | [Windows 11 Media Creation Tool](https://www.microsoft.com/en-us/software-download/windows11){:target="_blank"}
 
-Quicklinks: <a href="#appearance" Class="simple-button-small">Appearance</a><a href="#standard" Class="simple-button-small">Standard Setup</a><a href="#optional" Class="simple-button-small">Optional Tweaks</a><a href="#maint" Class="simple-button-small">Maintenance</a>
+Quicklinks: 
+<a href="#appearance" class="simple-button-small">Appearance</a>
+<a href="#standard" class="simple-button-small">Standard Setup</a>
+<a href="#optional" class="simple-button-small">Optional Tweaks</a>
+<a href="#maint" class="simple-button-small">Maintenance</a>
+<span style="float: right; font-weight: bold; color: #555;">Version: 24H2</span>
 
 ## Installation
 
