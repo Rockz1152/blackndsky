@@ -54,6 +54,7 @@ https://addons.mozilla.org/en-US/firefox/addon/old-dark-theme/
 
 ## Settings
 Click the Options Menu in top right corner > Settings
+
 General
 
 - Startup
@@ -175,7 +176,7 @@ Pin
 
 Configure
 
-- See the [uBlock Origin]({{site.url}}/ublock) article
+- See the [uBlock Origin]({{site.url}}/ublock){:target="_blank"} article
 
 ----
 
