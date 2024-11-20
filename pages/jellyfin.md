@@ -68,7 +68,7 @@ cat /proc/sys/fs/inotify/max_user_watches
 - Use `sudo crontab -e` to edit the crontab and add the following to the bottom:
 ```
 # Update jellyfin
-0 6 * * * apt-get update >/dev/null 2>&1; apt-get install -y jellyfin-server jellyfin-web jellyfin-ffmpeg6 >/dev/null 2>&1;
+0 6 * * * apt-get update >/dev/null 2>&1; apt-get --with-new-pkgs upgrade -y jellyfin jellyfin-server >/dev/null 2>&1;
 ```
 - The `0 6` in the command indicate **6:00 AM** and can be adjusted
 - For example **8:30 PM** would be `30 20 * * *`. The thee `*`s indicate the command runs every day at the time specified
