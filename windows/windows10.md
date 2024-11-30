@@ -79,6 +79,14 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Power" /v "Hiberb
 ```
 powercfg -h off
 ```
+- Disable Windows 11 upgrade notice
+```
+schtasks /change /tn "\Microsoft\Windows\WindowsUpdate\RUXIM\PLUGScheduler" /disable
+```
+<!-- Set Windows 10 release to 22H2
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate" /v "TargetReleaseVersion" /t REG_DWORD /d 1 /f
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate" /v "TargetReleaseVersionInfo" /t REG_SZ /d "22H2" /f
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate" /v "ProductVersion" /t REG_SZ /d "Windows 10" /f -->
 - Disable Copilot
 ```
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Edge" /v "HubsSidebarEnabled" /t REG_DWORD /d 0 /f
