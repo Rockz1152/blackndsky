@@ -56,7 +56,6 @@ layout: home
 </div>
 
 | Starforge Systems | [https://starforgesystems.com](https://starforgesystems.com){:target="_blank"}
-| NZXT BLD | [https://letsbld.com](https://letsbld.com){:target="_blank"}
 | Build Redux  | [https://buildredux.com](https://buildredux.com){:target="_blank"}
 | Ironside Computers | [https://ironsidecomputers.com](https://ironsidecomputers.com){:target="_blank"}
 | iBuyPower | [https://www.ibuypower.com](https://www.ibuypower.com){:target="_blank"}
