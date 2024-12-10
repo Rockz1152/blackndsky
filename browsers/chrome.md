@@ -38,7 +38,7 @@ https://chrome.google.com/webstore/detail/just-black/aghfnjkcakhmadgdomlmlhhaocb
 
 Additional Changes
 
-- Settings > Appearance
+- Options > Settings > Appearance
   - Check `Show home button`
   - Check `Show bookmarks bar`
   - Uncheck `Show tab groups in bookmarks bar`
@@ -56,7 +56,7 @@ Additional Changes
 
 Privacy
 
-- Settings > Privacy and Security > Permissions
+- Settings > Privacy and Security > Site Settings > Permissions
   - Location > `Don't allow sites to see your location`
   - Notifications > `Don't allow sites to send notifications`
 - Settings > Privacy and Security > Third-party cookies
@@ -66,6 +66,7 @@ Change Search Provider (Optional)
 
 - Settings > Search engine > Click `Change`
 - Select a search engine from the list such as `DuckDuckGo`
+- Click `Set as default`
 
 ----
 
