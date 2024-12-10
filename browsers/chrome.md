@@ -12,7 +12,6 @@ permalink: /chrome
 <sup>_Version 10/23/24_</sup>
 
 ## Installation
-
 Install with `winget` or use [Ninite](https://ninite.com/){:target="_blank"}
 ```
 winget install google.chrome --accept-package-agreements --accept-source-agreements
@@ -27,7 +26,6 @@ Open Chrome
 ----
 
 ## Appearance
-
 Choose a theme
 
 - Settings > Appearance > Theme
@@ -53,7 +51,6 @@ Additional Changes
 ----
 
 ## Settings
-
 Privacy
 
 - Settings > Privacy and Security > Site Settings > Permissions
@@ -71,7 +68,6 @@ Change Search Provider (Optional)
 ----
 
 ## Additional Settings
-
 Disable Casting
 ```
 reg add "HKLM\Software\Policies\Google\Chrome" /v "EnableMediaRouter" /t REG_DWORD /d 0 /f
