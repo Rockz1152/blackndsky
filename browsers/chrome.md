@@ -9,7 +9,7 @@ permalink: /chrome
 [Microsoft Edge]({{site.url}}/edge){: .simple-button}
 [uBlock Origin]({{site.url}}/ublock){: .simple-button}
 
-<sup>_Version 10/23/24_</sup>
+<sup>_Version 12/10/24_</sup>
 
 ## Installation
 Install with `winget` or use [Ninite](https://ninite.com/){:target="_blank"}

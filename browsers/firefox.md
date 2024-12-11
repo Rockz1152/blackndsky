@@ -9,7 +9,7 @@ permalink: /firefox
 [Microsoft Edge]({{site.url}}/edge){: .simple-button}
 [uBlock Origin]({{site.url}}/ublock){: .simple-button}
 
-<sup>_Version 10/23/24_</sup>
+<sup>_Version 12/10/24_</sup>
 
 > ### **Author's Note**
 >
