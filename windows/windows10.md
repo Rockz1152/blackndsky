@@ -197,7 +197,7 @@ Dism /Online /Cleanup-Image /StartComponentCleanup
 <a name="optional"></a>
 ## Optional Tweaks
 
-### Disable password when resuming from sleep
+### Disable lock screen when resuming from sleep
 Add or Remove "Require a password on wakeup" in Power Options using Command Prompt
 
 - Open an elevated command prompt.

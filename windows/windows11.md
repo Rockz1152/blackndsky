@@ -433,6 +433,14 @@ Disable shortcut keys that can interrupt gaming
 - Click "Filter Keys" and turn off all options
 - Keep "Toggle Keys" off
 
+### Disable lock screen when resuming from sleep
+- Apply the change to the current power profile
+```
+powercfg /SETDCVALUEINDEX SCHEME_CURRENT SUB_NONE CONSOLELOCK 0
+powercfg /SETACVALUEINDEX SCHEME_CURRENT SUB_NONE CONSOLELOCK 0
+```
+- Reboot the system to apply the change
+
 ----
 
 <a name="maint"></a>
