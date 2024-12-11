@@ -30,6 +30,11 @@ _*Open a "Windows Powershell (Admin)" prompt to run commands. Right click the st
 - Install software with [Ninite](https://ninite.com/){:target="_blank"}
 - Set a default Web browser in [Default apps](ms-settings:defaultapps)
 - Turn off telemetry with [O&O Shutup 10](https://www.oo-software.com/en/shutup10){:target="_blank"}
+- Disable Windows Spotlight
+```
+reg add "HKCU\SOFTWARE\Policies\Microsoft\Windows\CloudContent" /v DisableWindowsSpotlightFeatures /t REG_DWORD /d 1 /f
+Add-Type -TypeDefinition 'using System.Runtime.InteropServices; public class W { [DllImport("user32.dll", CharSet=CharSet.Auto)] public static extern int SystemParametersInfo(int uAction, int uParam, string lpvParam, int fuWinIni); public static void SetWallpaper(string path) { SystemParametersInfo(20, 0, path, 3); } }'; [W]::SetWallpaper("C:\Windows\Web\Wallpaper\Windows\img0.jpg"); Stop-Process -ProcessName explorer;
+```
 - Disable System Protection
 ```
 Disable-ComputerRestore "C:"; vssadmin delete shadows /all /quiet | Out-Null
