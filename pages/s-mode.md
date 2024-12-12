@@ -10,9 +10,9 @@ permalink: /s-mode
 
 Try these steps first
 
-- Disable secure boot in BIOS
+- Disable secure boot in the BIOS
 - Boot and check if S mode is enabled
-- After S mode is disabled, re-enable secure boot in BIOS
+- After S mode is disabled, re-enable secure boot in the BIOS
 
 If S mode is still enabled, continue with the following steps
 
@@ -30,4 +30,4 @@ If S mode is still enabled, continue with the following steps
   - Highlight `Offline System` and go to `File > Unload Hive`
 - Close any windows and restart the system
 - Verify S mode is disabled
-- Re-enable secure boot in BIOS
+- Re-enable secure boot in the BIOS
