@@ -76,7 +76,7 @@ layout: home
 <div id="div2"  markdown="1">
 - [Windows Tools]({{site.url}}/windows-tools)
 - [WindowsRE]({{site.url}}/winre)
-- [Handbrake]({{site.url}}/handbrake)
+- [Disable S mode]({{site.url}}/s-mode)
 - [Jekyll]({{site.url}}/jekyll)
 </div>
 </div>
