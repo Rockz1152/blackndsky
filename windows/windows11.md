@@ -236,7 +236,7 @@ Disable-ComputerRestore "C:"; vssadmin delete shadows /all /quiet | Out-Null
 ```
 - Remove OneDrive **-- Optional**
 ```
-Stop-Process -ProcessName OneDrive
+Stop-Process -ProcessName OneDrive -ErrorAction SilentlyContinue
 Start-Process "$Env:SystemRoot\System32\OneDriveSetup.exe" -ArgumentList "/uninstall" -Wait
 ```
 - Remove Teams **-- Optional**
