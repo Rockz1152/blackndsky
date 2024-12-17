@@ -33,6 +33,7 @@ _*Open a "Windows Powershell (Admin)" prompt to run commands. Right click the st
 - Disable Windows Spotlight
 ```
 reg add "HKCU\SOFTWARE\Policies\Microsoft\Windows\CloudContent" /v DisableWindowsSpotlightFeatures /t REG_DWORD /d 1 /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\NewStartPanel" /v "{2cc5ca98-6485-489a-920e-b3e88a6ccce3}" /t REG_DWORD /d 1 /f
 Add-Type -TypeDefinition 'using System.Runtime.InteropServices; public class W { [DllImport("user32.dll", CharSet=CharSet.Auto)] public static extern int SystemParametersInfo(int uAction, int uParam, string lpvParam, int fuWinIni); public static void SetWallpaper(string path) { SystemParametersInfo(20, 0, path, 3); } }'; [W]::SetWallpaper("C:\Windows\Web\Wallpaper\Windows\img0.jpg"); Stop-Process -ProcessName explorer;
 ```
 - Disable System Protection
