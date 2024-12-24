@@ -272,9 +272,13 @@ Set-Service -Name "WMPNetworkSvc" -StartupType Disabled; Stop-Service -Name "WMP
 ```
 Set-Service -Name "WSearch" -StartupType Disabled; Stop-Service -Name "WSearch"
 ```
-- Disable the Diagnostics Tracking Service
+- Disable Telemetry and the Diagnostics Tracking Service <!-- The registry is also handled by Shutup10+ -->
 ```
 Set-Service -Name "DiagTrack" -StartupType Disabled; Stop-Service -Name "DiagTrack"
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\DataCollection" /v "AllowTelemetry" /t REG_DWORD /d 0 /f
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\DataCollection" /v "LimitDiagnosticLogCollection" /t REG_DWORD /d 1 /f
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\DataCollection" /v "DisableOneSettingsDownloads" /t REG_DWORD /d 1 /f
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\DataCollection" /v "DoNotShowFeedbackNotifications" /t REG_DWORD /d 1 /f
 ```
 - Disable Windows Error Reporting across the system
 ```

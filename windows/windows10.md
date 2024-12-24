@@ -87,7 +87,7 @@ powercfg -h off
 ```
 - Disable Windows 11 upgrade notice
 ```
-schtasks /change /tn "\Microsoft\Windows\WindowsUpdate\RUXIM\PLUGScheduler" /disable
+schtasks /change /tn "\Microsoft\Windows\WindowsUpdate\RUXIM\PLUGScheduler" /disable 2>$null
 ```
 <!-- Set Windows 10 release to 22H2
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate" /v "TargetReleaseVersion" /t REG_DWORD /d 1 /f
