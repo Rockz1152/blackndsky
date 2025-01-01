@@ -1,4 +1,4 @@
 # blackndsky
 Repository for [blackndsky.net](https://blackndsky.net)
 
-&copy; 2024
+&copy; 2025
