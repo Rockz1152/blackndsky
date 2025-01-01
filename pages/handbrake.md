@@ -13,6 +13,8 @@ permalink: /handbrake
 
 **Linux:** `sudo apt install -y handbrake`
 
+----
+
 ## Configuration
 Open Handbrake and cancel the source selection dialogue
 
@@ -33,6 +35,8 @@ Click `Tools` **>** `Preferences`
 - Set `File Format` to `{source}`
 - Set `MP4 File Extension` to `Always use MP4`
 
+----
+
 ## Media Conversion
 
 - Click `Open Source`
@@ -51,6 +55,31 @@ Click `Tools` **>** `Preferences`
 - On the "Subtitles" tab, change "Foreign Audio Scan" to the English subtitles track
 - Uncheck `Forced Only` and `Burn In`
 - Start the transcode
+
+----
+
+## Optimized Encoding
+In order to create the highest quality file without wasting any space, it's best to utilize Multi-Pass encoding. Multi-pass encoding in HandBrake optimizes video compression by analyzing the video in multiple passes. The first pass gathers data to improve bitrate distribution, while the subsequent pass ensures higher quality and better file size efficiency.
+
+- Preset
+  - `Roku 720p30 Surround` or `Roku 1080p30 Surround` depending on source file
+- Summary
+  - Format: `MKV`
+  - Leave "Passthru Common Metadata" checked
+- Video
+  - Video Encorder: Leave `H.264(x264)` as it maximizes compatibility
+    - If compatibility isn't a concern, select `H.265(x265)` instead for better compression
+  - Encoder Preset: `Very Slow` _*Use for best results_
+  - Avg Bitrate (kbps): `2000`
+  - Check: `Multi-Pass Encoding` and `Turbo analysis pass`
+- Subtitles
+  - Change "Foreign Audio Scan" to any available English subtitles track, otherwise click the `X` on the far right to remove it
+
+Click `Start Encode` to begin
+
+Note: Multi-Pass Encoding takes a very long time to process. Expect transcoding sessions to last 4-6 hours per title.
+
+----
 
 ## DVD Ripping
 ### Download and Install **libdvdcss-2.dll**
