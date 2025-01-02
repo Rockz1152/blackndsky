@@ -92,7 +92,7 @@ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcon
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\NewStartPanel" /v "{2cc5ca98-6485-489a-920e-b3e88a6ccce3}" /t REG_DWORD /d 1 /f
 Stop-Process -ProcessName explorer
 ```
-- Start Layout
+- Compact Start Menu layout
 ```
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "Start_Layout" /t REG_DWORD /d 1 /f
 ```
@@ -388,9 +388,9 @@ Set-TimeZone -Id "Pacific Standard Time"
 ```
 Start-Service -Name "W32Time"; W32tm /resync /force | Out-Null
 ```
-- Disable unneeded tasks
+- Disable un-needed scheduled tasks <!-- include XblGameSaveTask on business systems-->
 ```
-Get-Scheduledtask 'Microsoft Compatibility Appraiser','Consolidator','UsbCeip','Microsoft-Windows-DiskDiagnosticDataCollector','QueueReporting','XblGameSaveTask',' DmClient','DmClientOnScenarioDownload' -erroraction silentlycontinue | Disable-scheduledtask
+Get-Scheduledtask 'Microsoft Compatibility Appraiser','Consolidator','UsbCeip','Microsoft-Windows-DiskDiagnosticDataCollector','QueueReporting',' DmClient','DmClientOnScenarioDownload','StartupAppTask','MareBackup','PcaPatchDbTask','ProgramDataUpdater','MapsUpdateTask','MapsToastTask','Proxy' -erroraction silentlycontinue | Disable-scheduledtask
 ```
 - Disable Windows Defender Notifications
 ```
