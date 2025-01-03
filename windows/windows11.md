@@ -93,6 +93,10 @@ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcon
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\NewStartPanel" /v "{2cc5ca98-6485-489a-920e-b3e88a6ccce3}" /t REG_DWORD /d 1 /f
 Stop-Process -ProcessName explorer
 ```
+- Disable wallpaper compression
+```
+reg add "HKCU\Control Panel\Desktop" /v "JPEGImportQuality" /t REG_DWORD /d 100 /f
+```
 - Compact Start Menu layout
 ```
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "Start_Layout" /t REG_DWORD /d 1 /f
@@ -163,10 +167,21 @@ reg add "HKEY_CLASSES_ROOT\Folder\shell\CompressToFullMenu_ForOldContextMenu" /v
 reg delete "HKEY_CLASSES_ROOT\*\shell\CompressToFullMenu_ForOldContextMenu" /f
 reg delete "HKEY_CLASSES_ROOT\Folder\shell\CompressToFullMenu_ForOldContextMenu" /f
 ```
+- Snap layouts bar at the top of the screen
+  - Disable
+```
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "EnableSnapBar" /t REG_DWORD /d 0 /f; Stop-Process -ProcessName explorer
+```
+  - Enable
+```
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "EnableSnapBar" /t REG_DWORD /d 1 /f; Stop-Process -ProcessName explorer
+```
 
 ### Microsoft Edge
 - Changes to make Microsoft Edge usable
 ```
+reg add "HKLM\Software\Policies\Microsoft\Edge" /v "QuickSearchShowMiniMenu" /t REG_DWORD /d 0 /f
+reg add "HKLM\Software\Policies\Microsoft\Edge" /v "TabServicesEnabled" /t REG_DWORD /d 0 /f
 reg add "HKLM\Software\Policies\Microsoft\Edge" /v "NewTabPageAllowedBackgroundTypes" /t REG_DWORD /d 3 /f
 reg add "HKLM\Software\Policies\Microsoft\Edge" /v "HubsSidebarEnabled" /t REG_DWORD /d 0 /f
 reg add "HKLM\Software\Policies\Microsoft\Edge" /v "EnableMediaRouter" /t REG_DWORD /d 0 /f
@@ -228,7 +243,7 @@ _*Open a "Terminal (Admin)" prompt to run commands. Right click the start button
     - Taskbar > Disable all
   - Local Machine
     - Windows Explorer > Disable all if you are not using OneDrive
-    - Microsoft Defender and Microsoft SPyNet > Disable all
+    - Microsoft Defender and Microsoft SpyNet > Disable all
     - Taskbar > Disable all
     - Miscellaneous > Disable all except "Disable Network Connecting Status Indicator"
 - Disable System Protection
@@ -248,6 +263,11 @@ Get-AppxPackage MSTeams* | Remove-AppxPackage -AllUsers
 - Disable Remote Assistance
 ```
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Remote Assistance" /v "fAllowToGetHelp" /t REG_DWORD /d 0 /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Remote Assistance" /v "fAllowFullControl" /t REG_DWORD /d 0 /f
+```
+- Disable 260 character path limit
+```
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\FileSystem" /v "LongPathsEnabled" /t REG_DWORD /d 1 /f
 ```
 - Enable Ultimate Performance power profile **-- Gaming Desktops Only**
 ```
@@ -277,6 +297,18 @@ Set-Service -Name "WMPNetworkSvc" -StartupType Disabled; Stop-Service -Name "WMP
 - Disable Windows Search service **-- If Not Using Outlook** <!-- Always disable after classic Outlook retirement -->
 ```
 Set-Service -Name "WSearch" -StartupType Disabled; Stop-Service -Name "WSearch"
+```
+- Disable Cloud Content search <!-- Shutup10+ -->
+```
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\SearchSettings" /v "IsAADCloudSearchEnabled" /t REG_DWORD /d 0 /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\SearchSettings" /v "IsDeviceSearchHistoryEnabled" /t REG_DWORD /d 0 /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\SearchSettings" /v "IsDynamicSearchBoxEnabled" /t REG_DWORD /d 0 /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\SearchSettings" /v "IsMSACloudSearchEnabled" /t REG_DWORD /d 0 /f
+reg add "HKCU\Software\Policies\Microsoft\Windows\Explorer" /v "DisableSearchBoxSuggestions" /t REG_DWORD /d 1 /f
+```
+- Disable ads in Windows Explorer/OneDrive
+```
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "ShowSyncProviderNotifications" /t REG_DWORD /d 0 /f
 ```
 - Disable Telemetry and the Diagnostics Tracking Service <!-- The registry is also handled by Shutup10+ -->
 ```
@@ -310,6 +342,10 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Power" /v "Hiberb
 ```
 reg add "HKLM\Software\Microsoft\Windows\CurrentVersion\Policies\System" /v "DisableAutomaticRestartSignOn" /t REG_DWORD /d 1 /f
 ```
+- Disable Notifications on Lock Screen
+```
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Notifications\Settings" /v "NOC_GLOBAL_SETTING_ALLOW_CRITICAL_TOASTS_ABOVE_LOCK" /t REG_DWORD /d 0 /f
+```
 - Disable hibernation file **-- Recommended**
 ```
 powercfg -h off
@@ -318,6 +354,7 @@ powercfg -h off
 ```
 reg add "HKLM\Software\Policies\Microsoft\Edge" /v "HubsSidebarEnabled" /t REG_DWORD /d 0 /f
 reg add "HKLM\Software\Policies\Microsoft\Edge" /v "WebAppSettings" /t REG_SZ /f; Set-ItemProperty -Path "HKLM:\Software\Policies\Microsoft\Edge" -Name "WebAppSettings" -Value '[{"manifest_id": "https://copilot.microsoft.com/?cmc", "run_on_os_login": "blocked", "force_unregister_os_integration": true}]' -Type String
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "ShowCopilotButton" /t REG_DWORD /d 0 /f
 reg add "HKCU\Software\Policies\Microsoft\Windows\WindowsCopilot" /v "TurnOffWindowsCopilot" /t REG_DWORD /d 1 /f
 reg add "HKLM\Software\Policies\Microsoft\Windows\WindowsCopilot" /v "TurnOffWindowsCopilot" /t REG_DWORD /d 1 /f
 reg add "HKCU\Software\Policies\Microsoft\Windows\WindowsAI" /v "DisableAIDataAnalysis" /t REG_DWORD /d 1 /f
@@ -372,6 +409,7 @@ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Notifications\Settings\M
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "LaunchTo" /t REG_DWORD /d 1 /f
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer" /v "ShowFrequent" /t REG_DWORD /d 0 /f
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer" /v "ShowRecent" /t REG_DWORD /d 0 /f
+reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer" /v "ShowCloudFilesInQuickAccess" /t REG_DWORD /d 0 /f
 ```
 - Add default folders back to "**This PC**" (Optional)
 ```
@@ -421,6 +459,12 @@ Set-TimeZone -Id "Pacific Standard Time"
 - Sync from internet time
 ```
 Start-Service -Name "W32Time"; W32tm /resync /force | Out-Null
+```
+- Stop Program Compatibility and Push Notifications background services
+```
+Set-Service -Name PcaSvc -StartupType Manual
+Set-Service -Name WpnService -StartupType Manual
+Get-Service 'PcaSvc','WpnService' | Stop-Service
 ```
 - Disable un-needed scheduled tasks <!-- include XblGameSaveTask on business systems-->
 ```
