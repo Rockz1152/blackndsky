@@ -528,12 +528,21 @@ Disable shortcut keys that can interrupt gaming
 - Keep "Toggle Keys" off
 
 ### Disable lock screen when resuming from sleep
-- Apply the change to the current power profile
+- Applies the change to the current power profile
 ```
 powercfg /SETDCVALUEINDEX SCHEME_CURRENT SUB_NONE CONSOLELOCK 0
 powercfg /SETACVALUEINDEX SCHEME_CURRENT SUB_NONE CONSOLELOCK 0
 ```
 - Reboot the system to apply the change
+
+### Disable F1 help on some Microsoft apps
+- This mainly prevents `[F1]` from opening tabs while on the desktop
+```
+New-Item -Path "HKCU:\SOFTWARE\Classes\Typelib\{8cec5860-07a1-11d9-b15e-000d56bfe6ee}\1.0\0\win32" -Force | Out-Null
+Set-ItemProperty -Path "HKCU:\SOFTWARE\Classes\Typelib\{8cec5860-07a1-11d9-b15e-000d56bfe6ee}\1.0\0\win32" -Name "(Default)" -Value "" | Out-Null
+New-Item -Path "HKCU:\SOFTWARE\Classes\Typelib\{8cec5860-07a1-11d9-b15e-000d56bfe6ee}\1.0\0\win64" -Force | Out-Null
+Set-ItemProperty -Path "HKCU:\SOFTWARE\Classes\Typelib\{8cec5860-07a1-11d9-b15e-000d56bfe6ee}\1.0\0\win64" -Name "(Default)" -Value "" | Out-Null
+```
 
 ----
 
