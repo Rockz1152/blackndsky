@@ -111,9 +111,13 @@ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Start" /v "VisiblePlaces
 ```
 - Disable Search, Taskview, and Chat in Taskbar
 ```
+reg add "HKLM\Software\Policies\Microsoft\Dsh" /v "AllowNewsAndInterests" /t REG_DWORD /d 0 /f
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Search" /v "SearchboxTaskbarMode" /t REG_DWORD /d 0 /f
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "ShowTaskViewButton" /t REG_DWORD /d 0 /f
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "TaskbarMn" /t REG_DWORD /d 0 /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v "HideSCAMeetNow" /t REG_DWORD /d 1 /f
+reg add "HKLM\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v "HideSCAMeetNow" /t REG_DWORD /d 1 /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced\People" /v "PeopleBand" /t REG_DWORD /d 0 /f
 ```
 - Disable Widgets in Taskbar
   - Open [Taskbar Settings](ms-settings:taskbar)
@@ -237,18 +241,6 @@ _*Open a "Terminal (Admin)" prompt to run commands. Right click the start button
 - Install drivers and reboot
 - Install software with [Ninite](https://ninite.com/){:target="_blank"}
 - Set a default Web browser in [Default apps](ms-settings:defaultapps)
-- Turn off telemetry with [O&O Shutup 10](https://www.oo-software.com/en/shutup10){:target="_blank"}
-  - Go to Actions > "Apply only recommended settings"
-  - Current User
-    - Windows Explorer > Disable ads in Windows Explorer/OneDrive
-    - Search > Disable extensions of Windows search with Bing
-    - Taskbar > Disable all
-  - Local Machine
-    - Windows AI - Disable all
-    - Windows Explorer > Disable all if you are not using OneDrive
-    - Microsoft Defender and Microsoft SpyNet > Disable all
-    - Taskbar > Disable all
-    - Miscellaneous > Disable all except "Disable Network Connecting Status Indicator"
 - Configure Out-of-Box privacy settings
 ```
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\AdvertisingInfo" /v "Enabled" /t REG_DWORD /d 0 /f
@@ -258,6 +250,8 @@ reg add "HKLM\Software\Microsoft\SQMClient\Windows" /v "CEIPEnable" /t REG_DWORD
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\location" /v "Value" /t REG_SZ /d "Deny" /f
 reg add "HKLM\Software\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\location" /v "Value" /t REG_SZ /d "Deny" /f
 reg add "HKLM\System\Maps" /v "AutoUpdateEnabled" /t REG_DWORD /d 0 /f
+reg add "HKLM\Software\Policies\Microsoft\Windows\Maps" /v "AutoDownloadAndUpdateMapData" /t REG_DWORD /d 0 /f
+reg add "HKLM\Software\Policies\Microsoft\Windows\Maps" /v "AllowUntriggeredNetworkTrafficOnSettingsPage" /t REG_DWORD /d 0 /f
 reg add "HKLM\System\CurrentControlSet\Services\lfsvc\Service\Configuration" /v "Status" /t REG_DWORD /d 0 /f
 reg add "HKLM\Software\Policies\Microsoft\Windows\LocationAndSensors" /v "DisableLocation" /t REG_DWORD /d 1 /f
 reg add "HKLM\Software\Policies\Microsoft\Windows\LocationAndSensors" /v "DisableWindowsLocationProvider" /t REG_DWORD /d 1 /f
@@ -305,6 +299,7 @@ Get-AppxPackage MSTeams* | Remove-AppxPackage -AllUsers
 ```
 reg add "HKLM\System\CurrentControlSet\Control\Remote Assistance" /v "fAllowToGetHelp" /t REG_DWORD /d 0 /f
 reg add "HKLM\System\CurrentControlSet\Control\Remote Assistance" /v "fAllowFullControl" /t REG_DWORD /d 0 /f
+reg add "HKLM\Software\Policies\Microsoft\Windows NT\Terminal Services" /v "fAllowToGetHelp" /t REG_DWORD /d 0 /f
 ```
 - Disable 260 character path limit
 ```
@@ -365,9 +360,9 @@ reg add "HKLM\System\CurrentControlSet\Control\WMI\Autologger\AutoLogger-Diagtra
 ```
 - Disable Microsoft SpyNet reporting
 ```
-reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\Spynet" /v "SpyNetReporting" /t REG_DWORD /d 0 /f
-reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\Spynet" /v "SubmitSamplesConsent" /t REG_DWORD /d 2 /f
-reg add "HKLM\SOFTWARE\Policies\Microsoft\MRT" /v "DontReportInfectionInformation" /t REG_DWORD /d 1 /f
+reg add "HKLM\Software\Policies\Microsoft\Windows Defender\Spynet" /v "SpyNetReporting" /t REG_DWORD /d 0 /f
+reg add "HKLM\Software\Policies\Microsoft\Windows Defender\Spynet" /v "SubmitSamplesConsent" /t REG_DWORD /d 2 /f
+reg add "HKLM\Software\Policies\Microsoft\MRT" /v "DontReportInfectionInformation" /t REG_DWORD /d 1 /f
 ```
 - Disable Activity History and Clipboard Suggestions
 ```
@@ -437,8 +432,8 @@ reg add "HKCU\Software\Policies\Microsoft\Windows\WindowsAI" /v "DisableAIDataAn
 reg add "HKLM\Software\Policies\Microsoft\Windows\WindowsAI" /v "DisableAIDataAnalysis" /t REG_DWORD /d 1 /f
 reg add "HKLM\Software\Policies\Microsoft\Windows\WindowsAI" /v "AllowRecallEnablement" /t REG_DWORD /d 0 /f
 reg add "HKLM\Software\Microsoft\Windows\CurrentVersion\Policies\Paint" /v "DisableImageCreator" /t REG_DWORD /d 1 /f
-reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Paint" /v "DisableCocreator" /t REG_DWORD /d 1 /f
-reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Paint" /v "DisableGenerativeFill" /t REG_DWORD /d 1 /f
+reg add "HKLM\Software\Microsoft\Windows\CurrentVersion\Policies\Paint" /v "DisableCocreator" /t REG_DWORD /d 1 /f
+reg add "HKLM\Software\Microsoft\Windows\CurrentVersion\Policies\Paint" /v "DisableGenerativeFill" /t REG_DWORD /d 1 /f
 dism /online /Disable-Feature /FeatureName:"Recall"; Get-WindowsOptionalFeature -Online | Where-Object {$_.FeatureName -eq "Recall"}
 ```
 - Prevent preinstalled applications from returning and remove Start Menu suggestions
@@ -495,7 +490,11 @@ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Notifications\Settings\M
 ```
 - Disable OneDrive access to network before login
 ```
-reg add "HKLM\SOFTWARE\Microsoft\OneDrive" /v "PreventNetworkTrafficPreUserSignIn" /t REG_DWORD /d 1 /f
+reg add "HKLM\Software\Microsoft\OneDrive" /v "PreventNetworkTrafficPreUserSignIn" /t REG_DWORD /d 1 /f
+```
+- Disable Key Management Service Online Activation
+```
+reg add "HKLM\Software\Policies\Microsoft\Windows NT\CurrentVersion\Software Protection Platform" /v "NoGenTicket" /t REG_DWORD /d 1 /f
 ```
 - Disable Notification Suggestions
 ```
