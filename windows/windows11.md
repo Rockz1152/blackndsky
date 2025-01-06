@@ -26,6 +26,10 @@ Quicklinks:
 - Select "USB Device" and wait for the installation media to be ready
 - Boot to the USB device to start the install
 
+Use the link below if you need to bypass Microsoft's hardware requirements
+
+- [Bypass Windows 11 Hardware Requirements]({{site.url}}/win11-bypass)
+
 ### Out-of-Box Setup
 Follow these steps to create a local user
 

@@ -4,13 +4,15 @@ title: "Windows Recovery Environment"
 permalink: /winre
 ---
 
-In January of 2024, Microsoft released KB5034441 after little to no testing. This update when ran against a default installation of Windows 10, would fail due to a lack of free space in the Windows Recovery Environment partition. This page contains the steps to fix this issue.
+In January of 2024, Microsoft released KB5034441 after little to no testing. This update when ran against a default installation of Windows 10 would fail due to a lack of free space in the Windows Recovery Environment partition. This page contains the steps to correct this issue.
 
 Microsoft did offer instructions, however they contain a technical error and are hard to understand. Original instructions: [https://support.microsoft.com/en-us/topic/kb5028997-instructions-to-manually-resize-your-partition-to-install-the-winre-update-400faa27-9343-461c-ada9-24c8229763bf](https://support.microsoft.com/en-us/topic/kb5028997-instructions-to-manually-resize-your-partition-to-install-the-winre-update-400faa27-9343-461c-ada9-24c8229763bf){:target="_blank"}
 
 ### Manual steps to fix KB5034441 installation failure
 
-**WARNING**: Proceed with caution, I take no responsibility for any damage that may occur. Please note these instructions only apply to systems with a WinRE partition at the end of the hard disk.
+> ### **WARNING**
+>
+> _Proceed with caution, I take no responsibility for any damage that may occur. Please note these instructions only apply to systems with a WinRE partition at the end of the hard disk._
 
 Check disk and recovery environment status
 - Check which disk and partition WinRE status is currently installed to, run `reagentc /info`
