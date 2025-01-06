@@ -109,7 +109,7 @@ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "S
 ```
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Start" /v "VisiblePlaces" /t REG_BINARY /d bc248a140cd68942a0806ed9bba2488286087352aa5143429f7b2776584659d4 /f
 ```
-- Disable Search, Taskview, and Chat in Taskbar
+- Disable Search, Taskview, Widgets, and Chat in Taskbar
 ```
 reg add "HKLM\Software\Policies\Microsoft\Dsh" /v "AllowNewsAndInterests" /t REG_DWORD /d 0 /f
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Search" /v "SearchboxTaskbarMode" /t REG_DWORD /d 0 /f
@@ -119,9 +119,6 @@ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v "H
 reg add "HKLM\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v "HideSCAMeetNow" /t REG_DWORD /d 1 /f
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced\People" /v "PeopleBand" /t REG_DWORD /d 0 /f
 ```
-- Disable Widgets in Taskbar
-  - Open [Taskbar Settings](ms-settings:taskbar)
-  - Toggle **Widgets** `Off`
 - Enable compact view in File Explorer
 ```
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "UseCompactMode" /t REG_DWORD /d 1 /f
@@ -287,7 +284,7 @@ reg add "HKLM\Software\Policies\Microsoft\Windows\Windows Search" /v "EnableDyna
 ```
 - Disable System Protection
 ```
-Disable-ComputerRestore "C:"; vssadmin delete shadows /all /quiet | Out-Null
+Disable-ComputerRestore "$Env:SystemDrive"; vssadmin delete shadows /all /quiet | Out-Null
 ```
 - Remove OneDrive **-- Optional**
 ```
