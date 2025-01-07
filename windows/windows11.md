@@ -238,7 +238,7 @@ _*Open a "Terminal (Admin)" prompt to run commands. Right click the start button
 
 - Remove unwanted Windows Store apps with [CleanApps](https://github.com/Rockz1152/CleanApps/releases){:target="_blank"} script
 - Update Apps in [Microsoft Store](ms-windows-store://downloadsandupdates)
-- Install [Windows Updates](ms-settings:windowsupdate)
+- Install [Windows Updates](ms-settings:windowsupdate) and reboot
 - Install drivers and reboot
 - Install software with [Ninite](https://ninite.com/){:target="_blank"}
 - Set a default Web browser in [Default apps](ms-settings:defaultapps)
@@ -407,7 +407,7 @@ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Mobility" /v "OptedIn" /
 reg add "HKLM\Software\Microsoft\Windows\Windows Error Reporting" /v "Disabled" /t REG_DWORD /d 1 /f; Disable-WindowsErrorReporting
 ```
 - If running SSD and second HD, move pagefile to second HD **-- Optional**
-- If running SSD disable Fast Startup
+- Disable Fast Startup
 ```
 reg add "HKLM\System\CurrentControlSet\Control\Session Manager\Power" /v "HiberbootEnabled" /t REG_DWORD /d 0 /f
 ```
@@ -480,10 +480,6 @@ reg add "HKCU\Software\Microsoft\GameBar" /v "UseNexusForGameBarEnabled" /t REG_
 reg add "HKCU\System\GameConfigStore" /v "GameDVR_FSEBehavior" /t REG_DWORD /d 2 /f
 reg add "HKCU\System\GameConfigStore" /v "GameDVR_Enabled" /t REG_DWORD /d 0 /f
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\GameDVR" /v "AppCaptureEnabled" /t REG_DWORD /d 0 /f
-```
-- Disable "Quiet Hours", allows you to disable "Do not disturb"
-```
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\QuietHours" /v "Enabled" /t REG_DWORD /d 0 /f
 ```
 - Disable prompting to sign-in with a Microsoft account
 ```
