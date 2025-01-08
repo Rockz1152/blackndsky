@@ -14,9 +14,12 @@ permalink: /windows11
 
 Quicklinks: 
 <a href="#appearance" class="simple-button-small">Appearance</a>
-<a href="#standard" class="simple-button-small">Standard Setup</a>
-<a href="#optional" class="simple-button-small">Optional Tweaks</a>
-<a href="#maint" class="simple-button-small">Maintenance</a>
+<a href="#privacy" class="simple-button-small">Privacy</a>
+<a href="#system" class="simple-button-small">System</a>
+<a href="#optional" class="simple-button-small">Optional</a>
+<a href="#updates" class="simple-button-small">Updates</a>
+<a href="#tweaks" class="simple-button-small">Tweaks</a>
+<a href="#maintenance" class="simple-button-small">Maintenance</a>
 <span style="float: right; font-weight: bold; color: #555;">Version: 24H2</span>
 
 ## Installation
@@ -43,8 +46,6 @@ Follow these steps to create a local user
 - Proceed to create a local user
 - On the "Privacy" screen, turn off all settings
 - After setup is complete, you may connect to the internet
-
-<a name="appearance"></a>
 
 ----
 
@@ -127,9 +128,45 @@ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced\People
 ```
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "UseCompactMode" /t REG_DWORD /d 1 /f
 ```
+- Set File Explorer to "**This PC**", uncheck "**Show recently used files**" and "**Show frequently used folders**"
+```
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "LaunchTo" /t REG_DWORD /d 1 /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer" /v "ShowFrequent" /t REG_DWORD /d 0 /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer" /v "ShowRecent" /t REG_DWORD /d 0 /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer" /v "ShowCloudFilesInQuickAccess" /t REG_DWORD /d 0 /f
+```
+- Add default folders back to "**This PC**" (Optional)
+```
+# --Desktop--
+New-ItemProperty -Path "HKLM:\Software\Microsoft\Windows\CurrentVersion\Explorer\MyComputer\NameSpace\{B4BFCC3A-DB2C-424C-B029-7FE99A87C641}" -Name "HideIfEnabled" -PropertyType String -Value "" -Force | Out-Null
+New-ItemProperty -Path "HKLM:\Software\Microsoft\Windows\CurrentVersion\Explorer\MyComputer\NameSpace\{B4BFCC3A-DB2C-424C-B029-7FE99A87C641}" -Name "HiddenByDefault" -PropertyType DWord -Value 0 -Force | Out-Null
+# --Documents--
+New-ItemProperty -Path "HKLM:\Software\Microsoft\Windows\CurrentVersion\Explorer\MyComputer\NameSpace\{d3162b92-9365-467a-956b-92703aca08af}" -Name "HideIfEnabled" -PropertyType String -Value "" -Force | Out-Null
+New-ItemProperty -Path "HKLM:\Software\Microsoft\Windows\CurrentVersion\Explorer\MyComputer\NameSpace\{d3162b92-9365-467a-956b-92703aca08af}" -Name "HiddenByDefault" -PropertyType DWord -Value 0 -Force | Out-Null
+# --Downloads--
+New-ItemProperty -Path "HKLM:\Software\Microsoft\Windows\CurrentVersion\Explorer\MyComputer\NameSpace\{088e3905-0323-4b02-9826-5d99428e115f}" -Name "HideIfEnabled" -PropertyType String -Value "" -Force | Out-Null
+New-ItemProperty -Path "HKLM:\Software\Microsoft\Windows\CurrentVersion\Explorer\MyComputer\NameSpace\{088e3905-0323-4b02-9826-5d99428e115f}" -Name "HiddenByDefault" -PropertyType DWord -Value 0 -Force | Out-Null
+# --Music--
+New-ItemProperty -Path "HKLM:\Software\Microsoft\Windows\CurrentVersion\Explorer\MyComputer\NameSpace\{3dfdf296-dbec-4fb4-81d1-6a3438bcf4de}" -Name "HideIfEnabled" -PropertyType String -Value "" -Force | Out-Null
+New-ItemProperty -Path "HKLM:\Software\Microsoft\Windows\CurrentVersion\Explorer\MyComputer\NameSpace\{1CF1260C-4DD0-4ebb-811F-33C572699FDE}" -Name "HiddenByDefault" -PropertyType DWord -Value 0 -Force | Out-Null
+New-ItemProperty -Path "HKLM:\Software\Microsoft\Windows\CurrentVersion\Explorer\MyComputer\NameSpace\{3dfdf296-dbec-4fb4-81d1-6a3438bcf4de}" -Name "HiddenByDefault" -PropertyType DWord -Value 0 -Force | Out-Null
+# --Pictures--
+New-ItemProperty -Path "HKLM:\Software\Microsoft\Windows\CurrentVersion\Explorer\MyComputer\NameSpace\{24ad3ad4-a569-4530-98e1-ab02f9417aa8}" -Name "HideIfEnabled" -PropertyType String -Value "" -Force | Out-Null
+New-ItemProperty -Path "HKLM:\Software\Microsoft\Windows\CurrentVersion\Explorer\MyComputer\NameSpace\{24ad3ad4-a569-4530-98e1-ab02f9417aa8}" -Name "HiddenByDefault" -PropertyType DWord -Value 0 -Force | Out-Null
+# --Videos--
+New-ItemProperty -Path "HKLM:\Software\Microsoft\Windows\CurrentVersion\Explorer\MyComputer\NameSpace\{f86fa3ab-70d2-4fc7-9c99-fcbf05467f3a}" -Name "HideIfEnabled" -PropertyType String -Value "" -Force | Out-Null
+New-ItemProperty -Path "HKLM:\Software\Microsoft\Windows\CurrentVersion\Explorer\MyComputer\NameSpace\{f86fa3ab-70d2-4fc7-9c99-fcbf05467f3a}" -Name "HiddenByDefault" -PropertyType DWord -Value 0 -Force | Out-Null
+```
+- Remove "**Share**", "**Cast to Device**", "**Give access to**" from right click context menu
+```
+reg add "HKLM\Software\Microsoft\Windows\CurrentVersion\Shell Extensions\Blocked" /v "{e2bf9676-5f8f-435c-97eb-11607a5bedf7}" /t REG_SZ /f
+reg add "HKLM\Software\Microsoft\Windows\CurrentVersion\Shell Extensions\Blocked" /v "{7AD84985-87B4-4a16-BE58-8B72A5B390F7}" /t REG_SZ /f
+reg add "HKLM\Software\Microsoft\Windows\CurrentVersion\Shell Extensions\Blocked" /v "{f81e9010-6ea4-11ce-a7ff-00aa003ca9f6}" /t REG_SZ /f
+Stop-Process -ProcessName explorer
+```
 
 ### Additional Changes
-Choice depends on personal preference, try out each setting out if you are not sure
+Choice depends on personal preference, try out each setting if you are not sure
 
 - Taskbar button location
   - Left
@@ -229,19 +266,11 @@ reg add "HKLM\Software\Policies\Microsoft\Edge\Recommended" /v "ShowHomeButton" 
 edge://policy/
 ```
 
-<a name="standard"></a>
-
 ----
 
-## Standard Setup
+## Privacy
 _*Open a "Terminal (Admin)" prompt to run commands. Right click the start button, select "Terminal (Admin)"_
 
-- Remove unwanted Windows Store apps with [CleanApps](https://github.com/Rockz1152/CleanApps/releases){:target="_blank"} script
-- Update Apps in [Microsoft Store](ms-windows-store://downloadsandupdates)
-- Install [Windows Updates](ms-settings:windowsupdate) and reboot
-- Install drivers and reboot
-- Install software with [Ninite](https://ninite.com/){:target="_blank"}
-- Set a default Web browser in [Default apps](ms-settings:defaultapps)
 - Configure Out-of-Box privacy settings
 ```
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\AdvertisingInfo" /v "Enabled" /t REG_DWORD /d 0 /f
@@ -266,6 +295,22 @@ reg add "HKLM\Software\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\appDiagnostics" /v "Value" /t REG_SZ /d "Deny" /f
 reg add "HKLM\Software\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\appDiagnostics" /v "Value" /t REG_SZ /d "Deny" /f
 ```
+- Disable Feedback, Telemetry, and the Diagnostics Tracking Service
+```
+Set-Service -Name "DiagTrack" -StartupType Disabled; Stop-Service -Name "DiagTrack"
+Set-Service -Name "dmwappushservice" -StartupType Disabled; Stop-Service -Name "dmwappushservice"
+reg add "HKLM\Software\Microsoft\Windows\CurrentVersion\Policies\DataCollection" /v "AllowTelemetry" /t REG_DWORD /d 0 /f
+reg add "HKLM\Software\Policies\Microsoft\Windows\AppCompat" /v "AITEnable" /t REG_DWORD /d 0 /f
+reg add "HKLM\Software\Policies\Microsoft\Windows\DataCollection" /v "AllowTelemetry" /t REG_DWORD /d 0 /f
+reg add "HKLM\Software\Policies\Microsoft\Windows\DataCollection" /v "LimitDiagnosticLogCollection" /t REG_DWORD /d 1 /f
+reg add "HKLM\Software\Policies\Microsoft\Windows\DataCollection" /v "DisableOneSettingsDownloads" /t REG_DWORD /d 1 /f
+reg add "HKLM\Software\Policies\Microsoft\Windows\DataCollection" /v "DoNotShowFeedbackNotifications" /t REG_DWORD /d 1 /f
+reg add "HKCU\Software\Microsoft\Siuf\Rules" /v "NumberOfSIUFInPeriod" /t REG_DWORD /d 0 /f
+reg add "HKCU\Software\Microsoft\Siuf\Rules" /v "PeriodInNanoSeconds" /t REG_DWORD /d 0 /f
+reg add "HKCU\Software\Microsoft\MediaPlayer\Preferences" /v "UsageTracking" /t REG_DWORD /d 0 /f
+reg add "HKLM\Software\Policies\Microsoft\Windows\AppCompat" /v "DisableInventory" /t REG_DWORD /d 1 /f
+reg add "HKLM\System\CurrentControlSet\Control\WMI\Autologger\AutoLogger-Diagtrack-Listener" /v "Start" /t REG_DWORD /d 0 /f
+```
 - Disable Cortana, Keyboard & Handwriting Insights
 ```
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Windows Search" /v "CortanaConsent" /t REG_DWORD /d 0 /f
@@ -286,59 +331,6 @@ reg add "HKLM\Software\Policies\Microsoft\Windows\Windows Search" /v "AllowCloud
 reg add "HKLM\Software\Policies\Microsoft\Windows\Windows Search" /v "AllowCortanaAboveLock" /t REG_DWORD /d 0 /f
 reg add "HKLM\Software\Policies\Microsoft\Windows\Windows Search" /v "EnableDynamicContentInWSB" /t REG_DWORD /d 0 /f
 ```
-- Disable System Protection
-```
-Disable-ComputerRestore "$Env:SystemDrive"; vssadmin delete shadows /all /quiet | Out-Null
-```
-- Remove OneDrive **-- Optional**
-```
-Stop-Process -ProcessName OneDrive -ErrorAction SilentlyContinue
-Start-Process "$Env:SystemRoot\System32\OneDriveSetup.exe" -ArgumentList "/uninstall" -Wait
-```
-- Remove Teams **-- Optional**
-```
-Get-AppxPackage MicrosoftTeams* | Remove-AppxPackage -AllUsers
-Get-AppxPackage MSTeams* | Remove-AppxPackage -AllUsers
-```
-- Disable Remote Assistance
-```
-reg add "HKLM\System\CurrentControlSet\Control\Remote Assistance" /v "fAllowToGetHelp" /t REG_DWORD /d 0 /f
-reg add "HKLM\System\CurrentControlSet\Control\Remote Assistance" /v "fAllowFullControl" /t REG_DWORD /d 0 /f
-reg add "HKLM\Software\Policies\Microsoft\Windows NT\Terminal Services" /v "fAllowToGetHelp" /t REG_DWORD /d 0 /f
-```
-- Disable 260 character path limit
-```
-reg add "HKLM\System\CurrentControlSet\Control\FileSystem" /v "LongPathsEnabled" /t REG_DWORD /d 1 /f
-```
-- Enable Ultimate Performance power profile **-- Gaming Desktops Only**
-```
-$powerProfile = Get-CimInstance -Namespace "root\cimv2\power" -ClassName Win32_PowerPlan | Where-Object { $_.ElementName -eq "Ultimate Performance" }
-if ($powerProfile -eq $null) {$result = powercfg -duplicatescheme e9a42b02-d5df-448d-aa00-03f14749eb61; if ($result -match "GUID: ([0-9a-fA-F-]+)") { powercfg -setactive $matches[1] }} else {
-if ($powerProfile.InstanceID -match "([0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12})") { powercfg -setactive $matches[1] }}
-```
-- Optimize system responsiveness and disable network throttling. **-- Gaming Desktops Only** <!-- Defaults: SystemResponsiveness=20 NetworkThrottlingIndex=10 -->
-```
-reg add "HKLM\Software\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile" /v "SystemResponsiveness" /t REG_DWORD /d 0 /f
-reg add "HKLM\Software\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile" /v "NetworkThrottlingIndex" /t REG_DWORD /d 4294967295 /f
-```
-- Disable Offline Files **-- Pro only**
-```
-Set-Service -Name "CscService" -StartupType Disabled; Stop-Service -Name "CscService"
-```
-- Disable Preview Updates **-- Pro only**
-```
-reg add "HKLM\Software\Policies\Microsoft\Windows\WindowsUpdate" /v "DeferQualityUpdates" /t REG_DWORD /d 1 /f
-reg add "HKLM\Software\Policies\Microsoft\Windows\WindowsUpdate" /v "DeferQualityUpdatesPeriodInDays" /t REG_DWORD /d 0 /f
-reg add "HKLM\Software\Policies\Microsoft\Windows\WindowsUpdate" /v "PauseQualityUpdatesStartTime" /t REG_SZ /f
-```
-- Disable Windows Media Player Network Sharing Service
-```
-Set-Service -Name "WMPNetworkSvc" -StartupType Disabled; Stop-Service -Name "WMPNetworkSvc"
-```
-- Disable Windows Search service **-- If Not Using Outlook** <!-- Always disable after classic Outlook retirement -->
-```
-Set-Service -Name "WSearch" -StartupType Disabled; Stop-Service -Name "WSearch"
-```
 - Disable Cloud Content search
 ```
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\SearchSettings" /v "IsAADCloudSearchEnabled" /t REG_DWORD /d 0 /f
@@ -346,28 +338,6 @@ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\SearchSettings" /v "IsDe
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\SearchSettings" /v "IsDynamicSearchBoxEnabled" /t REG_DWORD /d 0 /f
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\SearchSettings" /v "IsMSACloudSearchEnabled" /t REG_DWORD /d 0 /f
 reg add "HKCU\Software\Policies\Microsoft\Windows\Explorer" /v "DisableSearchBoxSuggestions" /t REG_DWORD /d 1 /f
-```
-- Disable Feedback, Telemetry, and the Diagnostics Tracking Service
-```
-Set-Service -Name "DiagTrack" -StartupType Disabled; Stop-Service -Name "DiagTrack"
-Set-Service -Name "dmwappushservice" -StartupType Disabled; Stop-Service -Name "dmwappushservice"
-reg add "HKLM\Software\Microsoft\Windows\CurrentVersion\Policies\DataCollection" /v "AllowTelemetry" /t REG_DWORD /d 0 /f
-reg add "HKLM\Software\Policies\Microsoft\Windows\AppCompat" /v "AITEnable" /t REG_DWORD /d 0 /f
-reg add "HKLM\Software\Policies\Microsoft\Windows\DataCollection" /v "AllowTelemetry" /t REG_DWORD /d 0 /f
-reg add "HKLM\Software\Policies\Microsoft\Windows\DataCollection" /v "LimitDiagnosticLogCollection" /t REG_DWORD /d 1 /f
-reg add "HKLM\Software\Policies\Microsoft\Windows\DataCollection" /v "DisableOneSettingsDownloads" /t REG_DWORD /d 1 /f
-reg add "HKLM\Software\Policies\Microsoft\Windows\DataCollection" /v "DoNotShowFeedbackNotifications" /t REG_DWORD /d 1 /f
-reg add "HKCU\Software\Microsoft\Siuf\Rules" /v "NumberOfSIUFInPeriod" /t REG_DWORD /d 0 /f
-reg add "HKCU\Software\Microsoft\Siuf\Rules" /v "PeriodInNanoSeconds" /t REG_DWORD /d 0 /f
-reg add "HKCU\Software\Microsoft\MediaPlayer\Preferences" /v "UsageTracking" /t REG_DWORD /d 0 /f
-reg add "HKLM\Software\Policies\Microsoft\Windows\AppCompat" /v "DisableInventory" /t REG_DWORD /d 1 /f
-reg add "HKLM\System\CurrentControlSet\Control\WMI\Autologger\AutoLogger-Diagtrack-Listener" /v "Start" /t REG_DWORD /d 0 /f
-```
-- Disable Microsoft SpyNet reporting
-```
-reg add "HKLM\Software\Policies\Microsoft\Windows Defender\Spynet" /v "SpyNetReporting" /t REG_DWORD /d 0 /f
-reg add "HKLM\Software\Policies\Microsoft\Windows Defender\Spynet" /v "SubmitSamplesConsent" /t REG_DWORD /d 2 /f
-reg add "HKLM\Software\Policies\Microsoft\MRT" /v "DontReportInfectionInformation" /t REG_DWORD /d 1 /f
 ```
 - Disable Activity History and Clipboard Suggestions
 ```
@@ -389,32 +359,6 @@ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\SettingSync\Groups\Langu
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\SettingSync\Groups\Accessibility" /v "Enabled" /t REG_DWORD /d 0 /f
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\SettingSync\Groups\Windows" /v "Enabled" /t REG_DWORD /d 0 /f
 ```
-- Disable password reveal button and user steps recorder
-```
-reg add "HKLM\Software\Policies\Microsoft\Windows\CredUI" /v "DisablePasswordReveal" /t REG_DWORD /d 1 /f
-reg add "HKLM\Software\Policies\Microsoft\Windows\AppCompat" /v "DisableUAR" /t REG_DWORD /d 1 /f
-```
-- Disable Smartphone integration
-```
-reg add "HKLM\Software\Policies\Microsoft\Windows\System" /v "EnableMmx" /t REG_DWORD /d 0 /f
-reg add "HKLM\Software\Policies\Microsoft\Windows\Messaging" /v "AllowMessageSync" /t REG_DWORD /d 0 /f
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Mobility" /v "CrossDeviceEnabled" /t REG_DWORD /d 0 /f
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Mobility" /v "PhoneLinkEnabled" /t REG_DWORD /d 0 /f
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Mobility" /v "OptedIn" /t REG_DWORD /d 0 /f
-```
-- Disable Windows Error Reporting across the system
-```
-reg add "HKLM\Software\Microsoft\Windows\Windows Error Reporting" /v "Disabled" /t REG_DWORD /d 1 /f; Disable-WindowsErrorReporting
-```
-- If running SSD and second HD, move pagefile to second HD **-- Optional**
-- Disable Fast Startup
-```
-reg add "HKLM\System\CurrentControlSet\Control\Session Manager\Power" /v "HiberbootEnabled" /t REG_DWORD /d 0 /f
-```
-- Disable automatic sign-in after updates and restarts
-```
-reg add "HKLM\Software\Microsoft\Windows\CurrentVersion\Policies\System" /v "DisableAutomaticRestartSignOn" /t REG_DWORD /d 1 /f
-```
 - Disable Camera, Notifications and Ads on Lock Screen
 ```
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Notifications\Settings" /v "NOC_GLOBAL_SETTING_ALLOW_CRITICAL_TOASTS_ABOVE_LOCK" /t REG_DWORD /d 0 /f
@@ -423,11 +367,7 @@ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" 
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" /v "RotatingLockScreenEnabled" /t REG_DWORD /d 0 /f
 reg add "HKLM\Software\Policies\Microsoft\Windows\Personalization" /v "NoLockScreenCamera" /t REG_DWORD /d 1 /f
 ```
-- Disable hibernation file **-- Recommended**
-```
-powercfg -h off
-```
-- Disable Copilot and Recall
+- Disable Windows AI, Copilot and Recall
 ```
 reg add "HKLM\Software\Policies\Microsoft\Edge" /v "HubsSidebarEnabled" /t REG_DWORD /d 0 /f
 reg add "HKLM\Software\Policies\Microsoft\Edge" /v "WebAppSettings" /t REG_SZ /f; Set-ItemProperty -Path "HKLM:\Software\Policies\Microsoft\Edge" -Name "WebAppSettings" -Value '[{"manifest_id": "https://copilot.microsoft.com/?cmc", "run_on_os_login": "blocked", "force_unregister_os_integration": true}]' -Type String
@@ -467,12 +407,92 @@ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" 
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" /v "SubscribedContentEnabled" /t REG_DWORD /d 0 /f
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" /v "SoftLandingEnabled" /t REG_DWORD /d 0 /f
 ```
-- Disable Windows Update via peer-to-peer
+- Disable password reveal button and user steps recorder
 ```
-reg add "HKLM\Software\Microsoft\Windows\CurrentVersion\DeliveryOptimization\Config" /v "DODownloadMode" /t REG_DWORD /d 0 /f
-reg add "HKLM\Software\Policies\Microsoft\Windows\DeliveryOptimization" /v "DODownloadMode" /t REG_DWORD /d 0 /f
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\DeliveryOptimization" /v "SystemSettingsDownloadMode" /t REG_DWORD /d 0 /f
-Delete-DeliveryOptimizationCache -Force
+reg add "HKLM\Software\Policies\Microsoft\Windows\CredUI" /v "DisablePasswordReveal" /t REG_DWORD /d 1 /f
+reg add "HKLM\Software\Policies\Microsoft\Windows\AppCompat" /v "DisableUAR" /t REG_DWORD /d 1 /f
+```
+- Disable prompting to sign-in with a Microsoft account
+```
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\UserProfileEngagement" /v "ScoobeSystemSettingEnabled" /t REG_DWORD /d 0 /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\SystemSettings\AccountNotifications" /v "EnableAccountNotifications" /t REG_DWORD /d 0 /f
+```
+- Disable Microsoft SpyNet reporting
+```
+reg add "HKLM\Software\Policies\Microsoft\Windows Defender\Spynet" /v "SpyNetReporting" /t REG_DWORD /d 0 /f
+reg add "HKLM\Software\Policies\Microsoft\Windows Defender\Spynet" /v "SubmitSamplesConsent" /t REG_DWORD /d 2 /f
+reg add "HKLM\Software\Policies\Microsoft\MRT" /v "DontReportInfectionInformation" /t REG_DWORD /d 1 /f
+```
+- Disable Windows Defender Notifications
+```
+reg add "HKLM\Software\Microsoft\Windows Defender Security Center\Notifications" /v "DisableEnhancedNotifications" /t REG_DWORD /d 1 /f
+reg add "HKLM\Software\Microsoft\Windows Defender Security Center\Virus and threat protection" /v "SummaryNotificationDisabled" /t REG_DWORD /d 1 /f
+reg add "HKLM\Software\Microsoft\Windows Defender Security Center\Virus and threat protection" /v "NoActionNotificationDisabled" /t REG_DWORD /d 1 /f
+reg add "HKLM\Software\Microsoft\Windows Defender Security Center\Virus and threat protection" /v "FilesBlockedNotificationDisabled" /t REG_DWORD /d 1 /f
+reg add "HKCU\Software\Microsoft\Windows Defender Security Center\Account protection" /v "DisableNotifications" /t REG_DWORD /d 1 /f
+reg add "HKCU\Software\Microsoft\Windows Defender Security Center\Account protection" /v "DisableWindowsHelloNotifications" /t REG_DWORD /d 1 /f
+reg add "HKCU\Software\Microsoft\Windows Defender Security Center\Account protection" /v "DisableDynamiclockNotifications" /t REG_DWORD /d 1 /f
+reg add "HKCU\Software\Microsoft\Windows Security Health\State" /v "AccountProtection_MicrosoftAccount_Disconnected" /t REG_DWORD /d 1 /f
+```
+- Disable reminders from "Windows Backup"
+```
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Notifications\Settings\MicrosoftWindows.Client.CBS_cw5n1h2txyewy!WindowsBackup" /v "Enabled" /t REG_DWORD /d 0 /f
+```
+- Disable Notification Suggestions
+```
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Notifications\Settings\Windows.ActionCenter.SmartOptOut" /v "Enabled" /t REG_DWORD /d 0 /f
+```
+
+## System
+- Disable hibernation file **-- Recommended**
+```
+powercfg -h off
+```
+- Disable Offline Files **-- Pro only**
+```
+Set-Service -Name "CscService" -StartupType Disabled; Stop-Service -Name "CscService"
+```
+- Disable Fast Startup
+```
+reg add "HKLM\System\CurrentControlSet\Control\Session Manager\Power" /v "HiberbootEnabled" /t REG_DWORD /d 0 /f
+```
+- Disable System Protection
+```
+Disable-ComputerRestore "$Env:SystemDrive"; vssadmin delete shadows /all /quiet | Out-Null
+```
+- Disable Remote Assistance
+```
+reg add "HKLM\System\CurrentControlSet\Control\Remote Assistance" /v "fAllowToGetHelp" /t REG_DWORD /d 0 /f
+reg add "HKLM\System\CurrentControlSet\Control\Remote Assistance" /v "fAllowFullControl" /t REG_DWORD /d 0 /f
+reg add "HKLM\Software\Policies\Microsoft\Windows NT\Terminal Services" /v "fAllowToGetHelp" /t REG_DWORD /d 0 /f
+```
+- Disable 260 character path limit
+```
+reg add "HKLM\System\CurrentControlSet\Control\FileSystem" /v "LongPathsEnabled" /t REG_DWORD /d 1 /f
+```
+- Disable Windows Error Reporting across the system
+```
+reg add "HKLM\Software\Microsoft\Windows\Windows Error Reporting" /v "Disabled" /t REG_DWORD /d 1 /f; Disable-WindowsErrorReporting
+```
+- Disable Key Management Service Online Activation
+```
+reg add "HKLM\Software\Policies\Microsoft\Windows NT\CurrentVersion\Software Protection Platform" /v "NoGenTicket" /t REG_DWORD /d 1 /f
+```
+- Disable OneDrive access to network before login
+```
+reg add "HKLM\Software\Microsoft\OneDrive" /v "PreventNetworkTrafficPreUserSignIn" /t REG_DWORD /d 1 /f
+```
+- Disable Windows Media Player Network Sharing Service
+```
+Set-Service -Name "WMPNetworkSvc" -StartupType Disabled; Stop-Service -Name "WMPNetworkSvc"
+```
+- Disable Smartphone integration
+```
+reg add "HKLM\Software\Policies\Microsoft\Windows\System" /v "EnableMmx" /t REG_DWORD /d 0 /f
+reg add "HKLM\Software\Policies\Microsoft\Windows\Messaging" /v "AllowMessageSync" /t REG_DWORD /d 0 /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Mobility" /v "CrossDeviceEnabled" /t REG_DWORD /d 0 /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Mobility" /v "PhoneLinkEnabled" /t REG_DWORD /d 0 /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Mobility" /v "OptedIn" /t REG_DWORD /d 0 /f
 ```
 - Disable Game Bar
 ```
@@ -481,64 +501,17 @@ reg add "HKCU\System\GameConfigStore" /v "GameDVR_FSEBehavior" /t REG_DWORD /d 2
 reg add "HKCU\System\GameConfigStore" /v "GameDVR_Enabled" /t REG_DWORD /d 0 /f
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\GameDVR" /v "AppCaptureEnabled" /t REG_DWORD /d 0 /f
 ```
-- Disable prompting to sign-in with a Microsoft account
+- Stop Program Compatibility and Push Notifications background services
 ```
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\UserProfileEngagement" /v "ScoobeSystemSettingEnabled" /t REG_DWORD /d 0 /f
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\SystemSettings\AccountNotifications" /v "EnableAccountNotifications" /t REG_DWORD /d 0 /f
+Set-Service -Name PcaSvc -StartupType Manual
+Set-Service -Name WpnService -StartupType Manual
+Get-Service 'PcaSvc','WpnService' | Stop-Service
 ```
-- Disable reminders from "Windows Backup"
+- Disable un-needed scheduled tasks <!-- include XblGameSaveTask on business systems-->
 ```
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Notifications\Settings\MicrosoftWindows.Client.CBS_cw5n1h2txyewy!WindowsBackup" /v "Enabled" /t REG_DWORD /d 0 /f
+Get-Scheduledtask 'Microsoft Compatibility Appraiser','Consolidator','UsbCeip','Microsoft-Windows-DiskDiagnosticDataCollector','QueueReporting',' DmClient','DmClientOnScenarioDownload','StartupAppTask','MareBackup','PcaPatchDbTask','ProgramDataUpdater','MapsUpdateTask','MapsToastTask','Proxy' -erroraction silentlycontinue | Disable-scheduledtask
 ```
-- Disable OneDrive access to network before login
-```
-reg add "HKLM\Software\Microsoft\OneDrive" /v "PreventNetworkTrafficPreUserSignIn" /t REG_DWORD /d 1 /f
-```
-- Disable Key Management Service Online Activation
-```
-reg add "HKLM\Software\Policies\Microsoft\Windows NT\CurrentVersion\Software Protection Platform" /v "NoGenTicket" /t REG_DWORD /d 1 /f
-```
-- Disable Notification Suggestions
-```
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Notifications\Settings\Windows.ActionCenter.SmartOptOut" /v "Enabled" /t REG_DWORD /d 0 /f
-```
-- Set File Explorer to "**This PC**", uncheck "**Show recently used files**" and "**Show frequently used folders**"
-```
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "LaunchTo" /t REG_DWORD /d 1 /f
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer" /v "ShowFrequent" /t REG_DWORD /d 0 /f
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer" /v "ShowRecent" /t REG_DWORD /d 0 /f
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer" /v "ShowCloudFilesInQuickAccess" /t REG_DWORD /d 0 /f
-```
-- Add default folders back to "**This PC**" (Optional)
-```
-# --Desktop--
-New-ItemProperty -Path "HKLM:\Software\Microsoft\Windows\CurrentVersion\Explorer\MyComputer\NameSpace\{B4BFCC3A-DB2C-424C-B029-7FE99A87C641}" -Name "HideIfEnabled" -PropertyType String -Value "" -Force | Out-Null
-New-ItemProperty -Path "HKLM:\Software\Microsoft\Windows\CurrentVersion\Explorer\MyComputer\NameSpace\{B4BFCC3A-DB2C-424C-B029-7FE99A87C641}" -Name "HiddenByDefault" -PropertyType DWord -Value 0 -Force | Out-Null
-# --Documents--
-New-ItemProperty -Path "HKLM:\Software\Microsoft\Windows\CurrentVersion\Explorer\MyComputer\NameSpace\{d3162b92-9365-467a-956b-92703aca08af}" -Name "HideIfEnabled" -PropertyType String -Value "" -Force | Out-Null
-New-ItemProperty -Path "HKLM:\Software\Microsoft\Windows\CurrentVersion\Explorer\MyComputer\NameSpace\{d3162b92-9365-467a-956b-92703aca08af}" -Name "HiddenByDefault" -PropertyType DWord -Value 0 -Force | Out-Null
-# --Downloads--
-New-ItemProperty -Path "HKLM:\Software\Microsoft\Windows\CurrentVersion\Explorer\MyComputer\NameSpace\{088e3905-0323-4b02-9826-5d99428e115f}" -Name "HideIfEnabled" -PropertyType String -Value "" -Force | Out-Null
-New-ItemProperty -Path "HKLM:\Software\Microsoft\Windows\CurrentVersion\Explorer\MyComputer\NameSpace\{088e3905-0323-4b02-9826-5d99428e115f}" -Name "HiddenByDefault" -PropertyType DWord -Value 0 -Force | Out-Null
-# --Music--
-New-ItemProperty -Path "HKLM:\Software\Microsoft\Windows\CurrentVersion\Explorer\MyComputer\NameSpace\{3dfdf296-dbec-4fb4-81d1-6a3438bcf4de}" -Name "HideIfEnabled" -PropertyType String -Value "" -Force | Out-Null
-New-ItemProperty -Path "HKLM:\Software\Microsoft\Windows\CurrentVersion\Explorer\MyComputer\NameSpace\{1CF1260C-4DD0-4ebb-811F-33C572699FDE}" -Name "HiddenByDefault" -PropertyType DWord -Value 0 -Force | Out-Null
-New-ItemProperty -Path "HKLM:\Software\Microsoft\Windows\CurrentVersion\Explorer\MyComputer\NameSpace\{3dfdf296-dbec-4fb4-81d1-6a3438bcf4de}" -Name "HiddenByDefault" -PropertyType DWord -Value 0 -Force | Out-Null
-# --Pictures--
-New-ItemProperty -Path "HKLM:\Software\Microsoft\Windows\CurrentVersion\Explorer\MyComputer\NameSpace\{24ad3ad4-a569-4530-98e1-ab02f9417aa8}" -Name "HideIfEnabled" -PropertyType String -Value "" -Force | Out-Null
-New-ItemProperty -Path "HKLM:\Software\Microsoft\Windows\CurrentVersion\Explorer\MyComputer\NameSpace\{24ad3ad4-a569-4530-98e1-ab02f9417aa8}" -Name "HiddenByDefault" -PropertyType DWord -Value 0 -Force | Out-Null
-# --Videos--
-New-ItemProperty -Path "HKLM:\Software\Microsoft\Windows\CurrentVersion\Explorer\MyComputer\NameSpace\{f86fa3ab-70d2-4fc7-9c99-fcbf05467f3a}" -Name "HideIfEnabled" -PropertyType String -Value "" -Force | Out-Null
-New-ItemProperty -Path "HKLM:\Software\Microsoft\Windows\CurrentVersion\Explorer\MyComputer\NameSpace\{f86fa3ab-70d2-4fc7-9c99-fcbf05467f3a}" -Name "HiddenByDefault" -PropertyType DWord -Value 0 -Force | Out-Null
-```
-- Remove "**Share**", "**Cast to Device**", "**Give access to**" from right click context menu
-```
-reg add "HKLM\Software\Microsoft\Windows\CurrentVersion\Shell Extensions\Blocked" /v "{e2bf9676-5f8f-435c-97eb-11607a5bedf7}" /t REG_SZ /f
-reg add "HKLM\Software\Microsoft\Windows\CurrentVersion\Shell Extensions\Blocked" /v "{7AD84985-87B4-4a16-BE58-8B72A5B390F7}" /t REG_SZ /f
-reg add "HKLM\Software\Microsoft\Windows\CurrentVersion\Shell Extensions\Blocked" /v "{f81e9010-6ea4-11ce-a7ff-00aa003ca9f6}" /t REG_SZ /f
-Stop-Process -ProcessName explorer
-```
-- Set the correct Time Zone **--** Or you can choose from "**Adjust date/time**"
+- Set the correct Time Zone **--** Or you can choose in [Date & time](ms-settings:dateandtime)
 ```
 Set-TimeZone -Id "Eastern Standard Time"
 ```
@@ -558,49 +531,88 @@ Set-TimeZone -Id "Pacific Standard Time"
 ```
 Start-Service -Name "W32Time"; W32tm /resync /force | Out-Null
 ```
-- Stop Program Compatibility and Push Notifications background services
+
+## Optional
+These sections are optional. Only execute their code if you want the change
+
+- If running an SSD and a second HD, move the pagefile to the second HD **-- Optional**
+- Remove OneDrive **-- Optional**
 ```
-Set-Service -Name PcaSvc -StartupType Manual
-Set-Service -Name WpnService -StartupType Manual
-Get-Service 'PcaSvc','WpnService' | Stop-Service
+Stop-Process -ProcessName OneDrive -ErrorAction SilentlyContinue
+Start-Process "$Env:SystemRoot\System32\OneDriveSetup.exe" -ArgumentList "/uninstall" -Wait
 ```
-- Disable un-needed scheduled tasks <!-- include XblGameSaveTask on business systems-->
+- Remove Teams **-- Optional**
 ```
-Get-Scheduledtask 'Microsoft Compatibility Appraiser','Consolidator','UsbCeip','Microsoft-Windows-DiskDiagnosticDataCollector','QueueReporting',' DmClient','DmClientOnScenarioDownload','StartupAppTask','MareBackup','PcaPatchDbTask','ProgramDataUpdater','MapsUpdateTask','MapsToastTask','Proxy' -erroraction silentlycontinue | Disable-scheduledtask
+Get-AppxPackage MicrosoftTeams* | Remove-AppxPackage -AllUsers
+Get-AppxPackage MSTeams* | Remove-AppxPackage -AllUsers
 ```
-- Disable Windows Defender Notifications
+- Disable Windows Search service **-- If Not Using Outlook** <!-- Always disable after classic Outlook retirement -->
 ```
-reg add "HKLM\Software\Microsoft\Windows Defender Security Center\Notifications" /v "DisableEnhancedNotifications" /t REG_DWORD /d 1 /f
-reg add "HKLM\Software\Microsoft\Windows Defender Security Center\Virus and threat protection" /v "SummaryNotificationDisabled" /t REG_DWORD /d 1 /f
-reg add "HKLM\Software\Microsoft\Windows Defender Security Center\Virus and threat protection" /v "NoActionNotificationDisabled" /t REG_DWORD /d 1 /f
-reg add "HKLM\Software\Microsoft\Windows Defender Security Center\Virus and threat protection" /v "FilesBlockedNotificationDisabled" /t REG_DWORD /d 1 /f
-reg add "HKCU\Software\Microsoft\Windows Defender Security Center\Account protection" /v "DisableNotifications" /t REG_DWORD /d 1 /f
-reg add "HKCU\Software\Microsoft\Windows Defender Security Center\Account protection" /v "DisableWindowsHelloNotifications" /t REG_DWORD /d 1 /f
-reg add "HKCU\Software\Microsoft\Windows Defender Security Center\Account protection" /v "DisableDynamiclockNotifications" /t REG_DWORD /d 1 /f
-reg add "HKCU\Software\Microsoft\Windows Security Health\State" /v "AccountProtection_MicrosoftAccount_Disconnected" /t REG_DWORD /d 1 /f
+Set-Service -Name "WSearch" -StartupType Disabled; Stop-Service -Name "WSearch"
+```
+- Enable Ultimate Performance power profile **-- Gaming Desktops Only**
+```
+$powerProfile = Get-CimInstance -Namespace "root\cimv2\power" -ClassName Win32_PowerPlan | Where-Object { $_.ElementName -eq "Ultimate Performance" }
+if ($powerProfile -eq $null) {$result = powercfg -duplicatescheme e9a42b02-d5df-448d-aa00-03f14749eb61; if ($result -match "GUID: ([0-9a-fA-F-]+)") { powercfg -setactive $matches[1] }} else {
+if ($powerProfile.InstanceID -match "([0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12})") { powercfg -setactive $matches[1] }}
+```
+- Optimize system responsiveness and disable network throttling. **-- Gaming Desktops Only** <!-- Defaults: SystemResponsiveness=20 NetworkThrottlingIndex=10 -->
+```
+reg add "HKLM\Software\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile" /v "SystemResponsiveness" /t REG_DWORD /d 0 /f
+reg add "HKLM\Software\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile" /v "NetworkThrottlingIndex" /t REG_DWORD /d 4294967295 /f
 ```
 - Disable Core Isolation: Memory integrity **-- Optional, Improves Game Performance**
 ```
 reg add "HKLM\System\CurrentControlSet\Control\DeviceGuard\Scenarios\HypervisorEnforcedCodeIntegrity" /v "Enabled" /t REG_DWORD /d 0 /f
 ```
-- Open [Windows Security Center](windowsdefender:) and dismiss any alerts
+
+## Updates
+- Update Apps in the [Microsoft Store](ms-windows-store://downloadsandupdates)
+- Remove unwanted Windows Store apps with [CleanApps](https://github.com/Rockz1152/CleanApps/releases){:target="_blank"} script
+- Disable automatic sign-in after updates and restarts
+```
+reg add "HKLM\Software\Microsoft\Windows\CurrentVersion\Policies\System" /v "DisableAutomaticRestartSignOn" /t REG_DWORD /d 1 /f
+```
+- Disable Windows Update via peer-to-peer
+```
+reg add "HKLM\Software\Microsoft\Windows\CurrentVersion\DeliveryOptimization\Config" /v "DODownloadMode" /t REG_DWORD /d 0 /f
+reg add "HKLM\Software\Policies\Microsoft\Windows\DeliveryOptimization" /v "DODownloadMode" /t REG_DWORD /d 0 /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\DeliveryOptimization" /v "SystemSettingsDownloadMode" /t REG_DWORD /d 0 /f
+Delete-DeliveryOptimizationCache -Force
+```
+- Disable Preview Updates **-- Pro only**
+```
+reg add "HKLM\Software\Policies\Microsoft\Windows\WindowsUpdate" /v "DeferQualityUpdates" /t REG_DWORD /d 1 /f
+reg add "HKLM\Software\Policies\Microsoft\Windows\WindowsUpdate" /v "DeferQualityUpdatesPeriodInDays" /t REG_DWORD /d 0 /f
+reg add "HKLM\Software\Policies\Microsoft\Windows\WindowsUpdate" /v "PauseQualityUpdatesStartTime" /t REG_SZ /f
+```
+- Install [Windows Updates](ms-settings:windowsupdate) and reboot
+- Install drivers and reboot
 - Cleanup Windows components
 ```
 Dism /Online /Cleanup-Image /StartComponentCleanup
 ```
-- Run Disk Cleanup with "**Clean up system files**"
-- Optimize drives
+- Install software with [Ninite](https://ninite.com/){:target="_blank"}
+- Setup [Firefox]({{site.url}}/firefox){:target="_blank"} or [Chrome]({{site.url}}/chrome){:target="_blank"} if you prefer either over Microsoft Edge
+  - You can always set a default Web browser in [Default apps](ms-settings:defaultapps)
+  - Search for your app in the list, click it and select `Set default`
+- Open [Windows Security Center](windowsdefender:) and dismiss any alerts
 - Disable [Do not Disturb](ms-settings:notifications)
   - Toggle off `Do not disturb`
   - Expand "Turn on do not disturb automatically"
   - Toggle off all rules
-- Reboot system
-
-<a name="optional"></a>
+- Run Disk Cleanup with "**Clean up system files**"
+```
+cleanmgr
+```
+- Optimize drives to complete the setup
+```
+dfrgui
+```
 
 ----
 
-## Optional Tweaks
+## Tweaks
 
 ### Disable Sticky Keys shortcuts
 Disable shortcut keys that can interrupt gaming
@@ -629,7 +641,6 @@ Set-ItemProperty -Path "HKCU:\Software\Classes\Typelib\{8cec5860-07a1-11d9-b15e-
 
 ----
 
-<a name="maint"></a>
 ## Maintenance
 - Install [Windows Updates](ms-settings:windowsupdate)
 - Update Apps in [Microsoft Store](ms-windows-store://downloadsandupdates)
