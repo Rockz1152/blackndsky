@@ -12,7 +12,7 @@ permalink: /windows10
 :------------: | :------------: | :------------: | :------------: | :------------:
 [CleanApps](https://github.com/Rockz1152/CleanApps/releases){:target="_blank"} | [O&O Shutup 10](https://www.oo-software.com/en/shutup10){:target="_blank"} | [Ninite](https://ninite.com/){:target="_blank"} | [Snappy Driver Installer Origin](https://www.glenn.delahoy.com/snappy-driver-installer-origin/){:target="_blank"} | [Windows 10 Media Creation Tool](https://www.microsoft.com/en-us/software-download/windows10){:target="_blank"}
 
-Quicklinks: <a href="#optional" Class="simple-button-small">Optional Tweaks</a><a href="#maint" Class="simple-button-small">Maintenance</a>
+Quicklinks: <a href="#optional-tweaks" Class="simple-button-small">Optional Tweaks</a><a href="#maintenance" Class="simple-button-small">Maintenance</a>
 
 ## Prepare Installation Media
 - Download the [Media Creation Tool](https://www.microsoft.com/en-us/software-download/windows10){:target="_blank"}
@@ -195,7 +195,6 @@ Dism /Online /Cleanup-Image /StartComponentCleanup
 
 ----
 
-<a name="optional"></a>
 ## Optional Tweaks
 
 ### Disable lock screen when resuming from sleep
@@ -247,7 +246,6 @@ reg delete "HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU" /v "NoAut
 
 ----
 
-<a name="maint"></a>
 ## Maintenance
 - Install [Windows Updates](ms-settings:windowsupdate)
 - Update Apps in [Microsoft Store](ms-windows-store://downloadsandupdates)

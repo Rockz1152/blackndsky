@@ -443,6 +443,8 @@ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Notifications\Settings\M
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Notifications\Settings\Windows.ActionCenter.SmartOptOut" /v "Enabled" /t REG_DWORD /d 0 /f
 ```
 
+----
+
 ## System
 - Disable hibernation file **-- Recommended**
 ```
@@ -532,6 +534,8 @@ Set-TimeZone -Id "Pacific Standard Time"
 Start-Service -Name "W32Time"; W32tm /resync /force | Out-Null
 ```
 
+----
+
 ## Optional
 These sections are optional. Only execute their code if you want the change
 
@@ -565,6 +569,8 @@ reg add "HKLM\Software\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProf
 ```
 reg add "HKLM\System\CurrentControlSet\Control\DeviceGuard\Scenarios\HypervisorEnforcedCodeIntegrity" /v "Enabled" /t REG_DWORD /d 0 /f
 ```
+
+----
 
 ## Updates
 - Update Apps in the [Microsoft Store](ms-windows-store://downloadsandupdates)
