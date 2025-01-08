@@ -135,7 +135,7 @@ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer" /v "ShowFreque
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer" /v "ShowRecent" /t REG_DWORD /d 0 /f
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer" /v "ShowCloudFilesInQuickAccess" /t REG_DWORD /d 0 /f
 ```
-- Add default folders back to "**This PC**" (Optional)
+- Add default folders back to "**This PC**"
 ```
 # --Desktop--
 New-ItemProperty -Path "HKLM:\Software\Microsoft\Windows\CurrentVersion\Explorer\MyComputer\NameSpace\{B4BFCC3A-DB2C-424C-B029-7FE99A87C641}" -Name "HideIfEnabled" -PropertyType String -Value "" -Force | Out-Null
@@ -359,7 +359,7 @@ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\SettingSync\Groups\Langu
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\SettingSync\Groups\Accessibility" /v "Enabled" /t REG_DWORD /d 0 /f
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\SettingSync\Groups\Windows" /v "Enabled" /t REG_DWORD /d 0 /f
 ```
-- Disable Camera, Notifications and Ads on Lock Screen
+- Disable Lock Screen Notifications, Ads, and Lock Screen Camera
 ```
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Notifications\Settings" /v "NOC_GLOBAL_SETTING_ALLOW_CRITICAL_TOASTS_ABOVE_LOCK" /t REG_DWORD /d 0 /f
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Notifications\Settings" /v "NOC_GLOBAL_SETTING_ALLOW_TOASTS_ABOVE_LOCK" /t REG_DWORD /d 0 /f
