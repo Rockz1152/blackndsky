@@ -88,13 +88,11 @@ Note: Multi-Pass Encoding takes a very long time to process. Expect transcoding 
 32-Bit
 
 - [http://download.videolan.org/pub/libdvdcss/1.2.12/win32/libdvdcss-2.dll](http://download.videolan.org/pub/libdvdcss/1.2.12/win32/libdvdcss-2.dll)
-- Alternative download from Dropbox [libdvdcss-2-32Bit.zip](https://www.dropbox.com/s/nrp5ky1rcjxmiuh/libdvdcss-2-32Bit.zip?dl=1)
 - Install to: `C:\Program Files (x86)\HandBrake`
 
 64-Bit
 
 - [http://download.videolan.org/pub/libdvdcss/1.2.12/win64/libdvdcss-2.dll](http://download.videolan.org/pub/libdvdcss/1.2.12/win64/libdvdcss-2.dll)
-- Alternative download from Dropbox [libdvdcss-2-64Bit.zip](https://www.dropbox.com/s/9qfq7zzh9nscjqm/libdvdcss-2-64Bit.zip?dl=1)
 - Install to: `C:\Program Files\HandBrake`
 
 _*Please note this .dll will need to be reinstalled after Handbrake updates on Windows systems_
