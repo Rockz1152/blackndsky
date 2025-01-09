@@ -26,13 +26,12 @@ permalink: /windows-tools
 
 | Program | Description
 | ============== | ====
-| [Balena Etcher](https://www.balena.io/etcher/){:target="_blank"} | Tool for writing .ISO and other image files to USB drives
+| [Ventoy](https://github.com/ventoy/Ventoy/releases){:target="_blank"} | Tool that creates a USB drive that can boot multiple .ISO files directly without the need to extract their contents.
+| [Rufus Portable](https://rufus.ie/){:target="_blank"} | Tool for writing .ISO and .IMG files to USB drives
 | [HirensBootCD ISO](https://www.hirensbootcd.org/download/){:target="_blank"} | The legendary PE boot tool updated with UEFI for modern systems, see page for full list of software
-| [HirensBootCD USB Tool](https://www.hirensbootcd.org/usb-booting/){:target="_blank"} | The recommended tool for creating a bootable USB stick for HirensBootCD
 | [HirensBootCD 15.2 ISO](https://www.hirensbootcd.org/old-versions/){:target="_blank"} | The original Hirens tool, see page for full list of software. Use Rufus Portable to write to USB drive
 | [Portable WinCD Emu](https://github.com/sysprogs/WinCDEmu/releases/){:target="_blank"} | Easily mount .ISO and other file types without using the built-in Windows utility
-| [Rufus Portable](https://rufus.ie/){:target="_blank"} | Tool for writing .ISO and .IMG files to USB drives
-| [Ventoy](https://github.com/ventoy/Ventoy/releases){:target="_blank"} | Tool that creates a USB drive that can boot multiple .ISO files directly without the need to extract their contents.
+| [Balena Etcher](https://www.balena.io/etcher/){:target="_blank"} | Tool for writing .ISO and other image files to USB drives
 
 ### General Software
 
