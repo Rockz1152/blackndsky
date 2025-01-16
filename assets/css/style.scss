@@ -188,27 +188,14 @@ nav {
   display: inherit;
 }
 
-
-/* adjust anchor links to fit header */
-
-/* apply to all ids */
-/* [id]::before {
-  content: '';
-  display: block;
-  height: 70px;
-  margin-top: -70px;
-  visibility: hidden;
-} */
-
-/* only apply to H2 or higher and not the banner */
-[id]:not(h3[id]):not(h4[id]):not(h5[id]):not([id="banner"])::before {
+/* adjust h2 anchor links to fit header */
+h2::before {
   content: '';
   display: block;
   height: 70px;
   margin-top: -70px;
   visibility: hidden;
 }
-
 
 /* Buttons */
 
