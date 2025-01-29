@@ -45,9 +45,13 @@ EOF
 ```
 sudo apt update
 ```
-- Install Jellyfin <!-- The "jellyfin" meta package is deprecated, use individual packages from now on -->
+- Install Jellyfin
 ```
-sudo apt install -y jellyfin-server jellyfin-web jellyfin-ffmpeg6
+sudo apt install -y jellyfin
+```
+- Adjust logging levels
+```
+sed -i 's/"MinimumLevel": "Information"/"MinimumLevel": "Error"/g' /etc/jellyfin/logging.json
 ```
 - Check service status
 ```

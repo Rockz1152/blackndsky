@@ -4,7 +4,7 @@ title: "Disable Windows S mode"
 permalink: /s-mode
 ---
 
-> ### **No Microsoft Account Needed**
+> ### **No Microsoft Account Required**
 >
 > Windows S mode is a cut-down version of Windows that only runs Microsoft-verified apps from the Microsoft Store. This limitation prevents you from creating a local user during setup, forcing you to sign-in with a Microsoft account. The official way of disabling S mode also requires a Microsoft account. This document will help you disable S-Mode without using a Microsoft account.
 
