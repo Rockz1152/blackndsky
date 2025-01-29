@@ -42,6 +42,10 @@ permalink: /ubuntu
 ```
 echo 'sudo sh -c "export DEBIAN_FRONTEND=noninteractive; apt update; apt upgrade -y; apt autoremove --purge -y;"' > $HOME/update-system.sh; chmod u+x $HOME/update-system.sh
 ```
+- Make a script to cleanup old kernels when necessary
+```
+echo 'bash -c "$(wget -qLO - https://raw.githubusercontent.com/Rockz1152/Ubuntu/main/kernel-clean.sh)"' > $HOME/kernel-clean.sh && chmod u+x $HOME/kernel-clean.sh
+```
 
 ----
 
