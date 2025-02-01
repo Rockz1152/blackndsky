@@ -215,6 +215,15 @@ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "E
 ```
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "EnableSnapBar" /t REG_DWORD /d 1 /f; Stop-Process -ProcessName explorer
 ```
+- Snap layouts flyout from the maximize button
+  - Disable
+```
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "EnableSnapAssistFlyout" /t REG_DWORD /d 0 /f; Stop-Process -ProcessName explorer
+```
+  - Enable
+```
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "EnableSnapAssistFlyout" /t REG_DWORD /d 1 /f; Stop-Process -ProcessName explorer
+```
 
 ### Microsoft Edge
 - Changes to make Microsoft Edge usable
