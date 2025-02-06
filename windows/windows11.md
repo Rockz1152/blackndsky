@@ -485,7 +485,7 @@ reg add "HKLM\System\CurrentControlSet\Control\FileSystem" /v "LongPathsEnabled"
 ```
 - Disable Windows Error Reporting across the system
 ```
-reg add "HKLM\Software\Microsoft\Windows\Windows Error Reporting" /v "Disabled" /t REG_DWORD /d 1 /f; Disable-WindowsErrorReporting
+Disable-WindowsErrorReporting; reg add "HKLM\Software\Microsoft\Windows\Windows Error Reporting" /v "Disabled" /t REG_DWORD /d 1 /f
 ```
 - Disable Key Management Service Online Activation
 ```
