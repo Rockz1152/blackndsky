@@ -533,7 +533,7 @@ Get-Service 'PcaSvc','WpnService' | Stop-Service
 ```
 - Disable un-needed scheduled tasks <!-- include XblGameSaveTask on business systems-->
 ```
-Get-Scheduledtask 'Microsoft Compatibility Appraiser','Consolidator','UsbCeip','Microsoft-Windows-DiskDiagnosticDataCollector','QueueReporting',' DmClient','DmClientOnScenarioDownload','StartupAppTask','MareBackup','PcaPatchDbTask','ProgramDataUpdater','MapsUpdateTask','MapsToastTask','Proxy' -erroraction silentlycontinue | Disable-scheduledtask
+Get-ScheduledTask 'Microsoft Compatibility Appraiser','Consolidator','UsbCeip','Microsoft-Windows-DiskDiagnosticDataCollector','QueueReporting','DmClient','DmClientOnScenarioDownload','StartupAppTask','MareBackup','PcaPatchDbTask','ProgramDataUpdater','MapsUpdateTask','MapsToastTask','Proxy' -ErrorAction SilentlyContinue | Disable-ScheduledTask
 ```
 - Set the correct Time Zone **--** Or you can choose in [Date & time](ms-settings:dateandtime)
 ```
