@@ -455,6 +455,8 @@ reg add "HKCU\Software\Microsoft\Windows Defender Security Center\Account protec
 reg add "HKCU\Software\Microsoft\Windows Defender Security Center\Account protection" /v "DisableWindowsHelloNotifications" /t REG_DWORD /d 1 /f
 reg add "HKCU\Software\Microsoft\Windows Defender Security Center\Account protection" /v "DisableDynamiclockNotifications" /t REG_DWORD /d 1 /f
 reg add "HKCU\Software\Microsoft\Windows Security Health\State" /v "AccountProtection_MicrosoftAccount_Disconnected" /t REG_DWORD /d 1 /f
+reg add "HKCU\Software\Microsoft\Windows Security Health\State" /v "Hardware_DataEncryption_AddMsa" /t REG_DWORD /d "0" /f
+reg add "HKCU\Software\Microsoft\Edge\SmartScreenPuaEnabled" /ve /t REG_DWORD /d "1" /f
 ```
 - Disable Notification Suggestions, Notifications from "Suggested" and "Windows Backup"
 ```
