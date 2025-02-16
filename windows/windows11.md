@@ -197,14 +197,8 @@ Stop-Process -ProcessName explorer
 - Add new "Compress to..." menu to Classic Right Click
   - Add menu
 ```
-reg add "HKEY_CLASSES_ROOT\*\shell\CompressToFullMenu_ForOldContextMenu" /v "CommandStateSync" /t REG_SZ /d "" /f
-reg add "HKEY_CLASSES_ROOT\*\shell\CompressToFullMenu_ForOldContextMenu" /v "ExplorerCommandHandler" /t REG_SZ /d "{7AE6900F-6EB0-44A2-9CA1-DB2F7EF352AF}" /f
-reg add "HKEY_CLASSES_ROOT\*\shell\CompressToFullMenu_ForOldContextMenu" /v "MUIVerb" /t REG_SZ /d "@Windows.UI.FileExplorer.dll,-51797" /f
-reg add "HKEY_CLASSES_ROOT\*\shell\CompressToFullMenu_ForOldContextMenu" /v "Note" /t REG_SZ /d "Copied from original Command Store command: Windows.CompressTo" /f
-reg add "HKEY_CLASSES_ROOT\Folder\shell\CompressToFullMenu_ForOldContextMenu" /v "CommandStateSync" /t REG_SZ /d "" /f
-reg add "HKEY_CLASSES_ROOT\Folder\shell\CompressToFullMenu_ForOldContextMenu" /v "ExplorerCommandHandler" /t REG_SZ /d "{7AE6900F-6EB0-44A2-9CA1-DB2F7EF352AF}" /f
-reg add "HKEY_CLASSES_ROOT\Folder\shell\CompressToFullMenu_ForOldContextMenu" /v "MUIVerb" /t REG_SZ /d "@Windows.UI.FileExplorer.dll,-51797" /f
-reg add "HKEY_CLASSES_ROOT\Folder\shell\CompressToFullMenu_ForOldContextMenu" /v "Note" /t REG_SZ /d "Copied from original Command Store command: Windows.CompressTo" /f
+New-Item -Path "HKLM:\Software\Classes\*\shell\CompressToFullMenu_ForOldContextMenu" -Force | Out-Null; New-ItemProperty -LiteralPath "HKLM:\Software\Classes\*\shell\CompressToFullMenu_ForOldContextMenu" -Name "CommandStateSync" -PropertyType String -Value "" -Force | Out-Null; reg add "HKEY_CLASSES_ROOT\*\shell\CompressToFullMenu_ForOldContextMenu" /v "ExplorerCommandHandler" /t REG_SZ /d "{7AE6900F-6EB0-44A2-9CA1-DB2F7EF352AF}" /f; reg add "HKEY_CLASSES_ROOT\*\shell\CompressToFullMenu_ForOldContextMenu" /v "MUIVerb" /t REG_SZ /d "@Windows.UI.FileExplorer.dll,-51797" /f; reg add "HKEY_CLASSES_ROOT\*\shell\CompressToFullMenu_ForOldContextMenu" /v "Note" /t REG_SZ /d "Copied from original Command Store command: Windows.CompressTo" /f;
+New-Item -Path "HKLM:\Software\Classes\Folder\shell\CompressToFullMenu_ForOldContextMenu" -Force | Out-Null; New-ItemProperty -LiteralPath "HKLM:\Software\Classes\Folder\shell\CompressToFullMenu_ForOldContextMenu" -Name "CommandStateSync" -PropertyType String -Value "" -Force | Out-Null; reg add "HKEY_CLASSES_ROOT\Folder\shell\CompressToFullMenu_ForOldContextMenu" /v "ExplorerCommandHandler" /t REG_SZ /d "{7AE6900F-6EB0-44A2-9CA1-DB2F7EF352AF}" /f; reg add "HKEY_CLASSES_ROOT\Folder\shell\CompressToFullMenu_ForOldContextMenu" /v "MUIVerb" /t REG_SZ /d "@Windows.UI.FileExplorer.dll,-51797" /f; reg add "HKEY_CLASSES_ROOT\Folder\shell\CompressToFullMenu_ForOldContextMenu" /v "Note" /t REG_SZ /d "Copied from original Command Store command: Windows.CompressTo" /f;
 ```
   - Remove menu
 ```
@@ -540,7 +534,7 @@ Set-Service -Name PcaSvc -StartupType Manual
 Set-Service -Name WpnService -StartupType Manual
 Get-Service 'PcaSvc','WpnService' | Stop-Service
 ```
-- Disable un-needed scheduled tasks <!-- include XblGameSaveTask on business systems-->
+- Disable un-needed scheduled tasks <!-- include 'XblGameSaveTask' on business systems | May need to add 'Microsoft Compatibility Appraiser Exp' -->
 ```
 Get-ScheduledTask 'Microsoft Compatibility Appraiser','Consolidator','UsbCeip','Microsoft-Windows-DiskDiagnosticDataCollector','QueueReporting','DmClient','DmClientOnScenarioDownload','StartupAppTask','MareBackup','PcaPatchDbTask','ProgramDataUpdater','MapsUpdateTask','MapsToastTask','Proxy' -ErrorAction SilentlyContinue | Disable-ScheduledTask
 ```
