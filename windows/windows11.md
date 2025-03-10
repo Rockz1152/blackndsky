@@ -474,7 +474,7 @@ powercfg -h off
 ```
 - Disable Offline Files **-- Pro only**
 ```
-Set-Service -Name "CscService" -StartupType Disabled; Stop-Service -Name "CscService"
+Set-Service -Name "CscService" -StartupType Disabled -ErrorAction SilentlyContinue; Stop-Service -Name "CscService" -ErrorAction SilentlyContinue
 ```
 - Disable Fast Startup
 ```
@@ -600,8 +600,6 @@ reg add "HKLM\System\CurrentControlSet\Control\DeviceGuard\Scenarios\HypervisorE
 ----
 
 ## Updates
-- Update Apps in the [Microsoft Store](ms-windows-store://downloadsandupdates)
-- Remove unwanted Windows Store apps with [CleanApps](https://github.com/Rockz1152/CleanApps/releases){:target="_blank"} script
 - Disable automatic sign-in after updates and restarts
 ```
 reg add "HKLM\Software\Microsoft\Windows\CurrentVersion\Policies\System" /v "DisableAutomaticRestartSignOn" /t REG_DWORD /d 1 /f
@@ -619,6 +617,8 @@ reg add "HKLM\Software\Policies\Microsoft\Windows\WindowsUpdate" /v "DeferQualit
 reg add "HKLM\Software\Policies\Microsoft\Windows\WindowsUpdate" /v "DeferQualityUpdatesPeriodInDays" /t REG_DWORD /d 0 /f
 reg add "HKLM\Software\Policies\Microsoft\Windows\WindowsUpdate" /v "PauseQualityUpdatesStartTime" /t REG_SZ /f
 ```
+- Remove unwanted Windows Store apps with [CleanApps](https://github.com/Rockz1152/CleanApps/releases) script
+- Update Apps in the [Microsoft Store](ms-windows-store://downloadsandupdates)
 - Install [Windows Updates](ms-settings:windowsupdate) and reboot
 - Install drivers and reboot
 - Cleanup Windows components
@@ -663,7 +663,7 @@ powercfg /SETACVALUEINDEX SCHEME_CURRENT SUB_NONE CONSOLELOCK 0
 ```
 - Reboot the system to apply the change
 
-### Disable F1 help on some Microsoft apps
+### Disable F1 help in some Microsoft apps
 - This mainly prevents `[F1]` from opening tabs while on the desktop
 ```
 New-Item -Path "HKCU:\Software\Classes\Typelib\{8cec5860-07a1-11d9-b15e-000d56bfe6ee}\1.0\0\win32" -Force | Out-Null
