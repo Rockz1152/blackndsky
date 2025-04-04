@@ -36,16 +36,10 @@ Use the link below if you need to bypass Microsoft's hardware requirements
 ### Out-of-Box Setup
 Follow these steps to create a local user
 
-- Make sure you are disconnected from the internet
 - Press `[Shift]` + `[F10]` to open a command prompt
-- Enter `oobe\bypassnro`
-- After setup restarts
-  - Select language and keyboard layout
-  - Skip adding a second keyboard layout
-  - Select `I don't have internet` and then `Continue with limited setup`
+- Enter `start ms-cxh:localonly`
 - Proceed to create a local user
 - On the "Privacy" screen, turn off all settings
-- After setup is complete, you may connect to the internet
 
 ----
 
