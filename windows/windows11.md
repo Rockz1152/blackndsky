@@ -273,7 +273,9 @@ reg add "HKLM\Software\Policies\Microsoft\Edge" /v "HideFirstRunExperience" /t R
 reg add "HKLM\Software\Policies\Microsoft\Edge" /v "AutoImportAtFirstRun" /t REG_DWORD /d 4 /f
 reg add "HKLM\Software\Policies\Microsoft\Edge\Recommended" /v "ShowHomeButton" /t REG_DWORD /d 1 /f
 ```
-- Open `edge://policy/` and click `Reload Policies` - Copy and paste link below to visit
+- Edge will reload the policies automatically within a few minutes
+  - You can force update them if you visit `edge://policy/` and click `Reload Policies`
+  - Copy and paste link below in a new tab to visit
 ```
 edge://policy/
 ```
