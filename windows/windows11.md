@@ -50,7 +50,7 @@ _*Open a "Terminal (Admin)" prompt to run commands. Right click the start button
 - Remove unwanted Windows Store apps
 ```
 $RemoveApps = "Microsoft.MixedReality.Portal|Microsoft.Wallet|Microsoft.WindowsCamera|Microsoft.BingNews|Microsoft.GetHelp|Microsoft.Getstarted|Microsoft.YourPhone|Microsoft.Messaging|Microsoft.Microsoft3DViewer|Microsoft.MicrosoftOfficeHub|Microsoft.MicrosoftSolitaireCollection|Microsoft.NetworkSpeedTest|Microsoft.News|Microsoft.Office.Lens|Microsoft.Office.OneNote|Microsoft.Office.Sway|Microsoft.OneConnect|Microsoft.People|Microsoft.Print3D|Microsoft.RemoteDesktop|Microsoft.SkypeApp|Microsoft.Office.Todo.List|Microsoft.Whiteboard|Microsoft.WindowsAlarms|microsoft.windowscommunicationsapps|Microsoft.WindowsFeedbackHub|Microsoft.WindowsMaps|Microsoft.BingWeather|Microsoft.549981C3F5F10|Microsoft.Advertising.Xaml|Microsoft.Copilot|Microsoft.Windows.DevHome|CandyCrush|EclipseManager|ActiproSoftwareLLC|AdobeSystemsIncorporated.AdobePhotoshopExpress|Duolingo-LearnLanguagesforFree|PandoraMediaInc|BubbleWitch3Saga|Wunderlist|Flipboard|Twitter|Facebook|Spotify|Minecraft|Royal Revolt|Sway|Speed Test|Dolby|Disney|Clipchamp.Clipchamp|Microsoft.PowerAutomateDesktop|Microsoft.Todos|MicrosoftCorporationII.MicrosoftFamily|Microsoft.BingSearch"
-$progressPreference = 'silentlyContinue'; Get-AppxPackage | where-object {$_.Name -match $RemoveApps} | Remove-AppxPackage -erroraction 'silentlycontinue'; $progressPreference = 'Continue'
+Get-AppxPackage | where-object {$_.Name -match $RemoveApps} | Remove-AppxPackage
 ```
   - You can also use the [CleanApps](https://github.com/Rockz1152/CleanApps/releases) script to remove or reinstall the apps
   - See [Github](https://github.com/Rockz1152/CleanApps) for a full list of apps removed
