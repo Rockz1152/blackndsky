@@ -43,8 +43,10 @@ Follow these steps to create a local user
 
 ----
 
+> ### **How to run commands**
+> Open a "Terminal (Admin)" prompt to run commands. Right click on the start button and select "Terminal (Admin)"
+
 ## Appearance
-_*Open a "Terminal (Admin)" prompt to run commands. Right click the start button, select "Terminal (Admin)"_
 
 ### Recommended
 - Remove unwanted Windows Store apps
@@ -283,8 +285,6 @@ edge://policy/
 ----
 
 ## Privacy
-_*Open a "Terminal (Admin)" prompt to run commands. Right click the start button, select "Terminal (Admin)"_
-
 - Configure Out-of-Box privacy settings
 ```
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\AdvertisingInfo" /v "Enabled" /t REG_DWORD /d 0 /f
