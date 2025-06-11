@@ -80,3 +80,7 @@ layout: home
 - [Jekyll]({{site.url}}/jekyll)
 </div>
 </div>
+
+<div id="disclaimer-bar">
+  Disclaimer: Use this site at your own risk. Content is provided as-is with no warranties.
+</div>

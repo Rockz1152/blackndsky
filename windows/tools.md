@@ -10,8 +10,6 @@ permalink: /windows-tools
 
 ### Hardware Information & Diagnostics
 
-| Program | Description
-| ============== | ====
 | [CPU-Z](https://www.cpuid.com/softwares/cpu-z.html){:target="_blank"} | Displays detailed information about the computer's CPU, chipset, and memory
 | [GPU-Z](https://www.techpowerup.com/download/techpowerup-gpu-z/){:target="_blank"} | Display detailed information on the current graphics card, it's driver and sensor data
 | [Hardware Monitor](https://www.cpuid.com/softwares/hwmonitor.html){:target="_blank"} | View all sensor data possible on the current system, includes CPU, GPU, motherboard and hard disks
@@ -24,8 +22,6 @@ permalink: /windows-tools
 
 ### .ISO Related Programs
 
-| Program | Description
-| ============== | ====
 | [Ventoy](https://github.com/ventoy/Ventoy/releases){:target="_blank"} | Tool that creates a USB drive that can boot multiple .ISO files directly without the need to extract their contents
 | [Rufus Portable](https://rufus.ie/){:target="_blank"} | Tool for writing .ISO and .IMG files to USB drives
 | [HirensBootCD ISO](https://www.hirensbootcd.org/download/){:target="_blank"} | The legendary PE boot tool updated with UEFI for modern systems, see page for full list of software
@@ -36,8 +32,6 @@ permalink: /windows-tools
 
 ### General Software
 
-| Program | Description
-| ============== | ====
 | [7-Zip](https://www.7-zip.org/download.html){:target="_blank"} | The 7-Zip download page
 | [7-Zip Portable](https://portableapps.com/apps/utilities/7-zip_portable){:target="_blank"} | Unpacks 7-Zip, can be used to extract all tools if built-in uncompress not available
 | [Autoruns](https://docs.microsoft.com/en-us/sysinternals/downloads/autoruns#download){:target="_blank"} | Easily see all programs on startup and many other locations
