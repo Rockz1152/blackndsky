@@ -587,11 +587,16 @@ Get-AppxPackage MSTeams* | Remove-AppxPackage -AllUsers
 ```
 Set-Service -Name "WSearch" -StartupType Disabled; Stop-Service -Name "WSearch"
 ```
-- Enable Ultimate Performance power profile **-- Gaming Desktops Only**
+- Set a Power Profile for desktop PCs (Choose one)
+  - Ultimate Performance **-- Gaming Desktops Only**
 ```
 $powerProfile = Get-CimInstance -Namespace "root\cimv2\power" -ClassName Win32_PowerPlan | Where-Object { $_.ElementName -eq "Ultimate Performance" }
 if ($powerProfile -eq $null) {$result = powercfg -duplicatescheme e9a42b02-d5df-448d-aa00-03f14749eb61; if ($result -match "GUID: ([0-9a-fA-F-]+)") { powercfg -setactive $matches[1] }} else {
 if ($powerProfile.InstanceID -match "([0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12})") { powercfg -setactive $matches[1] }}
+```
+  - High Performance with no disk sleep **-- Desktops Only**
+```
+powercfg -SETACTIVE 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c; powercfg -change -disk-timeout-ac 0; powercfg -change -disk-timeout-dc 0
 ```
 - Optimize system responsiveness and disable network throttling. **-- Gaming Desktops Only** <!-- Defaults: SystemResponsiveness=20 NetworkThrottlingIndex=10 -->
 ```
