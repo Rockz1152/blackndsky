@@ -143,11 +143,17 @@ browser.preferences.moreFromMozilla
 browser.preferences.experimental
 ```
 - Disable sites asking to handle email links
+  - _*This also prevents "mailto:" links from working_
   - Change `network.protocol-handler.external.mailto` to `false`
   - ```
 network.protocol-handler.external.mailto
 ```
-- Disable tab preview (Optional)
+- Disable Tab Groups
+  - Change `browser.tabs.groups.enabled` to `false`
+  - ```
+browser.tabs.groups.enabled
+```
+- Disable Tab Preview (Optional)
   - Change `browser.tabs.hoverPreview.enabled` to `false`
   - ```
 browser.tabs.hoverPreview.enabled
