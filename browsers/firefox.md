@@ -23,9 +23,11 @@ winget install mozilla.firefox --accept-package-agreements --accept-source-agree
 ```
 Open Firefox
 
+- Click `Continue`
 - Select the options you want and click `Save and Continue`
 - Continue through the onboarding process or close the tab
 - Right click the "Firefox View" button in the top left and select `Remove from Toolbar`
+- Right click the "Show sidebar" button to the left of the back arrow and select `Remove from Toolbar`
 
 ----
 
@@ -41,13 +43,14 @@ https://addons.mozilla.org/en-US/firefox/addon/old-dark-theme/
 ----
 
 ## Appearance
+_*This section is Optional_
 
 - Right click some empty space on the top bar and select `Customize Toolbar`
-- (Optional) Click `Toolbars` at the bottom
+- Click `Toolbars` at the bottom
   - Check `Menu Bar` optionally
   - Set `Bookmarks Toolbar` to `Always Show`
-- (Optional) Remove white space squares in top toolbar by dragging them to the box underneath
-- (Optional) Drag `Home` to toolbar next to reload
+- Remove white space squares in top toolbar by dragging them to the box underneath
+- Drag `Home` to toolbar next to reload
 - Click `Done`
 
 ----
@@ -62,10 +65,12 @@ General
   - Uncheck `Open Firefox automatically when your computer starts up`
 - Tabs
   - (Optional) Uncheck `Show an image preview when you hover on a tab`
+  - Uncheck `Use AI to suggest tabs and a name for tab groups`
 - Browsing
   - (Optional) Uncheck `Control media via keyboard, headset, or virtual interface` to disable Media Hotkeys
   - Uncheck `Recommend extensions as you browse`
   - Uncheck `Recommend features as you browse`
+  - Uncheck `Enable link previews`
 
 Home
 
@@ -73,26 +78,26 @@ Home
   - Set "Homepage and new windows" to `Firefox Home (Default)`
   - Make sure "New tabs" is set to `Firefox Home (Default)`
 - Firefox Home Content, Uncheck:
-  - `Sponsored shortcuts`
-  - `Shortcuts` (Optional)
   - `Weather` (Optional)
-  - `Sponsored stories`
+  - `Shortcuts` (Optional)
   - `Recommended stories`
+  - `Support Firefox`
   - `Recent activity`
 
 Search
 
 - Default Search Engine
   - Select preferred Default Search Engine
+  - My recommendation: `DuckDuckGo`
 - Search Suggestions
-  - Uncheck `Show trending search suggestions`
-  - Uncheck `Show search suggestions ahead of browsing history in address bar results`
   - Uncheck `Show search suggestions`
   - (Optional) Uncheck `Show recent searches`
 - Address Bar -- Firefox Suggest
   - Uncheck `Search engines`
+  - Uncheck `Quick actions`
   - Uncheck `Suggestions from Firefox`
   - Uncheck `Suggestions from sponsors`
+  - Make sure `Improve the Firefox Suggest experience` is disabled
 - Search Shortcuts
   - Uncheck everything
 
@@ -100,16 +105,15 @@ Privacy & Security
 
 - Website Privacy Preferences
   - Check `Tell websites not to sell or share my data`
-  - Check `Send websites a "Do Not Track" request`
 - Permissions
-  - Location > Settings > Check `Block new requests asking to access your location`
-  - Notifications > Settings > Check `Block new requests asking to allow notifications`
+  - Location > Settings > Check `Block new requests asking to access your location` > Click `Save Changes`
+  - Notifications > Settings > Check `Block new requests asking to allow notifications` > Click `Save Changes`
 - Firefox Data Collection and Use
   - Uncheck all settings
 - Website Advertising Preferences
-  - Uncheck `Allow websites to perform privacy-preserving ad measurement`
-- Enable DNS over HTTPS using:
-  - (Optional) Select `Max Protection`
+  - Make sure `Allow websites to perform privacy-preserving ad measurement` is disabled
+- Enable DNS over HTTPS using (Optional):
+  - Select `Max Protection`
 
 ----
 
@@ -127,11 +131,6 @@ Search for the setting and double click `true|false` to toggle the boolean
   - ```
 identity.fxaccounts.enabled
 ```
-- Disable Pocket
-  - Change `extensions.pocket.enabled` to `false`
-  - ```
-extensions.pocket.enabled
-```
 - Disable "More from Mozilla"
   - Change `browser.preferences.moreFromMozilla` to `false`
   - ```
@@ -142,16 +141,16 @@ browser.preferences.moreFromMozilla
   - ```
 browser.preferences.experimental
 ```
-- Disable sites asking to handle email links
-  - _*This also prevents "mailto:" links from working_
-  - Change `network.protocol-handler.external.mailto` to `false`
-  - ```
-network.protocol-handler.external.mailto
-```
 - Disable Tab Groups
   - Change `browser.tabs.groups.enabled` to `false`
   - ```
 browser.tabs.groups.enabled
+```
+- Disable sites asking to handle email links (Optional)
+  - _*This also prevents "mailto:" links from working_
+  - Change `network.protocol-handler.external.mailto` to `false`
+  - ```
+network.protocol-handler.external.mailto
 ```
 - Disable Tab Preview (Optional)
   - Change `browser.tabs.hoverPreview.enabled` to `false`
