@@ -10,10 +10,12 @@ permalink: /debian
 [xRDP]({{site.url}}/xrdp){: .simple-button}
 
 ## Download Installer
-- Debian 12: [https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/](https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/){:target="_blank"}
+- Current release: **Debian 13 Trixie**
+- Download from: [https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/](https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/){:target="_blank"}
 - Get the current `debian-XX.X.X-amd64-netinst.iso`
 
 ### Older Releases
+- Debian 12: [https://cdimage.debian.org/cdimage/archive/12.11.0/amd64/iso-cd/debian-12.11.0-amd64-netinst.iso](https://cdimage.debian.org/cdimage/archive/12.11.0/amd64/iso-cd/debian-12.11.0-amd64-netinst.iso)
 - Debian 11: [https://cdimage.debian.org/cdimage/archive/11.7.0/amd64/iso-cd/debian-11.7.0-amd64-netinst.iso](https://cdimage.debian.org/cdimage/archive/11.7.0/amd64/iso-cd/debian-11.7.0-amd64-netinst.iso)
 - Debian 10: [https://cdimage.debian.org/cdimage/archive/10.10.0/amd64/iso-cd/debian-10.10.0-amd64-netinst.iso](https://cdimage.debian.org/cdimage/archive/10.10.0/amd64/iso-cd/debian-10.10.0-amd64-netinst.iso)
 - Debian 9: [https://cdimage.debian.org/cdimage/archive/9.13.0/amd64/iso-cd/debian-9.13.0-amd64-netinst.iso](https://cdimage.debian.org/cdimage/archive/9.13.0/amd64/iso-cd/debian-9.13.0-amd64-netinst.iso)
@@ -132,20 +134,21 @@ Disable desktop composition
   - e.g. [https://wiki.debian.org/DebianBullseye#Links](https://wiki.debian.org/DebianBullseye#Links){:target="_blank"}
 
 ### Upgrade
-- Fully upgrades and cleanup any packages on the system
+- Fully upgrade and cleanup any packages on the system
 ```
-sudo sh -c "apt update; apt full-upgrade -y; apt autoremove --purge -y"
+sudo sh -c "apt update --allow-releaseinfo-change; apt full-upgrade -y; apt autoremove --purge -y"
 ```
 - Update source files to new release code name
+  - Bookworm(12) to Trixie(13)
 ```
-sudo sed -i 's/<OldName>/<NewName>/g' /etc/apt/sources.list
+sudo sed -i 's!bookworm!trixie!g' /etc/apt/sources.list
 ```
-  - Bullseye to Bookworm
+  - Bullseye(11) to Bookworm(12)
 ```
 sudo sed -i 's!bullseye!bookworm!g' /etc/apt/sources.list
 sudo sed -i 's!main!main non-free-firmware!g' /etc/apt/sources.list
 ```
-  - Buster to Bullseye:
+  - Buster(10) to Bullseye(11):
 ```
 sudo sed -i 's!buster!bullseye!g' /etc/apt/sources.list
 sudo sed -i 's!bullseye/updates!bullseye-security!g' /etc/apt/sources.list
