@@ -151,6 +151,11 @@ browser.tabs.groups.enabled
   - ```
 browser.tabs.groups.smart.enabled
 ```
+- Disable Local AI Generation
+  - Change `browser.ml.enable` to `false`
+  - ```
+browser.ml.enable
+```
 - Disable AI Chatbot integration
   - Change `browser.ml.chat.enabled` to `false`
   - ```
