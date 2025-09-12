@@ -146,6 +146,16 @@ browser.preferences.experimental
   - ```
 browser.tabs.groups.enabled
 ```
+- Disable AI smart tab grouping
+  - Change `browser.tabs.groups.smart.enabled` to `false`
+  - ```
+browser.tabs.groups.smart.enabled
+```
+- Disable AI Chatbot integration
+  - Change `browser.ml.chat.enabled` to `false`
+  - ```
+browser.ml.chat.enabled
+```
 - Disable sites asking to handle email links (Optional)
   - _*This also prevents "mailto:" links from working_
   - Change `network.protocol-handler.external.mailto` to `false`
