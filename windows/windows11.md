@@ -20,7 +20,7 @@ Quicklinks:
 <a href="#updates" class="simple-button-small">Updates</a>
 <a href="#tweaks" class="simple-button-small">Tweaks</a>
 <a href="#maintenance" class="simple-button-small">Maintenance</a>
-<span style="float: right; font-weight: bold; color: #555;">Version: 24H2</span>
+<span style="float: right; font-weight: bold; color: #555;">Version: 25H2</span>
 
 ## Installation
 
