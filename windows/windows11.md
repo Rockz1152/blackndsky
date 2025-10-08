@@ -589,7 +589,7 @@ Start-Process "$Env:SystemRoot\System32\OneDriveSetup.exe" -ArgumentList "/unins
 Get-AppxPackage MicrosoftTeams* | Remove-AppxPackage -AllUsers
 Get-AppxPackage MSTeams* | Remove-AppxPackage -AllUsers
 ```
-- Disable Windows Search service **-- If Not Using Outlook** <!-- Always disable after classic Outlook retirement -->
+- Disable Windows Search service **-- If Not Using Classic Outlook** <!-- Always disable after classic Outlook retirement -->
 ```
 Set-Service -Name "WSearch" -StartupType Disabled; Stop-Service -Name "WSearch"
 ```
