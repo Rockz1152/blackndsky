@@ -29,9 +29,38 @@ HKEY_LOCAL_MACHINE\System\Setup\LabConfig
 -->
 
 ## Windows 10 to 11 In-place Upgrade
-Create the following key to skip CPU and TPM checks
+Source: https://gist.github.com/asheroto/5087d2a38b311b0c92be2a4f23f92d3e
+
+Remove failed compatibility checks
+```
+Remove-Item -Path "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\CompatMarkers" -Recurse -Force -ErrorAction SilentlyContinue
+Remove-Item -Path "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Shared" -Recurse -Force -ErrorAction SilentlyContinue
+Remove-Item -Path "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\TargetVersionUpgradeExperienceIndicators" -Recurse -Force
+```
+
+Allow upgrades on unsupported TPM or CPU
 ```
 reg add "HKLM\System\Setup\MoSetup" /v "AllowUpgradesWithUnsupportedTPMOrCPU" /t REG_DWORD /d 1 /f
+```
+
+Set Upgrade Eligibility flag in HKCU
+```
+reg add "HKCU\Software\Microsoft\PCHC" /v "UpgradeEligibility" /t REG_DWORD /d 1 /f
+```
+
+Simulate hardware compatibility
+```
+New-Item -Path "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\HwReqChk" -Force
+New-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\HwReqChk" `
+  -Name "HwReqChkVars" `
+  -PropertyType MultiString `
+  -Value @(
+    "SQ_SecureBootCapable=TRUE",
+    "SQ_SecureBootEnabled=TRUE",
+    "SQ_TpmVersion=2",
+    "SQ_RamMB=8192"
+  ) `
+  -Force
 ```
 
 ## Rufus
