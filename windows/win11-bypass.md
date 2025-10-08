@@ -29,7 +29,7 @@ HKEY_LOCAL_MACHINE\System\Setup\LabConfig
 -->
 
 ## Windows 10 to 11 In-place Upgrade
-Source: https://gist.github.com/asheroto/5087d2a38b311b0c92be2a4f23f92d3e
+<!-- Source: https://gist.github.com/asheroto/5087d2a38b311b0c92be2a4f23f92d3e -->
 
 Remove failed compatibility checks
 ```
