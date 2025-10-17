@@ -68,6 +68,13 @@ Change Search Provider (Optional)
 ----
 
 ## Additional Settings
+Disable AI mode
+```
+reg add "HKLM\Software\Policies\Google\Chrome" /v "AIModeSettings" /t REG_DWORD /d 1 /f
+reg add "HKLM\Software\Policies\Google\Chrome" /v "GenAILocalFoundationalModelSettings" /t REG_DWORD /d 1 /f
+reg add "HKLM\Software\Policies\Google\Chrome" /v "GeminiSettings" /t REG_DWORD /d 1 /f
+```
+
 Disable Casting
 ```
 reg add "HKLM\Software\Policies\Google\Chrome" /v "EnableMediaRouter" /t REG_DWORD /d 0 /f

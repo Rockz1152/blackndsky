@@ -63,6 +63,8 @@ New-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCo
   -Force
 ```
 
+Run the upgrade assistant or "setup.exe" from the install media to upgrade
+
 ## Rufus
 Rufus can also skip hardware checks among other things when creating media from a .iso <!-- https://arstechnica.com/gadgets/2022/06/usb-installer-tool-removes-windows-11s-microsoft-account-requirements-and-more/ -->
 
