@@ -58,6 +58,9 @@ https://raw.githubusercontent.com/gijsdev/ublock-hide-yt-shorts/master/list.txt
 - Under "Default filtering mode" select `Complete`
   - Click `Allow` for the permissions popup
 - Change to the "Filter lists" tab
-  - Under "Default" make sure "Ads, trackers, miners, and more" is checked
+  - Under "Default" check all boxes
+  - Under "Ads" check all boxes
+  - Under "Privacy", check all boxes except "Block Outsider intrusion into LAN"
+  - Under "Malware protection, security" check all boxes
   - Under "Annoyances" check all boxes
-  - Expand "Miscellaneous", check all boxes except "Block Outsider intrusion into LAN"
+  - Under "Miscellaneous" check all boxes
