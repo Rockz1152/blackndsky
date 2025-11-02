@@ -60,7 +60,7 @@ https://raw.githubusercontent.com/gijsdev/ublock-hide-yt-shorts/master/list.txt
 - Change to the "Filter lists" tab
   - Under "Default" check all boxes
   - Under "Ads" check all boxes
-  - Under "Privacy", check all boxes except "Block Outsider intrusion into LAN"
+  - Under "Privacy" check all boxes except "Block Outsider intrusion into LAN"
   - Under "Malware protection, security" check all boxes
   - Under "Annoyances" check all boxes
   - Under "Miscellaneous" check all boxes
