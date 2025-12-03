@@ -7,20 +7,21 @@ permalink: /windows11
 [Windows 11]({{site.url}}/windows11){: .simple-pressed-button}
 [Windows 10]({{site.url}}/windows10){: .simple-button}
 [Tools]({{site.url}}/windows-tools){: .simple-button}
+<span style="float: right; font-weight: bold; color: #555;">Version: 25H2</span>
 
  Removes store apps | Turns off telemetry | Installs software | Finds missing drivers | Creates install media
 :------------: | :------------: | :------------: | :------------: | :------------:
 [CleanApps](https://github.com/Rockz1152/CleanApps/releases){:target="_blank"} | [O&O Shutup 10](https://www.oo-software.com/en/shutup10){:target="_blank"} | [Ninite](https://ninite.com/){:target="_blank"} | [Snappy Driver Installer Origin](https://www.glenn.delahoy.com/snappy-driver-installer-origin/){:target="_blank"} | [Windows 11 Media Creation Tool](https://www.microsoft.com/en-us/software-download/windows11){:target="_blank"}
 
-Quicklinks: 
+Quicklinks:
+<a href="#initial-updates" class="simple-button-small">Initial Updates</a>
 <a href="#appearance" class="simple-button-small">Appearance</a>
 <a href="#privacy" class="simple-button-small">Privacy</a>
 <a href="#system" class="simple-button-small">System</a>
 <a href="#optional" class="simple-button-small">Optional</a>
-<a href="#updates" class="simple-button-small">Updates</a>
+<a href="#finishing-up" class="simple-button-small">Finishing Up</a>
 <a href="#tweaks" class="simple-button-small">Tweaks</a>
 <a href="#maintenance" class="simple-button-small">Maintenance</a>
-<span style="float: right; font-weight: bold; color: #555;">Version: 25H2</span>
 
 ## Installation
 
@@ -46,9 +47,7 @@ Follow these steps to create a local user
 > ### **How to run commands**
 > Open a "Terminal (Admin)" prompt to run commands. Right click on the start button and select "Terminal (Admin)"
 
-## Appearance
-
-### Recommended
+## Initial Updates
 - Remove unwanted Windows Store apps
 ```
 $RemoveApps = "Microsoft.MixedReality.Portal|Microsoft.Wallet|Microsoft.WindowsCamera|Microsoft.BingNews|Microsoft.GetHelp|Microsoft.Getstarted|Microsoft.YourPhone|Microsoft.Messaging|Microsoft.Microsoft3DViewer|Microsoft.MicrosoftOfficeHub|Microsoft.MicrosoftSolitaireCollection|Microsoft.NetworkSpeedTest|Microsoft.News|Microsoft.Office.Lens|Microsoft.Office.OneNote|Microsoft.Office.Sway|Microsoft.OneConnect|Microsoft.People|Microsoft.Print3D|Microsoft.RemoteDesktop|Microsoft.SkypeApp|Microsoft.Office.Todo.List|Microsoft.Whiteboard|Microsoft.WindowsAlarms|microsoft.windowscommunicationsapps|Microsoft.WindowsFeedbackHub|Microsoft.WindowsMaps|Microsoft.BingWeather|Microsoft.549981C3F5F10|Microsoft.Advertising.Xaml|Microsoft.Copilot|Microsoft.Windows.DevHome|CandyCrush|EclipseManager|ActiproSoftwareLLC|AdobeSystemsIncorporated.AdobePhotoshopExpress|Duolingo-LearnLanguagesforFree|PandoraMediaInc|BubbleWitch3Saga|Wunderlist|Flipboard|Twitter|Facebook|Spotify|Minecraft|Royal Revolt|Sway|Speed Test|Dolby|Disney|Clipchamp.Clipchamp|Microsoft.PowerAutomateDesktop|Microsoft.Todos|MicrosoftCorporationII.MicrosoftFamily|Microsoft.BingSearch"
@@ -56,6 +55,13 @@ Get-AppxPackage | where-object {$_.Name -match $RemoveApps} | Remove-AppxPackage
 ```
   - You can also use the [CleanApps](https://github.com/Rockz1152/CleanApps/releases){:target="_blank"} script to remove or reinstall the apps
   - See [Github](https://github.com/Rockz1152/CleanApps){:target="_blank"} for a full list of apps removed
+- Update Apps in the [Microsoft Store](ms-windows-store://downloadsandupdates)
+- Install [Windows Updates](ms-settings:windowsupdate) and reboot
+- Install drivers and reboot
+
+## Appearance
+
+### Recommended
 - Switch off Spotlight (changing wallpaper) - Open [Personalization](ms-settings:personalization) and select a theme or choose one from below
   - Dark mode
 ```
@@ -616,7 +622,7 @@ reg add "HKLM\System\CurrentControlSet\Control\DeviceGuard\Scenarios\HypervisorE
 
 ----
 
-## Updates
+## Finishing Up
 - Disable automatic sign-in after updates and restarts
 ```
 reg add "HKLM\Software\Microsoft\Windows\CurrentVersion\Policies\System" /v "DisableAutomaticRestartSignOn" /t REG_DWORD /d 1 /f
@@ -634,13 +640,11 @@ reg add "HKLM\Software\Policies\Microsoft\Windows\WindowsUpdate" /v "DeferQualit
 reg add "HKLM\Software\Policies\Microsoft\Windows\WindowsUpdate" /v "DeferQualityUpdatesPeriodInDays" /t REG_DWORD /d 0 /f
 reg add "HKLM\Software\Policies\Microsoft\Windows\WindowsUpdate" /v "PauseQualityUpdatesStartTime" /t REG_SZ /f
 ```
-- Update Apps in the [Microsoft Store](ms-windows-store://downloadsandupdates)
-- Install [Windows Updates](ms-settings:windowsupdate) and reboot
-- Install drivers and reboot
 - Cleanup Windows components
 ```
 Dism /Online /Cleanup-Image /StartComponentCleanup
 ```
+- Remove any additional bloatware
 - Install software with [Ninite](https://ninite.com/){:target="_blank"}
 - Setup [Firefox]({{site.url}}/firefox){:target="_blank"} or [Chrome]({{site.url}}/chrome){:target="_blank"} if you prefer either over Microsoft Edge
   - You can always set a default Web browser in [Default apps](ms-settings:defaultapps)

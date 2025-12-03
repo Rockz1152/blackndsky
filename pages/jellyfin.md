@@ -51,7 +51,7 @@ sudo apt install -y jellyfin
 ```
 - Adjust logging levels
 ```
-sed -i 's/"MinimumLevel": "Information"/"MinimumLevel": "Error"/g' /etc/jellyfin/logging.json
+sudo sed -i 's/"MinimumLevel": "Information"/"MinimumLevel": "Error"/g' /etc/jellyfin/logging.json
 ```
 - Check service status
 ```
