@@ -5,11 +5,12 @@ permalink: /firefox
 ---
 
 [Mozilla Firefox]({{site.url}}/firefox){: .simple-pressed-button}
+[Waterfox]({{site.url}}/waterfox){: .simple-button}
 [Google Chrome]({{site.url}}/chrome){: .simple-button}
 [Microsoft Edge]({{site.url}}/edge){: .simple-button}
 [uBlock Origin]({{site.url}}/ublock){: .simple-button}
 
-<sup>_Version 12/10/24_</sup>
+<sup>_Version 9/12/25_</sup>
 
 > ### **Author's Note**
 >

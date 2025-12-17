@@ -5,6 +5,7 @@ permalink: /chrome
 ---
 
 [Mozilla Firefox]({{site.url}}/firefox){: .simple-button}
+[Waterfox]({{site.url}}/waterfox){: .simple-button}
 [Google Chrome]({{site.url}}/chrome){: .simple-pressed-button}
 [Microsoft Edge]({{site.url}}/edge){: .simple-button}
 [uBlock Origin]({{site.url}}/ublock){: .simple-button}
