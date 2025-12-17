@@ -17,7 +17,7 @@ permalink: /waterfox
 > _Waterfox is a no-nonsense, privacy driven fork of Firefox. That means no spying on user activity, no telemetry, no analytics, no experiments, and best of all no AI._
 
 ## Installation
-Install with `winget` or download from https://www.waterfox.com/download/
+Install with `winget` or download from [https://www.waterfox.com/download/](https://www.waterfox.com/download/){:target="_blank"}
 ```
 winget install -e Waterfox --accept-package-agreements --accept-source-agreements
 ```
@@ -37,7 +37,7 @@ Open Waterfox
 ## Appearance
 _*This section is Optional_
 
-- If you don't like the default Dark theme, try this one instead https://addons.mozilla.org/en-US/firefox/addon/old-dark-theme/
+- If you don't like the default Dark theme, try this one instead [https://addons.mozilla.org/en-US/firefox/addon/old-dark-theme/](https://addons.mozilla.org/en-US/firefox/addon/old-dark-theme/){:target="_blank"}
 ```
 https://addons.mozilla.org/en-US/firefox/addon/old-dark-theme/
 ```
