@@ -14,7 +14,7 @@ permalink: /waterfox
 
 > ### **Author's Note**
 >
-> _Waterfox is a no-nonsense, privacy driven fork of Firefox. That means no spying on user activity, no telemetry, no analytics, no experiments, and best of all no AI._
+> _Waterfox is a no-nonsense, privacy driven fork of Firefox. That means no spying on user activity, no telemetry, no analytics, no experiments, and no AI._
 
 ## Installation
 Install with `winget` or download from [https://www.waterfox.com/download/](https://www.waterfox.com/download/){:target="_blank"}
