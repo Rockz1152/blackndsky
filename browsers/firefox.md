@@ -167,11 +167,6 @@ browser.ml.chat.enabled
   - ```
 network.protocol-handler.external.mailto
 ```
-- Disable Tab Preview (Optional)
-  - Change `browser.tabs.hoverPreview.enabled` to `false`
-  - ```
-browser.tabs.hoverPreview.enabled
-```
 
 Once you have finished configuring your settings, close and reopen Firefox
 
