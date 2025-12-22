@@ -16,6 +16,7 @@ permalink: /windows-tools
 | [OCCT](https://www.ocbase.com/){:target="_blank"} | Portable CPU and GPU stress testing tool. Useful running with HardwareMonitor
 | [Prime 95](https://www.techpowerup.com/download/prime95/){:target="_blank"} | Stress test the CPU
 | [FurMark](https://www.geeks3d.com/furmark/downloads/){:target="_blank"} | Lightweight but very intensive graphics card / GPU stress test program
+| [CrystalDiskInfo Portable](https://portableapps.com/apps/utilities/crystaldiskinfo_portable){:target="_blank"} | Utility to check disk health by using S.M.A.R.T. data
 | [CrystalDiskMark Portable](https://portableapps.com/apps/utilities/crystaldiskmark_portable){:target="_blank"} | Benchmark disk read and write speeds
 | [MemTest86+](https://www.memtest.org/#downiso){:target="_blank"} | Free memory testing utility, choose "Auto-installer for USB Key (Win 9x/2k/xp/7)" on the download page
 | [Speccy Portable](https://www.majorgeeks.com/files/details/speccy_portable.html){:target="_blank"} | Display detailed information on the current system hardware, including manufacturer, hardware model SKUs
