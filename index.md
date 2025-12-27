@@ -24,6 +24,7 @@ layout: home
 </div>
 
 | PCPartPicker | [https://pcpartpicker.com](https://pcpartpicker.com){:target="_blank"}
+| Build Cores 3D | [https://buildcores.com](https://buildcores.com){:target="_blank"}
 | SSD Google Doc | [https://docs.google.com/spreadsheets/...](https://docs.google.com/spreadsheets/d/1B27_j9NDPU3cNlj2HKcrfpJKHkOf-Oi1DbuuQva2gT4){:target="_blank"}
 | Bottleneck Calculator | [https://pc-builds.com/calculator/](https://pc-builds.com/calculator/){:target="_blank"}
 | Build Compare | [https://www.gpucheck.com/build-multi](https://www.gpucheck.com/build-multi){:target="_blank"}
