@@ -25,7 +25,6 @@ layout: home
 
 | PCPartPicker | [https://pcpartpicker.com](https://pcpartpicker.com){:target="_blank"}
 | SSD Google Doc | [https://docs.google.com/spreadsheets/...](https://docs.google.com/spreadsheets/d/1B27_j9NDPU3cNlj2HKcrfpJKHkOf-Oi1DbuuQva2gT4){:target="_blank"}
-| Hard Disk Price | [https://diskprices.com/](https://diskprices.com/){:target="_blank"}
 | Bottleneck Calculator | [https://pc-builds.com/calculator/](https://pc-builds.com/calculator/){:target="_blank"}
 | Build Compare | [https://www.gpucheck.com/build-multi](https://www.gpucheck.com/build-multi){:target="_blank"}
 
@@ -44,6 +43,22 @@ layout: home
 | Passmark | [https://www.videocardbenchmark.net/singleCompare.php](https://www.videocardbenchmark.net/singleCompare.php){:target="_blank"}
 | UserBenchmark | [https://gpu.userbenchmark.com](https://gpu.userbenchmark.com){:target="_blank"}
 | GPU-Check | [https://www.gpucheck.com/gpu-benchmark-comparison](https://www.gpucheck.com/gpu-benchmark-comparison){:target="_blank"}
+
+<div align="center" markdown="1">
+**Price Lists**
+</div>
+
+| Hard Disk Prices | [https://diskprices.com](https://diskprices.com){:target="_blank"}
+| Ram Prices _*Unavailable_ | [https://betterramprices.com](https://betterramprices.com){:target="_blank"}
+| Monitor Prices | [https://www.monitorprices.org](https://www.monitorprices.org){:target="_blank"}
+| CPU Prices | [https://cpuscout.com](https://cpuscout.com){:target="_blank"}
+| GPU Prices | [https://gpupricecompare.com](https://gpupricecompare.com){:target="_blank"}
+| GPU Prices | [https://gpuquicklist.com](https://gpuquicklist.com){:target="_blank"}
+| Best Value GPU | [https://bestvaluegpu.com](https://bestvaluegpu.com){:target="_blank"}
+| PSU Prices | [https://psuprices.pages.dev](https://psuprices.pages.dev){:target="_blank"}
+| Thinkpad Prices | [https://thinkprices.com/us](https://thinkprices.com/us){:target="_blank"}
+| Mini PC Prices | [https://lowcostminipcs.com](https://lowcostminipcs.com){:target="_blank"}
+| Router Prices | [https://routerprices.net](https://routerprices.net){:target="_blank"}
 
 <div align="center" markdown="1">
 **Display**
