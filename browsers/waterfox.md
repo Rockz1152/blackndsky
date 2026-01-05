@@ -19,7 +19,7 @@ permalink: /waterfox
 ## Installation
 Install with `winget` or download from [https://www.waterfox.com/download/](https://www.waterfox.com/download/){:target="_blank"}
 ```
-winget install -e Waterfox --accept-package-agreements --accept-source-agreements
+winget install -e Waterfox --accept-package-agreements --accept-source-agreements --source winget
 ```
 Open Waterfox
 

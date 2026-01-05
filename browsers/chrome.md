@@ -15,7 +15,7 @@ permalink: /chrome
 ## Installation
 Install with `winget` or use [Ninite](https://ninite.com/){:target="_blank"}
 ```
-winget install google.chrome --accept-package-agreements --accept-source-agreements
+winget install google.chrome --accept-package-agreements --accept-source-agreements --source winget
 ```
 Open Chrome
 

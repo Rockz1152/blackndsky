@@ -20,7 +20,7 @@ permalink: /firefox
 
 Install with `winget` or use [Ninite](https://ninite.com/){:target="_blank"}
 ```
-winget install mozilla.firefox --accept-package-agreements --accept-source-agreements
+winget install mozilla.firefox --accept-package-agreements --accept-source-agreements --source winget
 ```
 Open Firefox
 
