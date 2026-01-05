@@ -35,12 +35,15 @@ Open Waterfox
 ----
 
 ## Appearance
-_*This section is Optional_
+_*This section is optional and subjective._
 
-- If you don't like the default Dark theme, try this one instead [https://addons.mozilla.org/en-US/firefox/addon/old-dark-theme/](https://addons.mozilla.org/en-US/firefox/addon/old-dark-theme/){:target="_blank"}
+If you don't like the default Dark theme, try this one instead https://addons.mozilla.org/en-US/firefox/addon/old-dark-theme/
 ```
 https://addons.mozilla.org/en-US/firefox/addon/old-dark-theme/
 ```
+
+Customize Layout
+
 - Right click some empty space on the top bar and select `Customize Toolbar`
 - Click `Toolbars` at the bottom
   - Optionally check `Menu Bar`
@@ -50,10 +53,17 @@ https://addons.mozilla.org/en-US/firefox/addon/old-dark-theme/
 - Drag `Home` to the toolbar next to reload
 - Click `Done`
 
+Open Settings under the Application Menu button in top right corner > Settings > Look & Feel
+
+- Theme
+  - Select `Lepton Style`
+- Icons
+  - Check `Hide All Icons`
+
 ----
 
 ## Settings
-Click the Options Menu in top right corner > Settings
+_*If you need to open Settings, you can find it under the Application Menu button in top right corner_
 
 General
 
@@ -94,13 +104,6 @@ Privacy & Security
 - Permissions
   - Location > Settings > Check `Block new requests asking to access your location` > Click `Save Changes`
   - Notifications > Settings > Check `Block new requests asking to allow notifications` > Click `Save Changes`
-
-Look & Feel
-
-- Theme
-  - Select `Lepton Style`
-- Icons
-  - Check `Hide All Icons`
 
 ----
 
