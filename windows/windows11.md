@@ -4,6 +4,7 @@ title: Windows 11
 permalink: /windows11
 ---
 
+<a id="top"></a>
 [Windows 11]({{site.url}}/windows11){: .simple-pressed-button}
 [Windows 10]({{site.url}}/windows10){: .simple-button}
 [Tools]({{site.url}}/windows-tools){: .simple-button}
@@ -726,3 +727,7 @@ Dism /Online /Cleanup-Image /StartComponentCleanup; Dism /Online /Cleanup-Image 
 - Run Disk Cleanup with "**Clean up system files**"
 - Optimize Drives
 - Reboot system
+
+<div id="rtt-button" aria-label="Return to top">
+  <a href="#top"></a>
+</div>
