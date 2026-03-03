@@ -107,7 +107,7 @@ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcon
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\NewStartPanel" /v "{2cc5ca98-6485-489a-920e-b3e88a6ccce3}" /t REG_DWORD /d 1 /f
 Stop-Process -ProcessName explorer
 ```
-- Compact Start Menu layout
+- Enable compact Start Menu layout
 ```
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "Start_Layout" /t REG_DWORD /d 1 /f
 ```
@@ -178,6 +178,10 @@ reg add "HKLM\Software\Microsoft\Windows\CurrentVersion\Shell Extensions\Blocked
 reg add "HKLM\Software\Microsoft\Windows\CurrentVersion\Shell Extensions\Blocked" /v "{7AD84985-87B4-4a16-BE58-8B72A5B390F7}" /t REG_SZ /f
 reg add "HKLM\Software\Microsoft\Windows\CurrentVersion\Shell Extensions\Blocked" /v "{f81e9010-6ea4-11ce-a7ff-00aa003ca9f6}" /t REG_SZ /f
 Stop-Process -ProcessName explorer
+```
+- Remove the "Drag Tray" at the top of the screen
+```
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\CDP" /v "DragTrayEnabled" /t REG_DWORD /d 0 /f
 ```
 
 ### Additional Changes
