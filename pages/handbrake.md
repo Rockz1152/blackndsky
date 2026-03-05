@@ -70,7 +70,9 @@ In order to create the highest quality file without wasting any space, it's best
   - Video Encorder: Leave `H.264(x264)` as it maximizes compatibility
     - If compatibility isn't a concern, select `H.265(x265)` instead for better compression
   - Encoder Preset: `Very Slow` _*Use for best results_
-  - Avg Bitrate (kbps): `2000`
+  - Avg Bitrate (kbps)
+    - 720p: `2000`
+    - 1080p: `2300`
   - Check: `Multi-Pass Encoding` and `Turbo analysis pass`
 - Subtitles
   - Change "Foreign Audio Scan" to any available English subtitles track, otherwise click the `X` on the far right to remove it
