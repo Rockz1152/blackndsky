@@ -69,7 +69,7 @@ In order to create the highest quality file without wasting any space, it's best
 - Video
   - Video Encorder: Leave `H.264(x264)` as it maximizes compatibility
     - If compatibility isn't a concern, select `H.265(x265)` instead for better compression
-  - Encoder Preset: `Very Slow` _*Use for best results_
+  - Encoder Preset: `Medium`
   - Avg Bitrate (kbps)
     - 720p: `2000`
     - 1080p: `2300`
