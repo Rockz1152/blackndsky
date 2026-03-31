@@ -46,6 +46,10 @@ Click `Tools` **>** `Preferences`
   - `Roku 720p30 Surround` or `Roku 1080p30 Surround` depending on source file
 - Summary
   - Format: `MKV`
+- Video
+  - If you want higher quality at the cost of file size you can adjust the Constant Quality RF of each preset
+  - 720p default is `21`, set to `20` for higher quality
+  - 1080p default is `22`, set to `21` for higher quality
 - Subtitles
   - Click `Selection Behavior ...`
   - All Matching Selected Languages: `English`
@@ -54,9 +58,9 @@ Click `Tools` **>** `Preferences`
   - Check `Passthru Track Names`
   - Burn-in Behavior: `None`
   - Click `Save` and then `Reload`
-- Click `Start` to begin transcoding
+- Click `Start Encode` to begin transcoding
   - If you are batch converting a set of media, click the down arrow next to `Add to Queue` **>** `Add all`
-  - Open the Queue window and click `Start`
+  - Open the Queue window and click `Start Queue`
 
 ----
 
