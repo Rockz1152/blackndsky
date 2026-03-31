@@ -34,52 +34,29 @@ Click `Tools` **>** `Preferences`
 - Set a `Default Path` e.g. "C:\Users\John\Downloads"
 - Set `File Format` to `{source}`
 - Set `MP4 File Extension` to `Always use MP4`
+- Uncheck `Change case to Title Case`
+- Uncheck `Replace underscores with a space`
 
 ----
 
 ## Media Conversion
-
 - Click `Open Source`
 - Select single media or media folder
-- `Presets` **>** `Devices` **>** `Roku XXX Resolution`
-- For single media - Click `Start`
-- For batch conversion
-  - Click the down arrow next to `Add to Queue` **>** `Add all`
-  - In Handbrake or the Queue windows, click `Start`
-
-### Convert MKV with Subtitles
-
-- Select the preset you want to convert the video to
-- On the "Summary" tab, change the container to `MKV`
-  - Optionally on the "Video" tab, change the "Encoder Preset" slider to "Very Slow"
-- On the "Subtitles" tab, change "Foreign Audio Scan" to the English subtitles track
-- Uncheck `Forced Only` and `Burn In`
-- Start the transcode
-
-----
-
-## Optimized Encoding
-In order to create the highest quality file without wasting any space, it's best to utilize Multi-Pass encoding. Multi-pass encoding in HandBrake optimizes video compression by analyzing the video in multiple passes. The first pass gathers data to improve bitrate distribution, while the subsequent pass ensures higher quality and better file size efficiency.
-
 - Preset
   - `Roku 720p30 Surround` or `Roku 1080p30 Surround` depending on source file
 - Summary
   - Format: `MKV`
-  - Leave "Passthru Common Metadata" checked
-- Video
-  - Video Encorder: Leave `H.264(x264)` as it maximizes compatibility
-    - If compatibility isn't a concern, select `H.265(x265)` instead for better compression
-  - Encoder Preset: `Medium`
-  - Avg Bitrate (kbps)
-    - 720p: `2000`
-    - 1080p: `2300`
-  - Check: `Multi-Pass Encoding` and `Turbo analysis pass`
 - Subtitles
-  - Change "Foreign Audio Scan" to any available English subtitles track, otherwise click the `X` on the far right to remove it
-
-Click `Start Encode` to begin
-
-Note: Multi-Pass Encoding takes a very long time to process. Expect transcoding sessions to last 4-6 hours per title.
+  - Click `Selection Behavior ...`
+  - All Matching Selected Languages: `English`
+  - Uncheck `Add Closed Captions`
+  - Uncheck `Add Foreign Audio Scan`
+  - Check `Passthru Track Names`
+  - Burn-in Behavior: `None`
+  - Click `Save` and then `Reload`
+- Click `Start` to begin transcoding
+  - If you are batch converting a set of media, click the down arrow next to `Add to Queue` **>** `Add all`
+  - Open the Queue window and click `Start`
 
 ----
 
