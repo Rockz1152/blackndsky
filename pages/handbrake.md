@@ -47,9 +47,12 @@ Click `Tools` **>** `Preferences`
 - Summary
   - Format: `MKV`
 - Video
-  - If you want higher quality at the cost of file size you can adjust the Constant Quality RF of each preset
-  - 720p default is `21`, set to `20` for higher quality
-  - 1080p default is `22`, set to `21` for higher quality
+  - If you want higher quality at the cost of file size you can adjust the "Constant Quality RF" of each preset
+    - 720p default is `21`, set to `20` for higher quality
+    - 1080p default is `22`, set to `21` for higher quality
+  - If conversion time is not an issue, you can change the "Encoder Preset" to `VerySlow` to maximize file compression
+    - Understand that this will more than double the time it takes to convert the file for a slightly smaller file size
+    - Otherwise, the default setting of `Medium` is the optimal choice
 - Subtitles
   - Click `Selection Behavior ...`
   - All Matching Selected Languages: `English`
