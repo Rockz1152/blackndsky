@@ -96,6 +96,10 @@ netmask 255.255.255.0
 gateway 192.168.0.1
 dns-nameservers 8.8.8.8 1.1.1.1
 ```
+- Make sure `resolvconf` is installed for DNS
+```
+sudo apt install resolvconf
+```
 - Reboot with `sudo reboot`
 
 ----
