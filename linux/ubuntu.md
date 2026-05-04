@@ -13,7 +13,7 @@ permalink: /ubuntu
 - New releases only support 64-bit systems
 - Download the latest LTS release from [https://releases.ubuntu.com](https://releases.ubuntu.com){:target="_blank"}
   - Select the `Server install image` after choosing a release
-- Current server install image: [https://releases.ubuntu.com/noble/ubuntu-24.04-live-server-amd64.iso](https://releases.ubuntu.com/noble/ubuntu-24.04-live-server-amd64.iso){:target="_blank"}
+- Current server install image: [https://releases.ubuntu.com/resolute/ubuntu-26.04-live-server-amd64.iso](https://releases.ubuntu.com/resolute/ubuntu-26.04-live-server-amd64.iso){:target="_blank"}
 
 ----
 
@@ -45,6 +45,10 @@ echo 'sudo sh -c "export DEBIAN_FRONTEND=noninteractive; apt update; apt upgrade
 - Make a script to cleanup old kernels when necessary
 ```
 echo 'bash -c "$(wget -qLO - https://raw.githubusercontent.com/Rockz1152/Ubuntu/main/kernel-clean.sh)"' > $HOME/kernel-clean.sh && chmod u+x $HOME/kernel-clean.sh
+```
+- Install any pending system updates
+```
+sudo apt update && sudo DEBIAN_FRONTEND=noninteractive apt upgrade -y
 ```
 
 ----
@@ -85,7 +89,7 @@ sudo dpkg-reconfigure tzdata
 
 ----
 
-## Software Packages
+## Software Packages and Configuration
 Run the automated script
 ```
 curl -sL https://raw.githubusercontent.com/Rockz1152/Ubuntu/main/ubuntu_setup.sh | sudo /bin/bash
@@ -100,7 +104,9 @@ sudo sed -i 's/PrintMotd yes/PrintMotd no/g' /etc/ssh/sshd_config
 ```
 - Disable "Ubuntu Pro" advertisement in apt
 ```
-sudo dpkg-divert --divert /etc/apt/apt.conf.d/20apt-esm-hook.conf.bak --rename --local /etc/apt/apt.conf.d/20apt-esm-hook.conf
+dpkg-divert --divert /etc/apt/apt.conf.d/20apt-esm-hook.conf.bak --rename --local /etc/apt/apt.conf.d/20apt-esm-hook.conf > /dev/null 2>/dev/null
+echo -n | sudo tee /etc/apt/apt.conf.d/20apt-esm-hook.conf > /dev/null 2>/dev/null
+chattr +i /etc/apt/apt.conf.d/20apt-esm-hook.conf > /dev/null 2>/dev/null
 ```
 - Remove unneeded server packages
 ```
@@ -112,7 +118,7 @@ sudo apt update; sudo DEBIAN_FRONTEND=noninteractive apt full-upgrade -y
 ```
 - Install additional software packages
 ```
-sudo DEBIAN_FRONTEND=noninteractive apt install -y ncdu zstd zip unzip p7zip-full unrar-free neofetch
+sudo DEBIAN_FRONTEND=noninteractive apt install -y ncdu zstd zip unzip 7zip unrar-free fastfetch
 ```
 - Install guest agents if you are running the server in a VM
   - VMWare
