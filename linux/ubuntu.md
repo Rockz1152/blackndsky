@@ -110,7 +110,7 @@ chattr +i /etc/apt/apt.conf.d/20apt-esm-hook.conf > /dev/null 2>/dev/null
 ```
 - Remove unneeded server packages
 ```
-sudo DEBIAN_FRONTEND=noninteractive apt autoremove --purge -y cloud-init multipath-tools snapd landscape-common; sudo rm -rf /etc/cloud
+sudo DEBIAN_FRONTEND=noninteractive apt autoremove --purge -y cloud-init snapd landscape-common; sudo rm -rf /etc/cloud
 ```
 - Install package updates
 ```
